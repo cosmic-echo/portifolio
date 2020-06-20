@@ -1,5 +1,5 @@
 # cosmic-echo/portifolio
-Portifólio do desenvolvedor
+Portifólio de desenvolvedor de Raul Sousa.
 
 ## Tarefas
 
