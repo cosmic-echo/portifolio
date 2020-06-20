@@ -5,9 +5,9 @@ Portifólio do desenvolvedor
 
 O controle das tarefas deste projeto será realizado no GitHub.
 
-##Ícones
+## Ícones
 
-:package: nova funcionalidade 
-:up: atualização 
-:bug: correção de bug 
-:crossed_flags: release 
+:package: nova funcionalidade<br/>
+:up: atualização<br/>
+:bug: correção de bug<br/>
+:crossed_flags: release<br/>
