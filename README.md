@@ -1,4 +1,4 @@
-# portifolio
+# cosmic-echo/portifolio
 Portifólio do desenvolvedor
 
 ## Tarefas
