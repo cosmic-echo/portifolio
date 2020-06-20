@@ -5,21 +5,25 @@
 }
 @keyframes flow {
     0% {
-        transform: translateY(10rem) rotateY(-30deg);
+        transform: translateY(10rem) rotateY(-30deg) scale(1.3);
         opacity: 0;
     }
     100% {
-        transform: translateY(0) rotateY(0);
+        transform: translateY(0) rotateY(0) scale(1);
         opacity: 1.0;
     }
 }
-@keyframes zoom {
+@keyframes fade {
     0% {
-        transform: scale(1.3);
+        opacity: 0;
     }
     100% {
-        scale(1);
+        opacity: 1.0;
     }
+}
+body {
+    animation: ease-in fade .7s;
+    background: #222;
 }
 header {
     width: 100%;
@@ -41,7 +45,7 @@ header {
     animation: zoom 3s;
 }
 #dots {
-    background: url("imagens/dot.png") repeat;
+    background: url("../img/dot.png") repeat;
     z-index: 2;
     width: 100%;
     height: 100%;
@@ -56,32 +60,25 @@ header {
     line-height: 4em;
     max-width: 70%;
     z-index: 3;
-    border: 1px solid red;
+    display: flex;
+    flex-flow: row;    
 }
 #profile_picture {
     width: 150px;
     height: 150px;
+    min-width: 50px;
+    min-height: 50px;
     border-radius: 100%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,.7), 1px 2px 5px rgba(0,0,0,.5), inset 0 0 0 30px rgba(255,255,255,1.0);
-    display: inline-block;
-    position: relative;
-    z-index: inherit;
-    overflow: hidden;
-}
-#profile_picture::before {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background: red; 
-    content: "Saiba mais";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 4 !important;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.5);
+    background: center url("../img/profile_picture.jpg");
+    background-size: 150px;
+    animation: flow .5s forwards;
+    align-self: flex-start;
+    
 }
 #details {
-    display: inline-block;
-    position: relative;
+    margin-left: 3rem;
+    width: 80%;
 }
 #banner h1 {
     font-family: "Segoe UI Light", sans-serif;
@@ -99,17 +96,16 @@ header {
     opacity: 0;
 }
 #developer_description {
-    font: normal 100 1.5rem "Segoe UI Light" , sans-serif;
+    font: normal 100 1.5rem "Segoe UI Light", sans-serif;
     margin-bottom: 2rem;
 }
 #aboutdeveloper {  
-    font: normal 300 1.5rem "Segoe UI" , sans-serif;
+    font: normal 300 1.5rem "Segoe UI", sans-serif;
     margin-bottom: 2rem;
     text-align: justify;  
 }
 #learn_more, #learn_more::before {
-    font-family: "Segoe UI", sans-serif;
-    font-weight: bold;
+    font: bold "Segoe UI", sans-serif;
     text-transform: uppercase;
     letter-spacing: .2em;
     border: 0;
@@ -120,7 +116,7 @@ header {
     color: #fff;
 }
 #learn_more::before {
-    background: red center center url("imagens/bg.jpg") repeat;
+    background: center center url("../img/bg.jpg") repeat;
     background-size: 300px;
     filter: blur(17px);
     z-index: -1;
@@ -134,11 +130,11 @@ header {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.5), 0 0 0 1px rgba(0,0,0,.3), 1px 2px 5px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), inset 0 0 15px  rgba(255,255,255,.4), 0 0 0 1px rgba(0,0,0,.3), 1px 2px 5px rgba(0,0,0,.3);
 }
 #learn_more:hover {
     background: rgba(255,255,255,.4) linear-gradient(to bottom, rgba(255,255,255,.3), rgba(0,0,0,.3));
     }
 #learn_more:active {
-    background: rgba(0,0,0,.2)  linear-gradient(to top, rgba(255,255,255,.3), rgba(0,0,0,.3));
+    background: rgba(0,0,0,.75)  linear-gradient(to top, rgba(255,255,255,.3), rgba(0,0,0,.3));
 }
