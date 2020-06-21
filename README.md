@@ -1,8 +1,5 @@
 # cosmic-echo/portifolio
-Portifólio de desenvolvedor de Raul Gomes.
-
-Para propósitos estudantis.
-For studying purposes.
+Portifólio de desenvolvedor de Raul Gomes, para propósitos estudantis (for studying purposes).
 
 ## Tarefas
 
