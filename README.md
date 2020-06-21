@@ -1,6 +1,9 @@
 # cosmic-echo/portifolio
 Portifólio de desenvolvedor de Raul Gomes.
 
+Para propósitos estudantis.
+For studying purposes.
+
 ## Tarefas
 
 O controle das tarefas deste projeto será realizado no GitHub.
