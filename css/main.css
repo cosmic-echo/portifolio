@@ -89,21 +89,22 @@
 }
 @keyframes zoom {
     0% {
-        background-size: 200%;
+        transform: scale(1.2);
         animation-timing-function: ease;
     }
     100% {
-        background-size: 100%;
+        transform: scale(1);
     }
 }
 body {  
-    animation: zoom 10s forwards;
+    background: #222;
 }
 #bg {
     position: fixed;
     top:0;
     left:0;
     z-index:-1;
+    animation: zoom 30s forwards;
 }
 #bg-dark {
     z-index: 1;
