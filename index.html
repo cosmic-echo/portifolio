@@ -7,16 +7,21 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/all.min.css" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/imagens/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/imagens/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/imagens/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script type="text/javascript">
+        function botao() {
+            document.querySelector("#banner").style.backgroundColor = "purple";
+        }
+    </script>
 </head>
 <body>
     <img id="bg" src="img/bg.jpg"/>
     <div id="bg-dark"></div>
     <div id="dots"></div>
-        <div class="container">
+    <div id="container">
         <header>
             <div id="banner">
                 <div id="profile_picture"></div>
@@ -24,9 +29,9 @@
                     <h1>Raul Sousa</h1>
                     <p id="developer_office">Web developer e designer front-end</p>
                     <p id="aboutdeveloper">
-                        O rastreamento para objetos postados no Brasil com código iniciado por "R" e "C" e terminado com "BR" não é garantido fora do território brasileiro. Para esses objetos, os operadores postais de outros países podem não disponibilizar e/ou transmitir informação de rastreamento para o Brasil.Sendo assim, consultas de rastreamento de objetos podem também ser realizadas nos sites dos operadores de destino disponíveis no site da UPU - União Postal Universal.
+                        Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
                     </p>
-                    <button id="learn_more">Saiba mais</button>
+                    <button id="learn_more" onClick="botao()">Saiba mais</button>
                 </div>
             </div>
             </div>
