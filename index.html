@@ -6,14 +6,21 @@
     <title>Portifólio</title>
     <link href="css/main.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
-    <link href="css/all.min.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <script type="text/javascript">
+        var x = 0;
+
         function botao() {
-            document.querySelector("#banner").style.backgroundColor = "purple";
+            if (x == 0) {
+                document.querySelector("#developer_name").style.backgroundColor = "purple";
+                x = 1;
+            } else {
+                document.querySelector("#developer_name").style.backgroundColor = "transparent";
+                x = 0;
+            }
         }
     </script>
 </head>
@@ -26,7 +33,7 @@
             <div id="banner">
                 <div id="profile_picture"></div>
                 <div id="details">
-                    <h1>Raul Sousa</h1>
+                    <h1 id="developer_name">Raul Sousa</h1>
                     <p id="developer_office">Web developer e designer front-end</p>
                     <p id="aboutdeveloper">
                         Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
