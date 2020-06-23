@@ -57,22 +57,26 @@
 }
 @keyframes zoom {
     0% {
-        transform: scale(1.2);
-        animation-timing-function: ease;
+        transform: scale(1.1);
     }
     100% {
-        transform: scale(1);
+        transform: scale(1.0);
     }
 }
 body {  
     background: #222;
+    overflow: hidden;
 }
 #bg {
     position: fixed;
     top:0;
     left:0;
-    z-index:-1;
-    animation: zoom 30s forwards;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    animation: zoom 7s ease-in-out;
+    transform: scale(1.0);
+    background: center url("../img/bg.jpg");
 }
 #bg-dark {
     z-index: 1;
@@ -84,7 +88,7 @@ body {
     background: rgba(0,0,0,.5);
 }
 #dots {
-    background: url("../img/dot.png") repeat;
+    background: center url("../img/dot.png") repeat;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -100,6 +104,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 }
 #banner {
     max-width: 70%;
