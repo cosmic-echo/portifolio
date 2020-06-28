@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Raul Gomes | Web developer e designer front-end</title>
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
     <script src="js/main.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
@@ -16,14 +16,19 @@
     <div id="bg"></div>
     <div id="bg-dark"></div>
     <div id="dots"></div>
+    <div id="hamburguer">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+    </div>
     <div id="container">
         <header>
             <div id="banner">
                 <div id="profile_picture"></div>
-                <div id="details">
+                <div id="developer_container">
                     <h1 id="developer_name">Raul Sousa</h1>
                     <p id="developer_office">Web developer e designer front-end</p>
-                    <p id="aboutdeveloper">
+                    <p id="developer_description">
                         Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
                     </p>
                     <button id="learn_more" onClick="botao()">Saiba mais</button>
@@ -31,6 +36,24 @@
             </div>
             </div>
         </header>
+        <div id="sidebar">
+            <nav>
+                <ul id="menu">
+                    <li class="menu-item"><a href="" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="" class="menu-link">Contatos</a></li>
+                    <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
+                </ul>
+            </nav>
+            <div id="social-media">
+                <div id="social-media-container">
+                    <a href="pudim.html"><i class="fab fa-github"></i></a>
+                    <a href="pudim.html"><i class="fab fa-instagram"></i></a>
+                    <a href="pudim.html"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

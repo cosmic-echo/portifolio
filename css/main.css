@@ -1,24 +1,50 @@
-* {
-    margin: 0;
-    padding: 0;
+/*fonts*/
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
+        url('../fonts/SegoeUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
-:focus {
-    outline:none;
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url('../fonts/SegoeUI-Italic.woff2') format('woff2'),
+        url('../fonts/SegoeUI-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
 }
-::-moz-focus-inner {
-    border:0;
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("../fonts/SegoeUI.woff2") format('woff2'),
+        url('../fonts/SegoeUI.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
-@keyframes fade {
-    0% {
-        opacity: 0;
-        transform: translateX(3%);
-        animation-timing-function: ease-in-out;
-    }
-    100% {
-        opacity: 1.0;
-        transform: none;
-    }
+@font-face {
+    font-family: "Segoe UI Light";
+    src: url('../fonts/SegoeUI-Light.woff2') format('woff2'),
+        url('../fonts/SegoeUI-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
+@font-face {
+    font-family: "Segoe UI Semilight";
+    src: url('../fonts/SegoeUI-Semilight.woff2') format('woff2'),
+        url('../fonts/SegoeUI-Semilight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@import url("all.min.css");
+/*end fonts*/
+
+/*animations*/
 @keyframes fade {
     0% {
         opacity: 0;
@@ -63,9 +89,52 @@
         transform: scale(1.0);
     }
 }
+/*end animations*/
+
+/*general settings*/
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    --font-light: "Segoe UI Light";
+    --font-normal: "Segoe UI";
+    --font-semilight: "Segoe UI Semilight";
+}
+/*end general settings*/
+
+/*blur*/
+#banner #learn_more::before, #sidebar::before {
+    background: center center url("../img/bg.jpg") repeat;
+    background-size: 300px;
+    content: "Saiba mais";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(0,0,0,0);
+}
+#banner #learn_more::before {
+    z-index: -1;
+    filter: blur(10px);
+    transform: scale(1.1);
+}
+#sidebar::before {
+    z-index: -1;
+    width: 20rem;
+    height: 100vh;
+    filter: blur(2rem) brightness(40%);
+    transform: scale(1.5);
+}
+/*end blur*/
+
 body {  
     background: #222;
     overflow: hidden;
+    font-family: --var(font-normal);
 }
 #bg {
     position: fixed;
@@ -96,6 +165,30 @@ body {
     left: 0;
     z-index: 2;
 }
+#hamburguer {
+    width: 1.5em;
+    height: 1.5em;
+    z-index: 1000;
+    position: fixed;
+    top: .5em;
+    right: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background .25s ease-in-out;
+    padding: 1.5em;
+    border-radius: 100%
+}
+#hamburguer:hover {
+    background: rgba(0,0,0,.3);
+}
+#hamburguer .line {
+    width: 100%;
+    height: .1em;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,.7);
+}
 header {
     width: 100%;
     height: 100vh;
@@ -113,7 +206,7 @@ header {
     animation: fade 1s forwards, translateY .7s forwards, rotateX .7s forwards;
     opacity: 0;
 }
-#profile_picture {
+#banner #profile_picture {
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -121,51 +214,43 @@ header {
     background: center url("../img/profile_picture.jpg");
     background-size: 150px;
 }
-#details {
+#banner #developer_container {
     margin-left: 3rem;
     width: 80%;
 }
 #banner h1 {
-    font-family: "Segoe UI Light", sans-serif;
+    font-family: --var(fontlight), sans-serif;
     font-size: 3rem;
     font-weight: 300;
-    color: #fff;
-    text-shadow: .3rem .4rem 10px rgba(0,0,0,.7);   
 }
-#developer_office, #aboutdeveloper {
+#banner #developer_office, #banner #developer_description, #banner h1 {
     text-shadow: .3rem .4rem 10px rgba(0,0,0,.7); 
     color: #fff;
 }
-#developer_office {
-    font: normal normal 1.5rem "Segoe UI Semilight", sans-serif;
+#banner #developer_office {
+    font-family: --var(fontsemilight), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
     margin-bottom: 2rem;
 }
-#aboutdeveloper {  
-    font: normal 300 1.5rem "Segoe UI Semilight", sans-serif;
+#banner #developer_description {  
+    font-family: --var(fontsemilight), sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
     margin-bottom: 2rem;
     text-align: justify;  
 }
-#learn_more, #learn_more::before {
-    font: normal bold .8rem "Segoe UI", sans-serif;
+#banner #learn_more, #banner #learn_more::before {
+    font-family: --var(fontnormal), sans-serif;
+    font-size: .8rem;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .2em;
     border: 0;
     outline: 0;
     padding: 1rem 3em 1em 3em;
 }
-#learn_more::before {
-    background: center center url("../img/bg.jpg") repeat;
-    background-size: 300px;
-    filter: blur(10px);
-    z-index: -1;
-    content: "Saiba mais";
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: scale(1.1);
-    color: rgba(0,0,0,0);
-}
-#learn_more {
+#banner #learn_more {
     background: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(0,0,0,.3));   
     cursor: pointer;
     position: relative;
@@ -177,13 +262,68 @@ header {
     border-radius: 50px;
     transition: background .4s ease;
 }
-#learn_more:hover {
+#banner #learn_more:hover {
     background: rgba(255,255,255,.25) linear-gradient(to bottom, rgba(255,255,255,.2), rgba(0,0,0,.3));
-    
 }
-#learn_more:active {
+#banner #learn_more:active {
     background: rgba(0,0,0,.3) linear-gradient(to top, rgba(255,255,255,.2), rgba(0,0,0,.3));
 }
-/** {
-    border: 1px solid red;
-}*/
+#sidebar {
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,.7);
+}
+#sidebar .menu-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+#sidebar .menu-link {
+    height: 1em;
+    width: 100%;
+    font-size: 2rem;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    transition: background .25s ease-in-out;
+    border-radius: 40px;
+}
+#sidebar .menu-link:hover {
+   background: rgba(0,0,0,.6);
+   cursor: pointer; 
+}
+#social-media {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5em;
+}
+#social-media-container {
+    display: flex; 
+    align-items: center;
+    justify-content: space-evenly;
+}
+#social-media-container i {
+    font-size: 2em;
+    color: #fff;
+    padding: .1em;
+    width: 1.5em;
+    height: 1.5em;
+    background: rgba(0,0,0,.1);
+    border-radius: 100%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: background .25s ease-in-out;
+}
+#social-media-container i:hover {
+    background: rgba(0,0,0,.6);
+}
