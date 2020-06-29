@@ -1,10 +1,15 @@
-# :warning: Portifólio de Raul Gomes
+# Portifólio de Raul Gomes :warning: :package: :beetle:
 
 Portifólio de desenvolvedor de Raul Gomes, para propósitos estudantis (for studying purposes).
 
 ## Tarefas
 
 O controle das tarefas deste projeto será realizado no GitHub.
+
+## Changelog
+
+- Menu hambúrguer adicionado
+- Correções de bugs
 
 ## Indicações visuais
 
