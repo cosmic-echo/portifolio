@@ -1,11 +1,5 @@
-var x = 0;
+var hamburguer = document.querySelector("#hamburguer");
 
-function botao() {
-    if (x == 0) {
-        document.querySelector("#developer_name").style.backgroundColor = "purple";
-        x = 1;
-    } else {
-        document.querySelector("#developer_name").style.backgroundColor = "transparent";
-        x = 0;
-    }
-}
+hamburguer.addEventListener("click", function () {
+  document.querySelector("#sidebar").classList.toggle("show-menu");
+});
