@@ -134,7 +134,7 @@
 body {  
     background: #222;
     overflow: hidden;
-    font-family: --var(font-normal);
+    font-family: "Segoe UI", sans-serif;;
 }
 #bg {
     position: fixed;
@@ -219,7 +219,7 @@ header {
     width: 80%;
 }
 #banner h1 {
-    font-family: --var(fontlight), sans-serif;
+    font-family: "Segoe UI Light", sans-serif;
     font-size: 3rem;
     font-weight: 300;
 }
@@ -228,20 +228,20 @@ header {
     color: #fff;
 }
 #banner #developer_office {
-    font-family: --var(fontsemilight), sans-serif;
+    font-family: "Segoe UI Semilight", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
 }
 #banner #developer_description {  
-    font-family: --var(fontsemilight), sans-serif;
+    font-family: "Segoe UI Semilight", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
     text-align: justify;  
 }
 #banner #learn_more, #banner #learn_more::before {
-    font-family: --var(fontnormal), sans-serif;
+    font-family: "Segoe UI" sans-serif;
     font-size: .8rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -281,8 +281,7 @@ header {
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,.7);
     transition: all .3s ease-in-out;
-    opacity: 0;
-    
+    opacity: 0;  
 }
 #sidebar.show-menu {
     right: 0;
