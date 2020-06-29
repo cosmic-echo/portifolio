@@ -1,4 +1,4 @@
-# Portifólio de Raul Gomes :warning: :package: :beetle:
+# Portifólio de Raul Gomes :warning: :package: :beetle: :up:
 
 Portifólio de desenvolvedor de Raul Gomes, para propósitos estudantis (for studying purposes).
 
