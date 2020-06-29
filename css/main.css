@@ -240,6 +240,13 @@ header {
     text-align: center;
     margin-bottom: 1.5rem;
     width: 100%;
+    transition: all .1s ease-in-out;
+}
+#sidebar .menu-item:hover {
+    transform: scale(1.06);
+}
+#sidebar .menu-item:active {
+    transform: scale(0.97);
 }
 #sidebar .menu-link {
     height: 1em;
@@ -248,12 +255,11 @@ header {
     font-weight: 300;
     color: #fff;
     padding: 10px 20px 10px 20px;
-    transition: background .25s ease-in-out;
     border-radius: 40px;
 }
 #sidebar .menu-link:hover {
    background: rgba(0,0,0,.6);
-   cursor: pointer; 
+   cursor: pointer;
 }
 #social-media {
     width: 100%;
@@ -266,21 +272,43 @@ header {
     display: flex; 
     align-items: center;
     justify-content: space-evenly;
+    margin: 0 1em;
 }
-#social-media-container i {
+#social-media-container a {
     font-size: 2em;
     color: #fff;
     padding: .1em;
     width: 1.5em;
     height: 1.5em;
+    max-width: 3em;
+    max-height: 3em;
     background: rgba(0,0,0,.1);
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
     border-radius: 100%;  
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    transition: background .25s ease-in-out;
+    transition: all .1s ease-in-out;
+    position: relative;
 }
-#social-media-container i:hover {
+#social-media-container a:hover {
     background: rgba(0,0,0,.6);
+    transform: scale(1.06);
+}
+#social-media-container a:active, #sidebar .menu-link:active {
+    transform: scale(0.97);
+}
+#social-media-container a span {
+    font-size: .5em;
+    padding: .4em .6em;
+    position: absolute;
+    top: -40px;
+    background: rgba(0,0,0,.8);
+    border-radius: 1rem;
+    visibility: hidden;
+    min-width: 3.5em;
+    text-align: center;
+}
+#social-media-container a:hover span {
+    visibility: visible;
 }
