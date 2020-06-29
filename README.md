@@ -1,4 +1,4 @@
-# Portifólio de Raul Gomes :warning: :package: :beetle: :up:
+# Portifólio de Raul Gomes
 
 Portifólio de desenvolvedor de Raul Gomes, para propósitos estudantis (for studying purposes).
 
@@ -6,16 +6,9 @@ Portifólio de desenvolvedor de Raul Gomes, para propósitos estudantis (for stu
 
 O controle das tarefas deste projeto será realizado no GitHub.
 
-## Changelog
+## Ícones
 
-- Menu hambúrguer adicionado
-- Correções de bugs
-
-## Indicações visuais
-
-- :crossed_flags: release<br/>
-- :warning: beta<br/>
 - :package: nova funcionalidade<br/>
 - :up: atualização<br/>
 - :beetle: correção de bug<br/>
-
+- :crossed_flags: release<br/>

@@ -1,47 +1,5 @@
 /*fonts*/
-@font-face {
-    font-family: "Segoe UI";
-    src: url('../fonts/SegoeUI-Bold.woff2') format('woff2'),
-        url('../fonts/SegoeUI-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Segoe UI";
-    src: url('../fonts/SegoeUI-Italic.woff2') format('woff2'),
-        url('../fonts/SegoeUI-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Segoe UI";
-    src: url("../fonts/SegoeUI.woff2") format('woff2'),
-        url('../fonts/SegoeUI.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Segoe UI Light";
-    src: url('../fonts/SegoeUI-Light.woff2') format('woff2'),
-        url('../fonts/SegoeUI-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: "Segoe UI Semilight";
-    src: url('../fonts/SegoeUI-Semilight.woff2') format('woff2'),
-        url('../fonts/SegoeUI-Semilight.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-@import url("all.min.css");
+@import url("fonts.css");
 /*end fonts*/
 
 /*animations*/
@@ -53,15 +11,6 @@
     }
     100% {
         opacity: 1.0;
-        transform: none;
-    }
-}
-@keyframes side {
-    0% {
-        transform: translateX(3%);
-        animation-timing-function: ease-in-out;
-    }
-    100% {
         transform: none;
     }
 }
@@ -100,11 +49,6 @@
     list-style: none;
     text-decoration: none;
 }
-:root {
-    --font-light: "Segoe UI Light";
-    --font-normal: "Segoe UI";
-    --font-semilight: "Segoe UI Semilight";
-}
 /*end general settings*/
 
 /*blur*/
@@ -134,7 +78,8 @@
 body {  
     background: #222;
     overflow: hidden;
-    font-family: "Segoe UI", sans-serif;;
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
 }
 #bg {
     position: fixed;
@@ -219,36 +164,37 @@ header {
     width: 80%;
 }
 #banner h1 {
-    font-family: "Segoe UI Light", sans-serif;
-    font-size: 3rem;
-    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
 }
 #banner #developer_office, #banner #developer_description, #banner h1 {
     text-shadow: .3rem .4rem 10px rgba(0,0,0,.7); 
     color: #fff;
 }
 #banner #developer_office {
-    font-family: "Segoe UI Semilight", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
 }
 #banner #developer_description {  
-    font-family: "Segoe UI Semilight", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
+    line-height: 2.5rem;
     font-weight: 300;
     margin-bottom: 2rem;
     text-align: justify;  
 }
 #banner #learn_more, #banner #learn_more::before {
-    font-family: "Segoe UI" sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: .9rem;
-    font-weight: bold;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: .2em;
+    letter-spacing: .28em;
     border: 0;
     outline: 0;
-    padding: 1rem 3em 1em 3em;
+    padding: 1rem 2.5em 1em 2.5em;
 }
 #banner #learn_more {
     background: rgba(0,0,0,.3) linear-gradient(to bottom, rgba(255,255,255,.3), rgba(0,0,0,.3));   
