@@ -45,7 +45,7 @@
 /*end fonts*/
 
 /*animations*/
-@keyframes fade {
+@keyframes fadeTranslateX {
     0% {
         opacity: 0;
         transform: translateX(3%);
@@ -203,7 +203,7 @@ header {
     max-width: 70%;
     display: flex;
     flex-direction: row;
-    animation: fade 1s forwards, translateY .7s forwards, rotateX .7s forwards;
+    animation: fadeTranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
     opacity: 0;
 }
 #banner #profile_picture {
@@ -273,16 +273,20 @@ header {
     height: 100vh;
     position: fixed;
     top: 0;
-    right: -20rem;
+    right: -30rem;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,.7);
+    transition: all .3s ease-in-out;
+    opacity: 0;
+    
 }
 #sidebar.show-menu {
     right: 0;
+    opacity: 1;  
 }
 #sidebar .menu-item {
     text-align: center;
