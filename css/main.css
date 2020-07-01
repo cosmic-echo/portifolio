@@ -327,7 +327,6 @@ header {
 .sessao-conhecimentos {
     color: #333;
     background: #ececec;
-    padding: 30px;
 }
 .conhecimentos {
     display: grid;
@@ -370,6 +369,7 @@ header {
     font-size: 3rem;
     color: #333;
     border-bottom: 1px solid rgba(0,0,0,.4);
+    margin-top: 2rem;
     margin-bottom: 4rem;
 }
 .conhecimento-header {
