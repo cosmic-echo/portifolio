@@ -78,39 +78,44 @@
 /*end blur*/
 
 body {  
-    background: #222;
-    overflow: hidden;
     font-family: "Roboto", sans-serif;
     font-weight: normal;
 }
-#bg {
-    position: fixed;
+#bg-container {
+    position: relative;
     top:0;
     left:0;
-    z-index: 0;
+    overflow: hidden;
     width: 100%;
-    height: 100%;
-    animation: zoom 7s ease-in-out;
-    transform: scale(1.0);
-    background: center url("../img/bg.jpg");
+    height: 100vh;
 }
-#bg-dark {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0,0,0,.5);
-}
-#dots {
-    background: center url("../img/dot.png") repeat;
-    width: 100%;
-    height: 100%;
+#background {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    animation: zoom 10s forwards;
+    background: center url("../img/bg.jpg");
+    z-index: 1;
+}
+#background-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
     z-index: 2;
+}
+#background-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center url("../img/dot.png") repeat;
+    z-index: 3;
 }
 #hamburguer {
     width: 1.5em;
@@ -123,13 +128,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    transition: background .25s ease-in-out;
+    transition: all .1s ease-in-out;
     padding: 1.5em;
     border-radius: 100%
 }
 #hamburguer:hover {
     background: rgba(0,0,0,.3);
+    transform: scale(1.06);
 }
+#hamburguer:active {
+    transform: scale(0.97);
+}
+    
 #hamburguer .line {
     width: 100%;
     height: .1em;
@@ -139,7 +149,9 @@ body {
 header {
     width: 100%;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 3;
     display: flex;
     align-items: center;
@@ -208,7 +220,7 @@ header {
     outline: 0;
     color: #fff;
     border-radius: 50px;
-    transition: background .4s ease;
+    transition: all .4s ease-in-out;
     text-shadow: 1px 1px 4px rgba(0,0,0,.7);
 }
 #banner #learn_more:hover {
@@ -311,4 +323,10 @@ header {
 }
 #social-media-container a:hover span {
     visibility: visible;
+}
+
+.conhecimentos {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows(6, 4rem);
 }
