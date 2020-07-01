@@ -9,8 +9,43 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <style type="text/css">
+        ::-webkit-scrollbar {
+          width: 14px;
+          height: 14px;
+        }
+        ::-webkit-scrollbar-button {
+          width: 3px;
+          height: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #b5b5b5;
+          border: 0px none #ffffff;
+          border-radius: 50px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #dedede;
+        }
+        ::-webkit-scrollbar-thumb:active {
+          background: #616161;
+        }
+        ::-webkit-scrollbar-track {
+          background: #666666;
+          border: 0px none #ffffff;
+          border-radius: 50px;
+        }
+        ::-webkit-scrollbar-track:hover {
+          background: #666666;
+        }
+        ::-webkit-scrollbar-track:active {
+          background: #333333;
+        }
+        ::-webkit-scrollbar-corner {
+          background: transparent;
+        }
+        </style>
     </head>
-<body>
+<body class="fontnormal">
     <div id="container">
         <div id="bg-container">
             <div id="background"></div>
@@ -26,12 +61,12 @@
             <div id="banner">
                 <div id="profile_picture"></div>
                 <div id="developer_container">
-                    <h1 id="developer_name">Raul Sousa</h1>
-                    <p id="developer_office">Web developer e designer front-end</p>
-                    <p id="developer_description">
+                    <h1 id="developer_name" class="fontthin">Raul Sousa</h1>
+                    <p id="developer_office" class="fontlight">Web developer e designer front-end</p>
+                    <p id="developer_description" class="fontlight">
                         Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
                     </p>
-                    <button id="learn_more" onclick="location.href='#conhecimentos';">Saiba mais</button>
+                    <button id="learn_more" class="fontblack" onclick="location.href='#conhecimentos';">Saiba mais</button>
                 </div>
             </div>
             </div>
@@ -55,73 +90,72 @@
                 </div>
             </div>
         </aside>
-        <section class="sessao-conhecimentos">
-            <div class="sessao-header">
-                <a name="conhecimentos"><h1>Conhecimentos</h1></a>
+        <section id="knowledge-section">
+            <div id="knowledge-header">
+                <a name="conhecimentos"><h1 class="fontlight">Conhecimentos</h1></a>
             </div>
-            <div class="conhecimentos">
-                <div class="conhecimento">
-                    <div class="conhecimento-header">
+            <div id="knowledge-container" class="fontnormal">
+                <div class="knowledge-item">
+                    <div class="knowledge-item-header">
                         <i class="fab fa-html5"></i>
-                        <h3>HTML</h3>
+                        <h3 class="fontmedium">HTML</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="knowledge-item-text">
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatem saepe, sit omnis molestiae id maiores veniam temporibus nostrum ut magni doloremque veritatis tempore esse itaque? Est iusto ea consequuntur!</p>
                     </div>
                 </div>
-                <div class="conhecimento">
-                    <div class="conhecimento-header">
+                <div class="knowledge-item">
+                    <div class="knowledge-item-header">
                         <i class="fab fa-css3-alt"></i>
-                        <h3>CSS</h3>
+                        <h3 class="fontmedium">CSS</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="knowledge-item-text">
                         <p>Hic consectetur, nostrum nesciunt accusantium cum quos, ipsa numquam veniam aperiam iusto, dolor laborum fugit placeat sunt voluptatem temporibus molestiae harum quidem. Dolorem ad atque doloremque ipsum hic recusandae similique.</p>
                     </div>
                 </div>
-                <div class="conhecimento">
-                    <div class="conhecimento-header">
+                <div class="knowledge-item">
+                    <div class="knowledge-item-header">
                         <i class="fas fa-pencil-alt"></i>
-                        <h3>Desenho</h3>
+                        <h3 class="fontmedium">Desenho</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="knowledge-item-text">
                         <p>Placeat culpa deleniti alias! Provident dolor doloribus adipisci voluptates quod aliquid fugiat maxime. Eaque vitae ullam, ipsam autem pariatur porro eum quae maiores ea perferendis saepe voluptatibus et inventore ad.</p>
                     </div>
                 </div>
-                <div class="conhecimento">
-                    <div class="conhecimento-header">
+                <div class="knowledge-item">
+                    <div class="knowledge-item-header">
                         <i class="fab fa-js"></i>
-                        <h3>Javascript</h3>
+                        <h3 class="fontmedium">Javascript</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="knowledge-item-text">
                         <p>Incidunt rerum pariatur exercitationem fuga sed dignissimos vitae placeat iusto obcaecati animi corporis harum quasi facilis odit eos nisi ducimus, minus non earum totam facere at perferendis in. Voluptatibus, labore?</p>
                     </div>
                 </div>
-                <div class="conhecimento">
-                    <div class="conhecimento-header">
+                <div class="knowledge-item">
+                    <div class="knowledge-item-header">
                         <i class="fab fa-bootstrap"></i>
-                        <h3>Bootstrap</h3>
+                        <h3 class="fontmedium">Bootstrap</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="knowledge-item-text">
                         <p>Doloribus eaque id ducimus delectus atque nostrum tenetur aperiam unde, beatae a aliquid aut voluptate, ad ut rem tempora in velit minus dolorem rerum sint autem quidem facilis? Quas, voluptatibus?</p>
                     </div>
                 </div>
-                <div class="conhecimento">
-                    <div class="conhecimento-header">
+                <div class="knowledge-item">
+                    <div class="knowledge-item-header">
                         <i class="fab fa-github"></i>
-                        <h3>Github</h3>
+                        <h3 class="fontmedium">Github</h3>
                     </div>
-                    <div class="conhecimento-text">
+                    <div class="knowledge-item-text">
                         <p>Earum veniam voluptatum dolore quidem maiores ullam facere doloremque sunt aspernatur, vero reprehenderit asperiores, alias adipisci illo repudiandae veritatis at provident ea! Molestiae nobis unde distinctio qui, expedita illo sed?</p>
                     </div>
                 </div>
-                <div class="conhecimentos-img-wrapper">
+                <!--<div class="knowledge-item">
                     <img src="img/knowledge-img.png" alt="Conhecimentos"></div>
-            </div>
+                </div>-->
         </section>
     </div>
-    <section id="credits">
-        <span>Créditos</span>
-        <p>Imagens: <a href="https://www.freepik.com/free-photos-vectors/technology">freepik</a></p>
+    <section id="siteinfo">
+        <p>Este site está sob a licença <a href="https://www.gnu.org/licenses/quick-guide-gplv3.pt-br.html">GPL v3</a></p>
     </section>
 </body>
 <script src="js/main.js" async></script>

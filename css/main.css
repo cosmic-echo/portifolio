@@ -77,10 +77,24 @@
 }
 /*end blur*/
 
-body {  
-    font-family: "Roboto", sans-serif;
+/*font settings*/
+.fontlight {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.fontthin {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+.fontblack {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+.fontnormal {
+    font-family: 'Roboto', sans-serif;
     font-weight: normal;
 }
+/*end font settings*/
 #bg-container {
     position: relative;
     top:0;
@@ -130,10 +144,11 @@ body {
     cursor: pointer;
     transition: all .1s ease-in-out;
     padding: 1.5em;
-    border-radius: 100%
+    border-radius: 100%;
+    background: rgba(0,0,0,.1);
 }
 #hamburguer:hover {
-    background: rgba(0,0,0,.3);
+    background: rgba(0,0,0,.6);
     transform: scale(1.06);
 }
 #hamburguer:active {
@@ -179,33 +194,25 @@ header {
     margin-left: 3rem;
     width: 80%;
 }
-#banner h1 {
-    font-family: "Roboto", sans-serif;
+#banner #developer_name {
     font-size: 4rem;
-    font-weight: 100;
 }
 #banner #developer_office, #banner #developer_description, #banner h1 {
     text-shadow: .3rem .4rem 10px rgba(0,0,0,.7); 
     color: #fff;
 }
 #banner #developer_office {
-    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
     margin-bottom: 2rem;
 }
 #banner #developer_description {  
-    font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
     line-height: 2.5rem;
-    font-weight: 300;
     margin-bottom: 2rem;
     text-align: justify;  
 }
 #banner #learn_more, #banner #learn_more::before {
-    font-family: "Roboto", sans-serif;
     font-size: .9rem;
-    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: .28em;
     border: 0;
@@ -326,93 +333,84 @@ header {
 #social-media-container a:hover span {
     visibility: visible;
 }
-.sessao-conhecimentos {
-    color: #333;
+/*KNOWLEDGE SECTION*/
+#knowledge-section {
+    color: #29323a;
     background: #ececec;
+    padding: 0 0 2rem 0;
 }
-.conhecimentos {
+#knowledge-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#knowledge-header h1 {
+    font-size: 3rem;
+    color: #29323a;
+    margin: 2rem 0 4rem 0;
+}
+#knowledge-container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 6rem);
     row-gap: 2rem;
 }
-.conhecimento:nth-child(1) {
-    grid-column: 4 / 7;
+.knowledge-item:nth-child(1) {
+    grid-column: 3 / 8;
     grid-row: 1 / 3;
 }
-.conhecimento:nth-child(2) {
-    grid-column: 3 / 6;
+.knowledge-item:nth-child(2) {
+    grid-column: 3 / 8;
     grid-row: 3 / 5;
 }
-.conhecimento:nth-child(3) {
-    grid-column: 4 / 7;
+.knowledge-item:nth-child(3) {
+    grid-column: 3 / 8;
     grid-row: 5 / -1;
 }
-.conhecimento:nth-child(4) {
-    grid-column: 11 / 14;
+.knowledge-item:nth-child(4) {
+    grid-column: 10 / 15;
     grid-row: 1 / 3;
 }
-.conhecimento:nth-child(5) {
-    grid-column: 12 / 15;
+.knowledge-item:nth-child(5) {
+    grid-column: 10 / 15;
     grid-row: 3 / 5;
 }
-.conhecimento:nth-child(6) {
-    grid-column: 11 / 14;
+.knowledge-item:nth-child(6) {
+    grid-column: 10 / 15;
     grid-row: 5 / -1;
 }
-.sessao-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.sessao-header h1 {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-size: 3rem;
-    color: #333;
-    border-bottom: 1px solid rgba(0,0,0,.4);
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
-.conhecimento-header {
-    display: flex;
-    align-items: center;
-    padding: 0 0 1rem 0;
-}
-.conhecimento-header i {
-    font-size: 2.5rem;
-}
-.conhecimento-header h3 {
-    font-family: Roboto, sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    padding: 0 0 0 .5rem;
-}
-.conhecimento-text {
-    text-align: justify;
-}
-.conhecimentos-img-wrapper {
+.knowledge-item:nth-child(7) {
     grid-column: 7 / 11;
     grid-row: 2 / 6;
     width: 100%;
 }
-.conhecimentos-img-wrapper img {
+.knowledge-item:nth-child(7) img {
     object-fit: cover;
     width: 100%;
 }
-#credits {
-    padding: 1rem;
-    display: grid;
-    grid-template-rows: repeat(2, 1.5rem);
-    background: #333;
-    color: #fefefe;
+.knowledge-item-header {
+    display: flex;
 }
-#credits:nth-child(1) {
-    grid-row: 1;
+.knowledge-item-header i {
+    font-size: 2.5rem;
+    padding: 0 0 1rem 0;
 }
-#credits:nth-child(21) {
-    grid-row: 2;
+.knowledge-item-header h3 {
+    font-size: 2rem;
+    padding: 0 0 0 .5rem;
 }
-#credits a {
-    color: aqua;
+.knowledge-item-text {
+    text-align: justify;
+    line-height: 1.7rem;
+}
+#siteinfo {
+    padding: 1rem 2rem;
+    background: #222;
+    color: rgba(255,255,255,.8);
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+#siteinfo a {
+    color: rgb(102, 181, 255);
 }
