@@ -139,7 +139,9 @@ body {
 #hamburguer:active {
     transform: scale(0.97);
 }
-    
+#hamburguer:active {
+    transform: scale(0.97);
+} 
 #hamburguer .line {
     width: 100%;
     height: .1em;
