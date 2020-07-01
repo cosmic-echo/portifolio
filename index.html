@@ -11,15 +11,17 @@
     <link rel="manifest" href="site.webmanifest">
     </head>
 <body>
-    <div id="bg"></div>
-    <div id="bg-dark"></div>
-    <div id="dots"></div>
-    <div id="hamburguer">
-        <div class="line" id="line1"></div>
-        <div class="line" id="line2"></div>
-        <div class="line" id="line3"></div>
-    </div>
     <div id="container">
+        <div id="bg-container">
+            <div id="background"></div>
+            <div id="background-dark"></div>
+            <div id="background-dots"></div>
+        </div>  
+        <div id="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+        </div>
         <header>
             <div id="banner">
                 <div id="profile_picture"></div>
@@ -29,7 +31,7 @@
                     <p id="developer_description">
                         Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
                     </p>
-                    <button id="learn_more">Saiba mais</button>
+                    <button id="learn_more" onclick="location.href='#conhecimentos';">Saiba mais</button>
                 </div>
             </div>
             </div>
@@ -53,7 +55,74 @@
                 </div>
             </div>
         </aside>
+        <section class="sessao-conhecimentos">
+            <div class="sessao-header">
+                <a name="conhecimentos"><h1>Conhecimentos</h1></a>
+            </div>
+            <div class="conhecimentos">
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam voluptatem saepe, sit omnis molestiae id maiores veniam temporibus nostrum ut magni doloremque veritatis tempore esse itaque? Est iusto ea consequuntur!</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Hic consectetur, nostrum nesciunt accusantium cum quos, ipsa numquam veniam aperiam iusto, dolor laborum fugit placeat sunt voluptatem temporibus molestiae harum quidem. Dolorem ad atque doloremque ipsum hic recusandae similique.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fas fa-pencil-alt"></i>
+                        <h3>Desenho</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Placeat culpa deleniti alias! Provident dolor doloribus adipisci voluptates quod aliquid fugiat maxime. Eaque vitae ullam, ipsam autem pariatur porro eum quae maiores ea perferendis saepe voluptatibus et inventore ad.</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-js"></i>
+                        <h3>Javascript</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Incidunt rerum pariatur exercitationem fuga sed dignissimos vitae placeat iusto obcaecati animi corporis harum quasi facilis odit eos nisi ducimus, minus non earum totam facere at perferendis in. Voluptatibus, labore?</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-bootstrap"></i>
+                        <h3>Bootstrap</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Doloribus eaque id ducimus delectus atque nostrum tenetur aperiam unde, beatae a aliquid aut voluptate, ad ut rem tempora in velit minus dolorem rerum sint autem quidem facilis? Quas, voluptatibus?</p>
+                    </div>
+                </div>
+                <div class="conhecimento">
+                    <div class="conhecimento-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Github</h3>
+                    </div>
+                    <div class="conhecimento-text">
+                        <p>Earum veniam voluptatum dolore quidem maiores ullam facere doloremque sunt aspernatur, vero reprehenderit asperiores, alias adipisci illo repudiandae veritatis at provident ea! Molestiae nobis unde distinctio qui, expedita illo sed?</p>
+                    </div>
+                </div>
+                <div class="conhecimentos-img-wrapper">
+                    <img src="img/knowledge-img.png" alt="Conhecimentos"></div>
+            </div>
+        </section>
     </div>
+    <section id="credits">
+        <span>Créditos</span>
+        <p>Imagens: <a href="https://www.freepik.com/free-photos-vectors/technology">freepik</a></p>
+    </section>
 </body>
 <script src="js/main.js" async></script>
 </html>
