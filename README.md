@@ -6,7 +6,7 @@ Portifólio de desenvolvedor de Raul Gomes, para propósitos estudantis (for stu
 
 O controle das tarefas deste projeto será realizado no GitHub.
 
-## Ícones
+## Ícones indicativos
 
 - :package: nova funcionalidade<br/>
 - :up: atualização<br/>
