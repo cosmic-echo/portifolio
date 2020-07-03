@@ -355,6 +355,9 @@ header {
 #social-media-container a:hover span {
     visibility: visible;
 }
+header {
+    box-shadow: 0 0 20px rgba(0,0,0,.8);
+}
 /*KNOWLEDGE SECTION*/
 #knowledge-section {
     color: #29323a;
