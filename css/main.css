@@ -388,11 +388,14 @@ header {
     margin: 0 10rem;
 }
 .knowledge-item {
-    box-shadow: inset 0 0 8px rgba(255,255,255,.5), 0 0 8px rgba(0,0,0,.5);
-    border: 1px solid rgba(0,0,0,.03);
     padding: 1.5rem;
-    border-radius: 15px;
+    border-radius: 1rem;
     background: #fff;
+    box-shadow: inset 0 0 8px rgba(255,255,255,.3);
+    transition: all .3s ease-in-out;
+}
+.knowledge-item:hover {
+    opacity: .8;
 }
 .knowledge-item-header {
     display: grid;
