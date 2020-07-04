@@ -44,19 +44,19 @@
     text-decoration: none;
 }
 .fontlight {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 300;
 }
 .fontthin {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 100;
 }
 .fontblack {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 900;
 }
 .fontnormal {
-    font-family: 'Roboto', sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: normal;
 }
 /*start*/
@@ -355,30 +355,38 @@ header {
 #social-media-container a:hover span {
     visibility: visible;
 }
-header {
-    box-shadow: 0 0 20px rgba(0,0,0,.8);
-}
-/*KNOWLEDGE SECTION*/
-#knowledge-section {
-    color: #29323a;
+.section {
+    color: rgb(36, 52, 68);
     background: #ececec;
-    padding: 0 0 2rem 0;
+    padding: 0 0 3.5rem 0;
 }
-#knowledge-header {
+.section-header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#knowledge-header h1 {
-    font-size: 3rem;
-    color: #29323a;
-    margin: 2rem 0 4rem 0;
+.section-header h1 {
+    font-size: 4rem;
+    color: rgb(36, 52, 68);
+    margin: 3.5rem 0;
 }
 #knowledge-container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(6, 6rem);
-    row-gap: 2rem;
+    grid-template-rows: repeat(6, 7rem);
+    row-gap: 1rem;
+}
+.knowledge-item-header {
+    display: flex;
+    margin: 0 0 .5rem 0;
+}
+.knowledge-item-header h3 {
+    font-size: 2rem;
+}
+.knowledge-item-header i {
+    font-size: 2rem;
+    padding: 0 .5rem 0 0;
+    text-shadow: 0 0 1px rgb(36, 52, 68);
 }
 .knowledge-item:nth-child(1) {
     grid-column: 3 / 8;
@@ -413,28 +421,18 @@ header {
     object-fit: cover;
     width: 100%;
 }
-.knowledge-item-header {
-    display: flex;
-}
-.knowledge-item-header i {
-    font-size: 2.5rem;
-    padding: 0 0 1rem 0;
-}
-.knowledge-item-header h3 {
-    font-size: 2rem;
-    padding: 0 0 0 .5rem;
-}
 .knowledge-item-text {
     text-align: justify;
     line-height: 1.7rem;
 }
 #siteinfo {
     padding: 1rem 2rem;
-    background: #222;
-    color: rgba(255,255,255,.8);
+    color: rgb(36, 52, 68);
     line-height: 1.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    opacity: .8;
 }
 #siteinfo a {
     color: rgb(102, 181, 255);
