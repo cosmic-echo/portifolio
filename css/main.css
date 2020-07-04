@@ -62,11 +62,15 @@
 /*start*/
 #banner #learn_more::before, #sidebar::before {
     background: center url("../img/bg.jpg") repeat;
-    content: "Saiba mais";
     position: absolute;
     top: 0;
     left: 0;
-    color: rgba(0,0,0,0);
+}
+#sidebar::before {
+    content: "";
+}
+#banner #learn_more::before {
+    content: "Saiba mais";
 }
 #banner #learn_more::before {
     z-index: -1;
@@ -131,7 +135,7 @@
     transition: all .1s ease-in-out;
     padding: 1.5em;
     border-radius: 100%;
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.3);
 }
 #hamburguer:hover {
     background: rgba(0,0,0,.6);
@@ -142,7 +146,7 @@
 }
 #hamburguer:active {
     transform: scale(0.97);
-} 
+}
 #hamburguer .line {
     width: 100%;
     height: .1em;
@@ -355,8 +359,14 @@ header {
 #social-media-container a:hover span {
     visibility: visible;
 }
+#knowledge::before {
+    background: center url("../img/bg.jpg") repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+}
 .section {
-    background: #ececec;
     padding: 0 0 3.5rem 0;
 }
 .section-header {
@@ -378,8 +388,8 @@ header {
     margin: 0 10rem;
 }
 .knowledge-item {
-    box-shadow: inset 0 0 5px rgba(255,255,255,.5), 0 0 8px rgba(0,0,0,.6);
-    border: 1px solid rgba(0,0,0,.05);
+    box-shadow: inset 0 0 8px rgba(255,255,255,.5), 0 0 8px rgba(0,0,0,.5);
+    border: 1px solid rgba(0,0,0,.03);
     padding: 1.5rem;
     border-radius: 15px;
     background: #fff;
@@ -389,6 +399,7 @@ header {
     grid-template-columns: repeat(1, 1fr);
     margin: 0 0 .5rem 0;
     color: #fff;
+    text-shadow: 0 0 1px #fff;
 }
 .knowledge-item-header h3 {
     font-size: 2rem;
