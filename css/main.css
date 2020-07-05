@@ -60,7 +60,7 @@
     font-weight: normal;
 }
 /*start*/
-#banner #learn_more::before, #sidebar::before {
+#sidebar::before {
     background: center url("../img/bg.jpg") repeat;
     position: absolute;
     top: 0;
@@ -68,9 +68,6 @@
 }
 #sidebar::before {
     content: "";
-}
-#banner #learn_more::before {
-    content: "Saiba mais";
 }
 #banner #learn_more::before {
     z-index: -1;
@@ -250,13 +247,14 @@ header {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), inset 0 0 15px  rgba(255,255,255,.4), 0 0 0 1px rgba(0,0,0,.3), 1px 2px 5px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.7), inset 0 0 15px rgba(255,255,255,.3), 1px 2px 5px rgba(0,0,0,.5);
     border: 0;
     outline: 0;
     color: #fff;
     border-radius: 50px;
     transition: all .4s ease-in-out;
-    text-shadow: 1px 1px 4px rgba(0,0,0,.7);
+    text-shadow: 1px 1px 4px rgba(0,0,0,.5);
+    border: 0;
 }
 #banner #learn_more:hover {
     background: rgba(255,255,255,.25) linear-gradient(to bottom, rgba(255,255,255,.2), rgba(0,0,0,.3));
@@ -389,10 +387,9 @@ header {
 }
 .knowledge-item {
     padding: 1.5rem;
-    border-radius: 1rem;
-    background: #fff;
-    box-shadow: inset 0 0 8px rgba(255,255,255,.3);
     transition: all .3s ease-in-out;
+    color: rgb(36, 52, 68);
+    border-radius: 1rem;
 }
 .knowledge-item:hover {
     opacity: .8;
