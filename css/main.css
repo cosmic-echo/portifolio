@@ -110,6 +110,7 @@
     height: 100%;
     background: center url("../img/dot.png") repeat;
     z-index: 3;
+    opacity: 0.6;
 }
 #hamburguer {
     width: 1.5em;
