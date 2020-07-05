@@ -61,27 +61,17 @@
 }
 /*start*/
 #sidebar::before {
-    background: center url("../img/bg.jpg") repeat;
+    background: rgb(33,57,81);
+    background: linear-gradient(339deg, rgba(33,57,81,1) 0%, rgba(203,155,135,1) 34%, rgba(110,152,166,1) 68%);
     position: absolute;
     top: 0;
-    left: 0;
-}
-#sidebar::before {
-    content: "";
-}
-#banner #learn_more::before {
-    z-index: -1;
-    filter: blur(10px);
-    transform: scale(1.1);
-    background-size: 400px;
-}
-#sidebar::before {
+    right: 0;
     z-index: -1;
     width: 20rem;
     height: 100vh;
-    filter: blur(1.6rem) brightness(40%);
-    transform: scale(1.6);
-    background-size: 20rem;
+    filter: blur(2.6rem) brightness(70%);
+    transform: scale(2.6);
+    content: "";
 }
 #bg-container {
     position: relative;
@@ -97,18 +87,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    animation: zoom 10s forwards;
-    background: center url("../img/bg.jpg");
+    background: rgb(33,57,81);
+    background: linear-gradient(339deg, rgba(33,57,81,1) 0%, rgba(203,155,135,1) 34%, rgba(110,152,166,1) 68%);
+    filter: blur(2.6rem);
+    transform: scale(2.6);
     z-index: 1;
-}
-#background-dark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.5);
-    z-index: 2;
 }
 #background-dots {
     position: absolute;
@@ -221,7 +204,7 @@ header {
     font-size: 4rem;
 }
 #banner #developer_office, #banner #developer_description, #banner h1 {
-    text-shadow: .3rem .4rem 10px rgba(0,0,0,.7); 
+    text-shadow: .2rem .3rem 10px rgba(0,0,0,.7); 
     color: #fff;
 }
 #banner #developer_office {
@@ -243,7 +226,7 @@ header {
     padding: 1rem 2.5em 1em 2.5em;
 }
 #banner #learn_more {
-    background: rgba(0,0,0,.3) linear-gradient(to bottom, rgba(255,255,255,.3), rgba(0,0,0,.3));   
+    background: rgba(255,255,255,.0) linear-gradient(to bottom, rgba(255,255,255,.3), rgba(0,0,0,.3));   
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -260,7 +243,7 @@ header {
     background: rgba(255,255,255,.25) linear-gradient(to bottom, rgba(255,255,255,.2), rgba(0,0,0,.3));
 }
 #banner #learn_more:active {
-    background: rgba(0,0,0,.3) linear-gradient(to top, rgba(255,255,255,.2), rgba(0,0,0,.3));
+    background: rgba(0,0,0,.1) linear-gradient(to top, rgba(255,255,255,.2), rgba(0,0,0,.3));
 }
 #sidebar {
     width: 20rem;
@@ -273,7 +256,8 @@ header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: 0 0 30px rgba(0,0,0,.8);
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 0 30px rgba(0,0,0,.7);
     transition: all .3s ease-in-out;
     opacity: 0;  
 }
@@ -328,7 +312,7 @@ header {
     max-width: 3em;
     max-height: 3em;
     background: rgba(0,0,0,.1);
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
+    border: 1px solid rgba(255,255,255,.3);
     border-radius: 100%;  
     display: flex;
     align-items: center;
@@ -356,13 +340,6 @@ header {
 }
 #social-media-container a:hover span {
     visibility: visible;
-}
-#knowledge::before {
-    background: center url("../img/bg.jpg") repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
 }
 .section {
     padding: 0 0 3.5rem 0;
