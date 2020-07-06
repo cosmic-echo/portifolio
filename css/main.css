@@ -426,13 +426,6 @@ header {
     position: relative;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 0 0 1px rgba(0,0,0,.5), 1px 1px 7px rgba(0,0,0,.7);
     padding: .7rem;
-    transition: all .25s ease-in-out;
-}
-.project-item:hover {
-    filter: brightness(110%);
-}
-.project-item:active {
-    filter: brightness(95%);
 }
 .project-item .project-go {
     width: 20rem;
@@ -442,6 +435,13 @@ header {
     top: 0;
     left: 0;
     display: block;
+    transition: all .25s ease-in-out;
+}
+.project-item .project-go:hover {
+    background: rgba(255,255,255,.2);
+}
+.project-item .project-go:active {
+    background: rgba(0,0,0,.2);
 }
 .project-item:nth-child(1) {
     background: url("../img/placeholder1.jpg");
@@ -470,14 +470,6 @@ header {
     color: #fff;
     text-shadow: 1px 1px 2px rgba(0,0,0,.5);
     padding: .7rem 1rem;
-    transition: all .25s ease-in-out;
-}
-.project-go:hover ~ .project-item-header h3 {
-    background: rgba(0,0,0,.8);
-    transform: scale(1.06);
-}
-.project-go:active ~ .project-item-header h3 {
-    transform: scale(1.03);
 }
 #siteinfo {
     padding: 5rem 2rem 1rem 2rem;
