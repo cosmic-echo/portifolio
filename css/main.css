@@ -427,13 +427,23 @@ header {
 .project-item {
     width: 20rem;
     height: 25rem;
-    background: purple;
     display: flex;
-    padding: 1.5rem;
     border-radius: .5rem;
+}
+.project-item {
+    width: 20rem;
+    height: 25rem;
+    background: url("../img/placeholder1.jpg");
+    background-size: 20rem auto;
+    display: flex;
+    border-radius: .5rem;
+    overflow: hidden;
 }
 .project-item-header {
     align-self: flex-end;
+    background: rgba(0,0,0,.5);
+    padding: 1.3rem;
+    width: 100%;
 }
 .project-item-header h3 {
     color: #fff;
