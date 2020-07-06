@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<linearGradient spreadMethod="pad" id="gradient" x1="55%" y1="126%" x2="0%" y2="0%">
+<stop offset="0" style="stop-color:rgb(18, 115, 226);stop-opacity:1;" />
+	<stop offset="10%" style="stop-color:rgb(18, 115, 226);stop-opacity:1;" />
+	<stop offset="100%" style="stop-color:rgb(155, 41, 245);stop-opacity:1;" />
+</linearGradient>
+</defs>
+<rect width="300" height="300" y="0" x="0" fill="url(#gradient)"/>
+</svg>
