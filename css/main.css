@@ -350,7 +350,7 @@ header {
 }
 .section-header h1 {
     font-size: 4rem;
-    color: rgb(36, 52, 68);
+    color: rgba(0,0,0,.7);
     margin: 3.5rem 0;
 }
 #knowledge-container {
@@ -369,7 +369,7 @@ header {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin: 0 0 .5rem 0;
-    color: rgb(49, 55, 141);
+    color: rgba(0,0,0,.7);
 }
 .knowledge-item-header h3 {
     font-size: 2rem;
@@ -410,7 +410,7 @@ header {
 }
 #siteinfo {
     padding: 1rem 2rem;
-    color: rgb(36, 52, 68);
+    color: #000;
     line-height: 1.5rem;
     display: flex;
     justify-content: flex-end;
@@ -422,6 +422,9 @@ header {
 }
 #projects-container {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+    column-gap: 3rem;
     margin: 0 10rem;
 }
 .project-item {
@@ -429,15 +432,26 @@ header {
     height: 25rem;
     display: flex;
     border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.5), 0 0 0 1px rgba(0,0,0,.4), 1px 1px 5px rgba(0,0,0,.4);
 }
-.project-item {
-    width: 20rem;
-    height: 25rem;
+.project-item:nth-child(1) {
     background: url("../img/placeholder1.jpg");
     background-size: 20rem auto;
-    display: flex;
-    border-radius: .5rem;
-    overflow: hidden;
+    grid-column: 1;
+    grid-row: 1;
+}
+.project-item:nth-child(2) {
+    background: url("../img/placeholder2.jpg");
+    background-size: 20rem auto;
+    grid-column: 2;
+    grid-row: 1;
+}
+.project-item:nth-child(3) {
+    background: url("../img/placeholder3.jpg");
+    background-size: 20rem auto;
+    grid-column: 3;
+    grid-row: 1;
 }
 .project-item-header {
     align-self: flex-end;
@@ -447,4 +461,5 @@ header {
 }
 .project-item-header h3 {
     color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
 }
