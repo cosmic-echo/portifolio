@@ -358,7 +358,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     justify-content: center;
-    
     column-gap: 4rem;
     margin: 0 10rem;
 }
@@ -409,66 +408,95 @@ header {
     color: rgba(0,0,0,.8);
 }
 #projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, auto);
-    justify-content: center;
-    column-gap: 3rem;
-    margin: 0 10rem;
+    display: flex;
+    justify-content: space-evenly;
 }
-.project-item {
-    width: 20rem;
-    height: 25rem;
+.project-card {
+    width: 22.5rem;
+    height: 30rem;
     display: flex;
     border-radius: .5rem;
     overflow: hidden;
     position: relative;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 0 0 1px rgba(0,0,0,.5), 1px 1px 7px rgba(0,0,0,.7);
-    padding: .7rem;
 }
-.project-item .project-go {
-    width: 20rem;
-    height: 25rem;
-    padding: .7rem;
+.project-card:hover .project-info {
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.project-card-bg, .project-card-bg-dark, .project-card-bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.project-card-bg {
+    z-index: 1;
+}
+.project-card:hover .project-card-bg-gradient {
+    opacity: 0.4;
+    transition: all .3s ease-in-out;
+}
+.project-card:hover .project-card-bg-dark {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+}
+.project-card-bg-gradient {
+    background: linear-gradient(45deg, rgba(196,18,255,1) 0%, rgba(196,18,255,1) 1%, rgba(37,106,152,1) 81%, rgba(0,128,128,1) 100%);
+    z-index: 2;
+    opacity: 0;
+}
+.project-card-bg-dark {
+    z-index: 3;
+    background: #000;
+    opacity: 0;
+}
+.project-card a {
     position: absolute;
     top: 0;
     left: 0;
     display: block;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
 }
-.project-item .project-go:hover {
-    background: rgba(255,255,255,.2);
-    transition: all .25s ease-in-out;
+.project-card a:active {
+    background: rgba(0,0,0,.4);
+    transition: all .3s ease-in-out;
 }
-.project-item .project-go:active {
-    background: rgba(0,0,0,.2);
-}
-.project-item:nth-child(1) {
+.project-card:nth-child(1) .project-card-bg {
     background: url("../img/placeholder1.jpg");
-    background-size: 20rem auto;
-    grid-column: 1;
-    grid-row: 1;
+    background-size: cover;
 }
-.project-item:nth-child(2) {
+.project-card:nth-child(2) .project-card-bg {
     background: url("../img/placeholder2.jpg");
-    background-size: 20rem auto;
-    grid-column: 2;
-    grid-row: 1;
+    background-size: cover;
 }
-.project-item:nth-child(3) {
+.project-card:nth-child(3) .project-card-bg {
     background: url("../img/placeholder3.jpg");
-    background-size: 20rem auto;
-    grid-column: 3;
-    grid-row: 1;
+    background-size: cover;
 }
-.project-item-header {
+.project-info {
     align-self: flex-end;
+    position: relative;
+    z-index: 4;
+    padding: 1rem;
+    opacity: 0;
 }
-.project-item-header h3 {
+.project-card p, .project-card h2, .project-info h4 {
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,.7);
+}
+.project-info h4 {
     background: rgba(0,0,0,.6);
     border-radius: 10rem;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
-    padding: .7rem 1rem;
+    padding: .5rem .8rem;
+    display: inline-block;
+}
+.project-card p {
+    padding: .8rem 0;
+    text-align: justify;
 }
 #siteinfo {
     padding: 5rem 2rem 1rem 2rem;
