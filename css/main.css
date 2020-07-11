@@ -44,6 +44,10 @@
     text-decoration: none;
     outline: 0;
 }
+input, textarea {
+    font-size: inherit;
+    font-family: inherit;
+}
 .fontlight {
     font-family: Roboto, sans-serif;
     font-weight: 300;
@@ -87,7 +91,6 @@
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.1);
-    box-shadow: inset 0 -1px 10px rgba(0,0,0,.5);
     z-index: 2;
 }
 #background-dots {
@@ -186,7 +189,7 @@ header {
     animation: fadeTranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
     opacity: 0;
 }
-#banner #profile_picture {
+#profile_picture {
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -215,7 +218,7 @@ header {
     margin-bottom: 2rem;
     text-align: justify;  
 }
-#banner #learn_more {
+.actionbutton {
     background: #0067b8;
     box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), 0 0 0 1px rgba(0,0,0,.2), 1px 1px 5px rgba(0,0,0,.5);
     border: 0;
@@ -228,11 +231,11 @@ header {
     letter-spacing: .28em;
     padding: 1rem 2.5em 1em 2.5em;
 }
-#banner #learn_more:hover {
+.actionbutton:hover {
     background: #147bca;
     transition: all .25s ease-in-out;
 }
-#banner #learn_more:active {
+.actionbutton:active {
     background: #0b5288;
 }
 #sidebar, #sidebar::before {
@@ -246,8 +249,8 @@ header {
     position: absolute;
     right: 0;
     z-index: -1;
-    filter: blur(2.6rem) brightness(60%);
-    transform: scale(2.6);
+    filter: blur(1rem) brightness(60%);
+    transform: scale(2);
     content: "";
 }
 #sidebar {
@@ -261,7 +264,8 @@ header {
     background: rgba(0,0,0,.5);
     box-shadow: 0 0 1.875rem rgba(0,0,0,.7);
     transition: all .3s ease-in-out;
-    opacity: 0;  
+    opacity: 0;
+    border-left: 1px solid rgba(255,255,255,.1);
 }
 #sidebar.show-menu {
     right: 0;
@@ -453,7 +457,7 @@ header {
     z-index: 3;
     background: #000;
     border-radius: .5rem;
-    box-shadow: inset 0 0 0 1px #fff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.8);
     opacity: 0;
 }
 .project-card a {
@@ -521,4 +525,101 @@ header {
 }
 #siteinfo a:active {
     color: rgb(124, 124, 124);
+}
+#contactme {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    animation: fadeTranslateX .25s ease-in-out;
+}
+#contactform {
+    padding: 2rem 5rem;
+    width: 25rem;
+    background: #f2f0fc;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 0 0 1px rgba(0,0,0,.5), 0 0 1rem rgba(0,0,0,.5);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+#contactheader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+#contactform h2 {
+    margin: 1.5rem 0 3rem 0;
+    color: rgba(0,0,0,.8);
+}
+#contactform .group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+#contactform .textlabel {
+    background: #f2f0fc;
+    color: #616161;
+    align-items: center;
+    position: absolute;
+    top: .8rem;
+    left: .5rem;
+    font-size: 1rem;
+    cursor: text;
+    padding: 0 .2rem;
+}
+#contactform .textinput {
+    padding: .8rem;
+    border-radius: .25rem;
+    border: 1px solid rgb(121, 121, 121);
+    width: 100%;
+    transition: .25s ease-in-out;
+    box-sizing: border-box;
+    background: #f2f0fc;
+}
+#contactform .textinput:focus ~ label, #contactform .textinput:valid ~ label {
+    position: absolute;
+    top: -.4rem;
+    left: .5rem;
+    font-size: .8rem;
+    color: #208de0;
+    transition: all .125s ease-in-out;
+}
+#contactform .textinput:valid:not(:focus) ~ label {
+    color: grey;
+}
+#contactform .textinput:focus {
+    border: 1px solid #208de0;
+    box-shadow: 0 0 0 1px #208de0;
+    background: #f2f0fc;
+    display: inline-block;
+}
+#contactform textarea {
+    resize: none;
+    height: 15rem;
+    border: 1px solid transparent;
+}
+#sendform {
+    align-self: flex-end;
+    padding: .7rem .9rem;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .25s ease-in-out;
+    background: #1367a7;
+}
+#sendform:hover {
+    background: #208de0;
+}
+#sendform:active {
+    background: #0b5288;
+}
+#sendform i, #sendform span, #sendform {
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
 }
