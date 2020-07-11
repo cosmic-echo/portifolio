@@ -553,6 +553,9 @@ header {
     display: flex;
     flex-direction: column;
 }
+#contactheader a i {
+    font-size: 2rem;
+}
 #contactform h2 {
     margin: 1.5rem 0 3rem 0;
     color: rgba(0,0,0,.8);
@@ -603,10 +606,24 @@ header {
     height: 15rem;
     border: 1px solid transparent;
 }
+#contactform #bottompanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#contactform #bottompanel a {
+    color: #1367a7;
+    align-self: center;
+}
+#contactform #bottompanel a:hover {
+    color: #208de0;
+}
+#contactform #bottompanel a:active {
+    color: #0b5288;
+}
 #sendform {
-    align-self: flex-end;
+    align-self: center;
     padding: .7rem .9rem;
-    display: inline-block;
     border: 1px solid transparent;
     border-radius: .25rem;
     transition: all .25s ease-in-out;
