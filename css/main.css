@@ -1,3 +1,4 @@
+@import url("reset.css");
 @import url("fonts.css");
 @import url("fontawesome-all-min.css");
 @keyframes fadeTranslateX {
@@ -47,6 +48,8 @@
 input, textarea {
     font-size: inherit;
     font-family: inherit;
+    padding: 0;
+    margin: 0;
 }
 .fontlight {
     font-family: Roboto, sans-serif;
@@ -64,7 +67,10 @@ input, textarea {
     font-family: Roboto, sans-serif;
     font-weight: normal;
 }
-/*start*/
+body {
+    font-family: Roboto, sans-serif;
+    background: rgb(240, 240, 240);
+}
 #bg-container {
     position: relative;
     top: 0;
@@ -80,8 +86,6 @@ input, textarea {
     width: 100%;
     height: 100%;
     background: linear-gradient(45deg, rgba(196,18,255,1) 0%, rgba(196,18,255,1) 1%, rgba(37,106,152,1) 81%, rgba(0,128,128,1) 100%);
-    filter: blur(1rem);
-    transform: scale(2);
     z-index: 1;
 }
 #background-dark {
@@ -103,6 +107,79 @@ input, textarea {
     z-index: 3;
     opacity: 0.6;
 }
+/*about developer banner*/
+header {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+#banner {
+    max-width: 70%;
+    display: flex;
+    flex-direction: row;
+    animation: fadeTranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
+    opacity: 0;
+}
+#banner #profile_picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.5);
+    background: center url("../img/profile_picture.jpg");
+    background-size: 150px;
+}
+#banner #developer_container {
+    margin-left: 3rem;
+    width: 80%;
+}
+#banner #developer_name {
+    font-size: 4rem;
+}
+#banner #developer_office, #banner #developer_description, #banner h1 {
+    text-shadow: .2rem .3rem 10px rgba(0,0,0,.7); 
+    color: #fff;
+}
+#banner #developer_office {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+#banner #developer_description {  
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: justify;  
+}
+#banner #learnmore {
+    background: #0067b8;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), 0 0 0 1px rgba(0,0,0,.2), 1px 1px 5px rgba(0,0,0,.5);
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .28em;
+    padding: 1rem 2.5em 1em 2.5em;
+    transition: all .25s ease-in-out;
+}
+#banner #learnmore:hover {
+    background: #147bca;
+}
+#banner #learnmore:active {
+    background: #0b5288;
+    transform: scale(0.90);
+}
+/*about developer banner*/
+
+/*sidebar*/
 #hamburguer {
     width: 1.5em;
     height: 1.5em;
@@ -116,17 +193,13 @@ input, textarea {
     padding: 1.5em;
     border-radius: 100%;
     background: rgba(0,0,0,.3);
+    transition: all .1s ease-in-out;
 }
 #hamburguer:hover {
     background: rgba(0,0,0,.6);
-    transform: scale(1.06);
-    transition: all .1s ease-in-out;
 }
 #hamburguer:active {
-    transform: scale(0.97);
-}
-#hamburguer:active {
-    transform: scale(0.97);
+    transform: scale(0.90);
 }
 #hamburguer .line {
     width: 100%;
@@ -170,102 +243,32 @@ input, textarea {
     transform: rotate(90deg);
     Z-index: 2;
 }
-header {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-}
-#banner {
-    max-width: 70%;
-    display: flex;
-    flex-direction: row;
-    animation: fadeTranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
-    opacity: 0;
-}
-#profile_picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.5);
-    background: center url("../img/profile_picture.jpg");
-    background-size: 150px;
-}
-#banner #developer_container {
-    margin-left: 3rem;
-    width: 80%;
-}
-#banner #developer_name {
-    font-size: 4rem;
-}
-#banner #developer_office, #banner #developer_description, #banner h1 {
-    text-shadow: .2rem .3rem 10px rgba(0,0,0,.7); 
-    color: #fff;
-}
-#banner #developer_office {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
-#banner #developer_description {  
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: justify;  
-}
-.actionbutton {
-    background: #0067b8;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), 0 0 0 1px rgba(0,0,0,.2), 1px 1px 5px rgba(0,0,0,.5);
-    border: 0;
-    cursor: pointer;
-    color: #fff;
-    border-radius: 5px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
-    font-size: .9rem;
-    text-transform: uppercase;
-    letter-spacing: .28em;
-    padding: 1rem 2.5em 1em 2.5em;
-}
-.actionbutton:hover {
-    background: #147bca;
-    transition: all .25s ease-in-out;
-}
-.actionbutton:active {
-    background: #0b5288;
-}
 #sidebar, #sidebar::before {
     width: 20rem;
-    height: 100vh;
-    top: 0;
+    height: 100vh;  
 }
 #sidebar::before {
-    background: rgb(33,57,81);
     background: linear-gradient(-45deg, rgba(196,18,255,1) 0%, rgba(196,18,255,1) 1%, rgba(37,106,152,1) 81%, rgba(0,128,128,1) 100%);
     position: absolute;
+    top: 0;
     right: 0;
     z-index: -1;
-    filter: blur(1rem) brightness(60%);
-    transform: scale(2);
+    filter: brightness(60%);
     content: "";
+    opacity: 0.97;
 }
 #sidebar {
     position: fixed;
+    top: 0;
     right: -30rem;
     z-index: 999;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: rgba(0,0,0,.5);
     box-shadow: 0 0 1.875rem rgba(0,0,0,.7);
     transition: all .3s ease-in-out;
     opacity: 0;
-    border-left: 1px solid rgba(255,255,255,.1);
 }
 #sidebar.show-menu {
     right: 0;
@@ -275,13 +278,10 @@ header {
     text-align: center;
     margin-bottom: 1.5rem;
     width: 100%;
-}
-#sidebar .menu-item:hover {
-    transform: scale(1.06);
-    transition: all .1s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 #sidebar .menu-item:active {
-    transform: scale(0.97);
+    transform: scale(0.90);
 }
 #sidebar .menu-link {
     height: 1em;
@@ -291,10 +291,11 @@ header {
     color: #fff;
     padding: 0.625rem 1.25rem 0.625rem 1.25rem;
     border-radius: 2.5rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 #sidebar .menu-link:hover {
    background: rgba(0,0,0,.6);
-   cursor: pointer;
 }
 #social-media {
     width: 100%;
@@ -324,14 +325,13 @@ header {
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    transition: all .2s ease-in-out;
 }
 #social-media-container a:hover {
     background: rgba(0,0,0,.6);
-    transform: scale(1.06);
-    transition: all .1s ease-in-out;
 }
 #social-media-container a:active, #sidebar .menu-link:active {
-    transform: scale(0.97);
+    transform: scale(0.90);
 }
 #social-media-container a span {
     font-size: .5em;
@@ -347,6 +347,11 @@ header {
 #social-media-container a:hover span {
     visibility: visible;
 }
+/*sidebar*/
+/*sections*/
+section {
+    margin: 4rem 0;
+}
 .section-header {
     display: flex;
     justify-content: center;
@@ -355,7 +360,7 @@ header {
 .section-header h1 {
     font-size: 4rem;
     color: rgba(0,0,0,.8);
-    margin: 3.5rem 0;
+    margin: 0 0 3rem 0;
 }
 #knowledge-container {
     display: grid;
@@ -423,6 +428,14 @@ header {
     overflow: hidden;
     position: relative;
     box-shadow: 0 0 0 1px rgba(0,0,0,.5), 1px 1px 7px rgba(0,0,0,.7);
+    transition: all .2s ease-in-out;
+    user-select: none;
+}
+.project-card:hover {
+    transform: scale(1.03);  
+}
+.project-card:active {
+    transform: scale(1);
 }
 .project-card:hover .project-info {
     opacity: 1;
@@ -437,7 +450,7 @@ header {
 }
 .project-card-bg {
     z-index: 1;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.6);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
     border-radius: .5rem;
 }
 .project-card:hover .project-card-bg-gradient {
@@ -457,7 +470,7 @@ header {
     z-index: 3;
     background: #000;
     border-radius: .5rem;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.8);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
     opacity: 0;
 }
 .project-card a {
@@ -507,69 +520,30 @@ header {
     padding: .8rem 0;
     text-align: justify;
 }
-#siteinfo {
-    padding: 5rem 2rem 1rem 2rem;
-    color: rgb(117, 117, 117);
-    line-height: 1.5rem;
-    display: flex;
+#contactdeveloper {
+    align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-}
-#siteinfo a {
-    color: rgb(82, 82, 82);
-}
-#siteinfo a:hover {
-    color: rgb(96, 88, 209);
-    text-decoration: underline;
-    transition: all .25s ease-in-out;
-}
-#siteinfo a:active {
-    color: rgb(124, 124, 124);
-}
-#contactme {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 997;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-    animation: fadeTranslateX .25s ease-in-out;
 }
-#contactform {
-    padding: 2rem 5rem;
-    width: 25rem;
-    background: #f2f0fc;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.6), 0 0 0 1px rgba(0,0,0,.5), 0 0 1rem rgba(0,0,0,.5);
-    border-radius: .5rem;
-    display: flex;
-    flex-direction: column;
+#contactdeveloper #formcontainer {
+    width: 60%;
+    height: 80%;
 }
-#contactheader {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-#contactheader a i {
-    font-size: 2rem;
-}
-#contactform h2 {
-    margin: 1.5rem 0 3rem 0;
-    color: rgba(0,0,0,.8);
-}
-#contactform .group {
-    position: relative;
-    margin-bottom: 1rem;
+#contactdeveloper form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
 }
 #contactform .textlabel {
-    background: #f2f0fc;
+    background: #fff;
     color: #616161;
     align-items: center;
     position: absolute;
-    top: .8rem;
+    top: .9rem;
     left: .5rem;
     font-size: 1rem;
     cursor: text;
@@ -578,27 +552,16 @@ header {
 #contactform .textinput {
     padding: .8rem;
     border-radius: .25rem;
-    border: 1px solid rgb(121, 121, 121);
+    border: 1px solid rgba(0,0,0,.8);
     width: 100%;
     transition: .25s ease-in-out;
     box-sizing: border-box;
-    background: #f2f0fc;
-}
-#contactform .textinput:focus ~ label, #contactform .textinput:valid ~ label {
-    position: absolute;
-    top: -.4rem;
-    left: .5rem;
-    font-size: .8rem;
-    color: #208de0;
-    transition: all .125s ease-in-out;
-}
-#contactform .textinput:valid:not(:focus) ~ label {
-    color: grey;
+    background: #fff;
 }
 #contactform .textinput:focus {
     border: 1px solid #208de0;
     box-shadow: 0 0 0 1px #208de0;
-    background: #f2f0fc;
+    background: #fff;
     display: inline-block;
 }
 #contactform textarea {
@@ -621,22 +584,41 @@ header {
 #contactform #bottompanel a:active {
     color: #0b5288;
 }
-#sendform {
+#sendbutton {
     align-self: center;
-    padding: .7rem .9rem;
+    padding: .5rem .9rem;
     border: 1px solid transparent;
     border-radius: .25rem;
     transition: all .25s ease-in-out;
     background: #1367a7;
 }
-#sendform:hover {
+#sendbutton:hover {
     background: #208de0;
 }
-#sendform:active {
+#sendbutton:active {
     background: #0b5288;
 }
-#sendform i, #sendform span, #sendform {
+#sendbutton i, #sendbutton span, #sendbutton {
     cursor: pointer;
     color: #fff;
     user-select: none;
+}
+#siteinfo {
+    padding: 5rem 2rem 1rem 2rem;
+    color: rgb(117, 117, 117);
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+#siteinfo a {
+    color: rgb(82, 82, 82);
+}
+#siteinfo a:hover {
+    color: rgb(96, 88, 209);
+    text-decoration: underline;
+    transition: all .25s ease-in-out;
+}
+#siteinfo a:active {
+    color: rgb(124, 124, 124);
 }

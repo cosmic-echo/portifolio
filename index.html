@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raul Sousa</title>
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     </head>
-    <body class="fontnormal">
+    <body>
         <div id="container">
             <div id="bg-container">
                 <div id="background"></div>
@@ -30,40 +31,80 @@
             </div>
             <header>
                 <div id="banner"> 
-                <div id="profile_picture"></div>
-                <div id="developer_container">
-                    <h1 id="developer_name" class="fontthin">Raul Sousa</h1>
-                    <p id="developer_office" class="fontlight">Web developer e designer front-end</p>
-                    <p id="developer_description" class="fontlight">
-                        Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
-                    </p>
-                    <button class="actionbutton" class="fontblack" onclick="location.href='#saibamais';">Saiba mais</button>
+                    <div id="profile_picture"></div>
+                    <div id="developer_container">
+                        <h1 id="developer_name" class="fontthin">Raul Sousa</h1>
+                        <p id="developer_office" class="fontlight">Web developer e designer front-end</p>
+                        <p id="developer_description" class="fontlight">
+                            Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
+                        </p>
+                        <button id="learnmore" class="fontblack" onclick="location.href='#projetos';">Saiba mais</button>
+                    </div>
+                </div>
+            </header>
+            <aside id="sidebar">
+                <nav>
+                    <ul id="menu">
+                        <li class="menu-item"><a href="" class="menu-link">Home</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">Conhecimentos</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
+                        <li class="menu-item"><a href="contato.html" class="menu-link">Contato</a></li>
+                        <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
+                    </ul>
+                </nav>
+                <div id="social-media">
+                    <div id="social-media-container">
+                        <a href="tel:192"><span>WhatsApp</span><i class="fab fa-whatsapp"></i></a>
+                        <a href="pudim.html"><span>Instagram</span><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:exemplo@exemplo.com"><span>E-mail</span><i class="far fa-envelope"></i></a>
+                        <a href="https://github.com/cosmic-echo/portifolio"><span>Github</span><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </aside>
+            <section id="projects" class="section">
+                <div class="section-header">
+                    <a name="projetos"><h1 class="fontlight">Projetos</h1></a>
+                </div>
+                <div id="projects-container" class="fontnormal">
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">Este site</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">CSS</h4>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">Este site, também, uai</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">HTML</h4>     
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">Sol com nuvens</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Desenho</h4>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-        </header>
-        <aside id="sidebar">
-            <nav>
-                <ul id="menu">
-                    <li class="menu-item"><a href="" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Conhecimentos</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="contato.html" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
-                </ul>
-            </nav>
-            <div id="social-media">
-                <div id="social-media-container">
-                    <a href="tel:192"><span>WhatsApp</span><i class="fab fa-whatsapp"></i></a>
-                    <a href="pudim.html"><span>Instagram</span><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:exemplo@exemplo.com"><span>E-mail</span><i class="far fa-envelope"></i></a>
-                    <a href="https://github.com/cosmic-echo/portifolio"><span>Github</span><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </aside>
+        </div>
         <section id="knowledge" class="section">
             <div class="section-header">
-                <a name="saibamais"><h1 class="fontlight">Conhecimentos</h1></a>
+                <a name="conhecimentos"><h1 class="fontlight">Conhecimentos</h1></a>
             </div>
             <div id="knowledge-container" class="fontnormal">
                 <div class="knowledge-item">
@@ -121,52 +162,38 @@
                     </div>
                 </div>
         </section>
-        <section id="projects" class="section">
+        <section id="contactdeveloper" class="section">
             <div class="section-header">
-                <h1 class="fontlight">Projetos</h1>
+                <h1 class="fontlight">Orçamento</h1>
             </div>
-            <div id="projects-container" class="fontnormal">
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">Este site</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">CSS</h4>
+            <div id="formcontainer">
+                <form>
+                    <input type="text" name="qtde" class="textinput" required/>
+                    <label for="qtde" min="1" class="textlabel">Quantidade de páginas</label>
+                    <label for="js">Preciso de JavaScript</label>
+                    <input type="checkbox" name="js" required/>
+                    <label>Você precisa de um layout?</label>
+                    <div class="group">
+                        <input type="radio" name="layout" id="layout-sim" required/>
+                        <label for="layout-sim">Sim</label>
+                        <input type="radio" name="layout" id="layout-nao" required/>
+                        <label for="layout-nao">Não</label>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">Este site, também, uai</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">HTML</h4>     
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">Sol com nuvens</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">Desenho</h4>
-                    </div>
-                </div>
+                    <input type="range" name="prazo" id="prazo" required/>
+                    <label for="prazo">Prazo</label>
+                    <button id="sendbutton" onclick="location.href='pudim.html';">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <span>Enviar</span>
+                    </button>
+                </form>
             </div>
-        </div>
+        </section>
+        <section id="siteinfo">
+            <p>Portifólio de Raul Gomes</p>
+            <span>&nbsp;|&nbsp;</span>
+            <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença CC0 1.0 Universal</a></p>
+        </section>
     </div>
-    <section id="siteinfo">
-        <p>Portifólio de Raul Gomes</p>
-        <span>&nbsp;|&nbsp;</span>
-        <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença CC0 1.0 Universal</a></p>
-    </section>
 </body>
-<script src="js/main.js" async></script>
+<script src="js/main.js"></script>
 </html>
