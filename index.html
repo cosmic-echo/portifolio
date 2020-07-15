@@ -165,7 +165,7 @@
             </div>
             <div id="formtabs">
                 <div class="formgroup">
-                    <input type="radio" id="radio--request" name="formoption" class="formoption" value="siterequest">
+                    <input type="radio" id="radio--request" name="formoption" class="formoption" value="siterequest" checked/>
                     <label for="radio--request" class="formoption--label">Fazer um orçamento</label>
                 </div>
                 <div class="formgroup">
@@ -173,21 +173,21 @@
                     <label for="radio--contact" class="formoption--label">Mandar uma mensagem</label>
                 </div>
             </div>
+            <form id="form--request" class="show-form" action="pudim.html">
+                <input type="text" id="email1" class="textinput" placeholder="E-mail" required/>
+                <input type="text" id="name1" class="textinput" placeholder="Nome" required/>
+            </form>
             <form id="form--contact" action="pudim.html">
                 <input type="text" id="name" class="textinput" placeholder="Nome" required/>
                 <input type="text" id="email" class="textinput" placeholder="E-mail" required/>
                 <textarea id="messagebox" class="textinput" placeholder="Mensagem" required></textarea>
                 <input type="button" class="button button--siterequest fontblack" value="Enviar"/>
             </form>
-            <form id="form--request" action="pudim.html">
-                <input type="text" id="email" class="textinput" placeholder="E-mail" required/>
-                <input type="text" id="name" class="textinput" placeholder="Nome" required/>
-            </form>
         </section>
         <section id="siteinfo">
             <p>Portifólio de Raul Gomes</p>
             <span>&nbsp;|&nbsp;</span>
-            <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença CC0 1.0 Universal</a></p>
+            <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença</a></p>
         </section>
     </div>
 </body>

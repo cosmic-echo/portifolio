@@ -16,11 +16,11 @@ radiorequest.addEventListener('click', modifyVisibility, false);
 radiocontact.addEventListener('click', modifyVisibility1, false);
 
 function modifyVisibility() {
-  formrequest.style.display = "block";
-  formcontact.style.display = "none";
+  formrequest.classList.toggle("show-form");
+  formcontact.classList.remove("show-form");
 }
 
 function modifyVisibility1() {
-  formrequest.style.display = "none";
-  formcontact.style.display = "display";
+  formrequest.classList.remove("show-form");
+  formcontact.classList.toggle("show-form");
 }
