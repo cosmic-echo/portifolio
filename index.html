@@ -160,27 +160,47 @@
                     </div>
                 </div>
         </section>
-        <section id="contactdeveloper" class="section">
+        <section id="contactdeveloper" class="section disableselection">
             <div class="section-header">
                 <a name="contato"></a><h1 class="fontlight disableselection">Contato</h1></a>
             </div>
-            <div id="formtabs">
-                <div class="formgroup">
-                    <input type="radio" id="radio--request" name="formoption" class="formoption" value="siterequest" checked/>
-                    <label for="radio--request" class="formoption--label">Fazer um orçamento</label>
+            <div id="formtabs" class="flexrow">
+                <div class="form-tabs--group">
+                    <input type="radio" id="radio--request" name="formoption" class="formtabs--option" value="siterequest" checked/>
+                    <label for="radio--request">Fazer um orçamento</label>
                 </div>
-                <div class="formgroup">
-                    <input type="radio" id="radio--contact" name="formoption" class="formoption" value="developermessage"/>
-                    <label for="radio--contact" class="formoption--label">Mandar uma mensagem</label>
+                <div class="form-tabs--group">
+                    <input type="radio" id="radio--contact" name="formoption" class="formtabs--option" value="developermessage"/>
+                    <label for="radio--contact">Mandar uma mensagem</label>
                 </div>
             </div>
             <form id="form--request" class="show-form" action="pudim.html">
-                <span>Função indisponível</span>
+
+                <input type="number" id="qtde" class="contactform--input" placeholder="Quantidade de páginas" min="1" required/>
+                <h3 class="fontnormal">Você precisa de JavaScript?</h3>
+                <div class="flexrow">
+                    <input type="radio" name="layout" id="js-sim" class="contactform--radio"/>
+                    <label for="js-sim">Sim</label>
+                    <input type="radio" name="layout" id="js-nao" class="contactform--radio"/>
+                    <label for="js-nao">Não</label>
+                </div>
+                <h3 class="fontnormal">E de um layout?</h3>
+                <div class="flexrow">
+                    <input type="radio" name="layout" id="layout-sim" class="contactform--radio"/>
+                    <label for="layout-sim">Sim</label>
+                    <input type="radio" name="layout" id="layout-nao" class="contactform--radio"/>
+                    <label for="layout-nao">Não</label>
+                    </div>
+                <h3 class="fontnormal">Prazo</h3>
+                <div class="flexrow">
+                    <input type="range" name="prazo" id="prazo" class="contactform--input-range"/>
+                </div>
+                <input type="button" class="button button--siterequest fontblack" value="Enviar"/>
             </form>
             <form id="form--contact" action="pudim.html">
-                <input type="text" id="name" class="textinput" placeholder="Nome" required/>
-                <input type="text" id="email" class="textinput" placeholder="E-mail" required/>
-                <textarea id="messagebox" class="textinput" placeholder="Mensagem" required></textarea>
+                <input type="text" id="name" class="contactform--input" placeholder="Nome" required/>
+                <input type="text" id="email" class="contactform--input" placeholder="E-mail" required/>
+                <textarea id="messagebox" class="contactform--input" placeholder="Mensagem" required></textarea>
                 <input type="button" class="button button--siterequest fontblack" value="Enviar"/>
             </form>
         </section>

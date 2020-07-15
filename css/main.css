@@ -87,6 +87,10 @@ input, textarea {
 .disableselection {
     user-select: none;
 }
+.flexrow {
+    display: flex;
+    flex-direction: row;
+}
 .button {
     background: #0067b8;
     border: 0;

@@ -182,29 +182,33 @@
     height: 100vh;
 }
 #formtabs {
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
     margin-bottom: 2rem;
 }
 #formtabs, #form--contact, #form--request {
     width: 40%; 
 }
+#form--contact, #form--request {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    row-gap: 1rem;
+}
 #contactdeveloper form {
     display: none;
+    align-items: flex-start;
 }
 #contactdeveloper form.show-form {
-    display: block !important;
+    display: grid;
 }
-.formgroup {
+.form-tabs--group {
     position: relative;
 }
-.formoption {
+.formtabs--option {
     position: absolute;
     cursor: pointer;
     visibility: hidden;
 }
-.formoption + label {
+.formtabs--option + label {
     border-bottom: 3px solid transparent;
     padding: .5rem 0;
     text-transform: uppercase;
@@ -213,32 +217,54 @@
     user-select: none;
     color: rgba(0,0,0,.8);
 }
-.formoption:checked + label {
+.formtabs--option:checked + label {
     border-bottom: 3px solid #208de0;
     transition: all .25s ease-in-out;
     color: #208de0;
 }
-.textinput {
+.contactform--input {
     padding: .8rem;
     border-radius: .25rem;
     border: 1px solid rgba(0,0,0,.5);
-    width: 100%;
     transition: all .2s ease-in-out;
     background: #fff;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+
     font-weight: 300;
     box-sizing: border-box;
 }
-.textinput:focus {
+.contactform--input:focus {
     border: 1px solid #208de0;
     box-shadow: 0 0 0 1px #208de0;
     background: #fff;
 }
+#form--request .contactform--input {
+    margin: 0 !important;
+}
+.contactform--radio, .contactform--checkbox {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+.contactform--radio + label, .contactform--checkbox + label{
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: 2rem;
+}
+.contactform--input-range {
+    width: 100%;
+}
+input[type=range]::-moz-range-track, input[type=range]::-webkit-slider-runnable-track {
+    background: pink;
+}
 textarea {
     resize: none;
     height: 15rem !important;
-    border: 1px solid transparent;
+}
+#contactdeveloper form h3 {
+    margin: 1rem 0 0rem 0;
 }
 /*end - contact section*/
 
@@ -250,6 +276,7 @@ textarea {
     display: flex;
     justify-content: center;
     font-size: 0.8rem;
+    margin: 6rem 0 0 0;
 }
 #siteinfo a {
     color: rgb(82, 82, 82);
