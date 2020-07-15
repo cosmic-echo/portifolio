@@ -84,6 +84,9 @@ input, textarea {
     font-family: Roboto, sans-serif;
     font-weight: normal;
 }
+.disableselection {
+    user-select: none;
+}
 .button {
     background: #0067b8;
     border: 0;
@@ -96,7 +99,6 @@ input, textarea {
     text-transform: uppercase;
     padding: 1rem 2rem;
     letter-spacing: .28em;
-    
 }
 .button:hover {
     background: #147bca;
