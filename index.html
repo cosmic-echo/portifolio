@@ -9,8 +9,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            document.querySelector("#loadingscreen").style.display = "none";
+        });
+      </script>
     </head>
     <body>
+        <div id="loadingscreen">
+            <img src="img/loading.gif" alt="Carregando"/>
+        </div>
         <div id="container">
             <div id="bg-container">
                 <div id="background"></div>
