@@ -1,0 +1,84 @@
+#bg-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(196,18,255,1) 0%, rgba(196,18,255,1) 1%, rgba(37,106,152,1) 81%, rgba(0,128,128,1) 100%);
+    z-index: 1;
+}
+#background-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+    z-index: 2;
+}
+#background-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center url("../img/dot.png") repeat;
+    z-index: 3;
+    opacity: 0.6;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+#banner {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    animation: fadeTranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
+    opacity: 0;
+}
+#profile_picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.5);
+    background: center url("../img/profile_picture.jpg");
+    background-size: 150px;
+}
+#developer_container {
+    margin-left: 3rem;
+    width: 80%;
+}
+#developer_name {
+    font-size: 4rem;
+}
+#developer_office, #developer_description, #developer_name {
+    text-shadow: .2rem .3rem 10px rgba(0,0,0,.7); 
+    color: #fff;
+}
+#developer_office {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+#developer_description {  
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: justify;  
+}
