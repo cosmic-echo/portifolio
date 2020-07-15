@@ -199,9 +199,6 @@
 #contactdeveloper form {
     display: none;
 }
-#contactdeveloper form.show-form {
-    display: block;
-}
 .formgroup {
     position: relative;
 }
