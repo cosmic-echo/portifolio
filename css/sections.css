@@ -71,6 +71,7 @@
 #projects-container {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 7px; /*navigation/scrolling fix*/
 }
 .project-card {
     width: 22.5rem;
