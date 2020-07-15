@@ -180,9 +180,9 @@
 /*start - contact section*/
 #contactdeveloper {
     align-items: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 #contactdeveloper .section-header h1 {
     margin: 0 0 3rem 0;
