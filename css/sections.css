@@ -195,7 +195,6 @@
 }
 #contactdeveloper form {
     display: none;
-    align-items: flex-start;
 }
 #contactdeveloper form.show-form {
     display: grid;
@@ -229,7 +228,6 @@
     transition: all .2s ease-in-out;
     background: #fff;
     font-size: 1.2rem;
-
     font-weight: 300;
     box-sizing: border-box;
 }
@@ -237,6 +235,10 @@
     border: 1px solid #208de0;
     box-shadow: 0 0 0 1px #208de0;
     background: #fff;
+}
+.contactform--readonly {
+    border: 0;
+    background: transparent;
 }
 #form--request .contactform--input {
     margin: 0 !important;
@@ -247,11 +249,13 @@
     vertical-align: middle;
     margin-right: .5rem;
 }
-.contactform--radio + label, .contactform--checkbox + label{
+.contactform--checkbox + label {
     width: 1.5rem;
     height: 1.5rem;
     vertical-align: middle;
     margin-right: 2rem;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 .contactform--input-range {
     width: 100%;

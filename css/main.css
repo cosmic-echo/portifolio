@@ -61,6 +61,7 @@ body {
     font-family: Roboto, sans-serif;
     background: rgb(240, 240, 240);
     font-size: 16px;
+    color: rgba(0,0,0,.8);
 }
 input, textarea {
     font-size: inherit;
@@ -90,6 +91,9 @@ input, textarea {
 .flexrow {
     display: flex;
     flex-direction: row;
+}
+.flexstart {
+    align-self: flex-start;
 }
 .button {
     background: #0067b8;
