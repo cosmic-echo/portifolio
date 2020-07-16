@@ -9,7 +9,6 @@
 }
 .section-header h1 {
     font-size: 4rem;
-    color: rgba(0,0,0,.8);
     margin: 4rem 0 3rem 0;
 }
 /*start - knowledge section*/
@@ -26,7 +25,6 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin: 0 0 .5rem 0;
-    color: rgba(0,0,0,.8);
 }
 .knowledge-item-header h3 {
     font-size: 2rem;
@@ -63,7 +61,6 @@
 .knowledge-item-text {
     text-align: justify;
     line-height: 1.7rem;
-    color: rgba(0,0,0,.8);
 }
 /*end of knowledge section*/
 
@@ -210,15 +207,12 @@
 .formtabs--option + label {
     border-bottom: 3px solid transparent;
     padding: .5rem 0;
-    text-transform: uppercase;
-    font-size: 1rem;
     cursor: pointer;
     user-select: none;
-    color: rgba(0,0,0,.8);
+    font-size: 1.4rem;
 }
 .formtabs--option:checked + label {
     border-bottom: 3px solid #208de0;
-    transition: all .25s ease-in-out;
     color: #208de0;
 }
 .contactform--input {
@@ -227,8 +221,6 @@
     border: 1px solid rgba(0,0,0,.5);
     transition: all .2s ease-in-out;
     background: #fff;
-    font-size: 1.2rem;
-    font-weight: 300;
     box-sizing: border-box;
 }
 .contactform--input:focus {
@@ -239,9 +231,6 @@
 .contactform--readonly {
     border: 0;
     background: transparent;
-}
-#form--request .contactform--input {
-    margin: 0 !important;
 }
 .contactform--radio, .contactform--checkbox {
     width: 1.5rem;
@@ -254,14 +243,12 @@
     height: 1.5rem;
     vertical-align: middle;
     margin-right: 2rem;
-    font-size: 1.2rem;
-    font-weight: 300;
 }
-.contactform--input-range {
-    width: 100%;
-}
-input[type=range]::-moz-range-track, input[type=range]::-webkit-slider-runnable-track {
-    background: pink;
+.contactform--readonly {
+    color: rgba(0,0,0,.8);
+    font-weight: normal;
+    width: 5%;
+    margin-left: 1%;
 }
 textarea {
     resize: none;

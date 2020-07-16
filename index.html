@@ -167,35 +167,39 @@
             <div id="formtabs" class="flexrow">
                 <div class="form-tabs--group">
                     <input type="radio" id="radio--request" name="formoption" class="formtabs--option" value="siterequest" checked/>
-                    <label for="radio--request">Fazer um orçamento</label>
+                    <label for="radio--request" class="fontlight">Fazer um orçamento</label>
                 </div>
                 <div class="form-tabs--group">
                     <input type="radio" id="radio--contact" name="formoption" class="formtabs--option" value="developermessage"/>
-                    <label for="radio--contact">Mandar uma mensagem</label>
+                    <label for="radio--contact" class="fontlight">Mandar uma mensagem</label>
                 </div>
             </div>
             <form id="form--request" class="show-form" action="pudim.html">
-                <input type="number" id="qtde" class="contactform--input" placeholder="Quantidade de páginas" min="1" required/>
-                <div>
+                <div class="flextstart">
+                    <input type="number" id="qtde" class="contactform--input" placeholder="Quantidade de páginas" min="1" required/>
+                </div>
+                <div class=" flextstart">
                     <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
                     <label for="layout-js">Preciso de Javascript</label>
                 </div>
-                <div>
+                <div class=" flextstart">
                     <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
                     <label for="layout-js">Preciso de um layout</label>
                 </div>
                 <input type="range" id="prazo" oninput="display.value=value" onchange="display.value=value" min="3" max="30" required/>
                 <div class="flexrow">
                 <span>Prazo (em dias):</span>
-                <input type="text" id="display" class="contactform--readonly" style="margin-left: 1%;width: 5%" inputvalue="0" readonly/>
+                <input type="text" id="display" class="contactform--readonly" inputvalue="0" readonly/>
                 </div>
-                <input type="button" class="button button--siterequest fontblack" value="Enviar"/>
+                <div class="flextstart">
+                    <input type="button" class="button button--formsubmit fontblack" value="Enviar"/>
+                </div>
             </form>
             <form id="form--contact" action="pudim.html">
                 <input type="text" id="name" class="contactform--input" placeholder="Nome" required/>
                 <input type="text" id="email" class="contactform--input" placeholder="E-mail" required/>
                 <textarea id="messagebox" class="contactform--input" placeholder="Mensagem" required></textarea>
-                <input type="button" class="button button--siterequest fontblack flexstart" value="Enviar"/>
+                <input type="button" class="button button--formsubmit fontblack" value="Enviar"/>
             </form>
         </section>
         <section id="siteinfo" class="disableselection">
