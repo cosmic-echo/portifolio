@@ -178,11 +178,11 @@
     flex-direction: column;
     height: 100vh;
 }
-#formtabs {
-    justify-content: space-around;
+#form-tabs {
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
-#formtabs, #form--contact, #form--request {
+#form-tabs, #form--contact, #form--request {
     width: 40%; 
 }
 #form--contact, #form--request {
@@ -192,9 +192,13 @@
 }
 #contactdeveloper form {
     display: none;
+    opacity: 0;
+    animation: fadeTranslateX .2s ease-in-out;
 }
 #contactdeveloper form.show-form {
     display: grid;
+    opacity: 1;
+   
 }
 .form-tabs--group {
     position: relative;
@@ -205,7 +209,6 @@
     visibility: hidden;
 }
 .formtabs--option + label {
-    border-bottom: 3px solid transparent;
     padding: .5rem 0;
     cursor: pointer;
     user-select: none;
@@ -214,14 +217,15 @@
 .formtabs--option:checked + label {
     border-bottom: 3px solid #208de0;
     color: #208de0;
+    transition: all .2s ease-in-out;
 }
 .contactform--input {
     padding: .8rem;
     border-radius: .25rem;
     border: 1px solid rgba(0,0,0,.5);
     transition: all .2s ease-in-out;
-    background: #fff;
     box-sizing: border-box;
+    background: rgba(255,255,255,.7);
 }
 .contactform--input:focus {
     border: 1px solid #208de0;
@@ -237,6 +241,12 @@
     height: 1.5rem;
     vertical-align: middle;
     margin-right: .5rem;
+    opacity: 0.7;
+    transition: all .2s ease-in-out;
+}
+.contactform--radio:checked, .contactform--checkbox:checked,
+.contactform--radio:hover, .contactform--checkbox:hover {
+    opacity: 1;
 }
 .contactform--checkbox + label {
     width: 1.5rem;

@@ -164,7 +164,7 @@
             <div class="section-header">
                 <a name="contato"></a><h1 class="fontlight disableselection">Contato</h1></a>
             </div>
-            <div id="formtabs" class="flexrow">
+            <div id="form-tabs" class="flexrow">
                 <div class="form-tabs--group">
                     <input type="radio" id="radio--request" name="formoption" class="formtabs--option" value="siterequest" checked/>
                     <label for="radio--request" class="fontlight">Fazer um orçamento</label>
@@ -192,14 +192,16 @@
                 <input type="text" id="display" class="contactform--readonly" inputvalue="0" readonly/>
                 </div>
                 <div class="flextstart">
-                    <input type="button" class="button button--formsubmit fontblack" value="Enviar"/>
+                    <input type="button" class="button" value="Fazer pedido"/>
                 </div>
             </form>
             <form id="form--contact" action="pudim.html">
                 <input type="text" id="name" class="contactform--input" placeholder="Nome" required/>
                 <input type="text" id="email" class="contactform--input" placeholder="E-mail" required/>
                 <textarea id="messagebox" class="contactform--input" placeholder="Mensagem" required></textarea>
-                <input type="button" class="button button--formsubmit fontblack" value="Enviar"/>
+                <div class="flextstart">
+                    <input type="button" class="button" value="Enviar"/>
+                </div>
             </form>
         </section>
         <section id="siteinfo" class="disableselection">
