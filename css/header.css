@@ -37,10 +37,14 @@ a[name="inicio"] {
     border-radius: 2.5rem;
     cursor: pointer;
     transition: all .2s ease;
-    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4);
 }
-.menu-link--top-panel:hover {
+.menu-link--top-panel:hover, .menu-link--top-panel:hover.contact {
     background: rgba(0,0,0,.4);
+    box-shadow: none;
+}
+.menu-link--top-panel.contact {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
 }
 #social-media-container--top-panel {
     display: flex;
@@ -57,7 +61,7 @@ a[name="inicio"] {
     justify-content: space-evenly;
     position: relative;
     transition: all .25s ease;
-    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4);
 }
 .social-item--top-panel:hover {
     background: rgba(0,0,0,.4);
@@ -65,9 +69,6 @@ a[name="inicio"] {
 .social-item--top-panel:active i {
     transform: scale(0.90);
     transition: all .2s ease;
-}
-.menu-link--top-panel.contact {
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
 }
 .social-tooltip--top-panel {
     font-size: .9rem;
@@ -138,6 +139,7 @@ header {
     flex-direction: row;
     animation: fade 1s forwards, ranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
     opacity: 0;
+    margin-top: 3rem;
 }
 #profile_picture {
     width: 150px;
