@@ -16,18 +16,24 @@
                 <div id="background"></div>
                 <div id="background-dark"></div>
                 <div id="background-dots"></div>
-            </div>  
-            <div id="hamburguer">
-                <input type="checkbox" />
-                <div class="line" id="line1"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-                <div id="hamburguer-close">
-                    <div class="close1">
-                      <div class="close2"></div>
-                    </div>
-                </div>
             </div>
+            
+            <section id="top-panel">
+                <div id="top-panel-gradient"></div>
+                <nav>
+                    <ul id="menu--top-panel">
+                        <li class="menu-item--top-panel"><a href="#inicio" class="menu-link--top-panel">Início</a></li>
+                        <li class="menu-item--top-panel"><a href="#projetos" class="menu-link--top-panel">Projetos</a></li>
+                        <li class="menu-item--top-panel"><a href="#conhecimentos" class="menu-link--top-panel">Conhecimentos</a></li>
+                        <li class="menu-item--top-panel"><a href="#contato" class="menu-link--top-panel">Contato</a></li>
+                    </ul>
+                </nav>
+                <nav id="social-media-container--top-panel">
+                    <ul><a class="social-item--top-panel social-item--top-panel1" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip--top-panel">WhatsApp</span><i class="fab fa-whatsapp"></i></a></ul>
+                    <ul><a class="social-item--top-panel" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip--top-panel">Instagram</span><i class="fab fa-instagram"></i></a></ul>
+                    <ul><a class="social-item--top-panel" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip--top-panel">Github</span><i class="fab fa-github"></i></a></ul>
+                </nav>
+            </section>
             <header>
                 <a name="inicio"></a>
                 <div id="banner"> 
@@ -38,11 +44,22 @@
                         <p id="developer_description" class="fontlight disableselection">
                             Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
                         </p>
-                        <button class="button button--learnmore fontblack" class="fontblack" onclick="location.href='#projetos';">Saiba mais</button>
+                        <button id="button--learnmore" class="fontmedium" onclick="location.href='#projetos';">Saiba mais</button>
                     </div>
                 </div>
             </header>
-            <aside id="sidebar" class="disableselection">
+            <div id="hamburguer" style="display: none;">
+                <input type="checkbox" />
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+                <div id="hamburguer-close">
+                    <div class="close1">
+                      <div class="close2"></div>
+                    </div>
+                </div>
+            </div>
+            <aside id="sidebar" class="disableselection" style="display: none;">
                 <nav>
                     <ul id="menu">
                         <li class="menu-item"><a href="#inicio" class="menu-link">Início</a></li>
@@ -53,9 +70,9 @@
                 </nav>
                 <div id="social-media">
                     <div id="social-media-container">
-                        <a class="social-item" href="tel:192"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a>
-                        <a class="social-item" href="pudim.html"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a>
-                        <a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a>
+                        <div><a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a></div>
+                        <div><a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a></div>
+                        <div><a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a></div>
                     </div>
                 </div>
             </aside>
@@ -175,9 +192,8 @@
                 </div>
             </div>
             <form id="form--request" class="show-form" action="pudim.html">
-                <div class="flextstart">
-                    <input type="number" id="qtde" class="contactform--input" placeholder="Quantidade de páginas" min="1" required/>
-                </div>
+                <input type="number" id="quantity" name="quantity" class="contactform--input" min="1" required/>
+                <label for="quantity">Quantidade de páginas</label>
                 <div class=" flextstart">
                     <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
                     <label for="layout-js">Preciso de Javascript</label>
@@ -186,22 +202,17 @@
                     <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
                     <label for="layout-js">Preciso de um layout</label>
                 </div>
-                <input type="range" id="prazo" oninput="display.value=value" onchange="display.value=value" min="3" max="30" required/>
-                <div class="flexrow">
-                <span>Prazo (em dias):</span>
-                <input type="text" id="display" class="contactform--readonly" inputvalue="0" readonly/>
-                </div>
-                <div class="flextstart">
-                    <input type="button" class="button" value="Fazer pedido"/>
-                </div>
+                <input type="number" name="deadline" id="deadline" class="contactform--input" min="1" required/>
+                <label for="deadline">Prazo</label>
+                <input type="button" class="button--submit" value="Fazer pedido"/>
             </form>
             <form id="form--contact" action="pudim.html">
-                <input type="text" id="name" class="contactform--input" placeholder="Nome" required/>
-                <input type="text" id="email" class="contactform--input" placeholder="E-mail" required/>
+                <input type="text" id="name" name="name" class="contactform--input" required/>
+                <label for="name">Quantidade de páginas</label>
+                <input type="text" id="email" class="contactform--input" required/>
+                <label for="quantity">Quantidade de páginas</label>
                 <textarea id="messagebox" class="contactform--input" placeholder="Mensagem" required></textarea>
-                <div class="flextstart">
-                    <input type="button" class="button" value="Enviar"/>
-                </div>
+                <input type="button" class="button--submit" value="Enviar"/>
             </form>
         </section>
         <section id="siteinfo" class="disableselection">

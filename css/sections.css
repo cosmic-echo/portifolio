@@ -183,7 +183,7 @@
     margin-bottom: 2rem;
 }
 #form-tabs, #form--contact, #form--request {
-    width: 40%; 
+    width: 35%; 
 }
 #form--contact, #form--request {
     grid-template-columns: repeat(1, 1fr);
@@ -197,8 +197,7 @@
 }
 #contactdeveloper form.show-form {
     display: grid;
-    opacity: 1;
-   
+    opacity: 1;  
 }
 .form-tabs--group {
     position: relative;
@@ -212,7 +211,7 @@
     padding: .5rem 0;
     cursor: pointer;
     user-select: none;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 .formtabs--option:checked + label {
     border-bottom: 3px solid #208de0;
@@ -221,7 +220,7 @@
 }
 .contactform--input {
     padding: .8rem;
-    border-radius: .25rem;
+    border-radius: .4rem;
     border: 1px solid rgba(0,0,0,.5);
     transition: all .2s ease-in-out;
     box-sizing: border-box;
