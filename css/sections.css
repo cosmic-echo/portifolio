@@ -133,15 +133,15 @@
 }
 .project-card:nth-child(1) .project-card-bg {
     background: url("../img/placeholder1.jpg");
-    background-size: cover;
+    background-size: 100%;
 }
 .project-card:nth-child(2) .project-card-bg {
     background: url("../img/placeholder2.jpg");
-    background-size: cover;
+    background-size: 100%;
 }
 .project-card:nth-child(3) .project-card-bg {
     background: url("../img/placeholder3.jpg");
-    background-size: cover;
+    background-size: 100%;
 }
 .project-info {
     align-self: flex-end;
