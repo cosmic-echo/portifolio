@@ -49,6 +49,7 @@ a[name="inicio"] {
     border-radius: 2.5rem;
     cursor: pointer;
     transition: all .2s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
 }
 .menu-link--top-panel:hover {
    background: rgba(0,0,0,.6);
@@ -67,6 +68,7 @@ a[name="inicio"] {
     justify-content: space-evenly;
     position: relative;
     transition: all .25s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
 }
 .social-item--top-panel:hover {
     background: rgba(0,0,0,.6);
