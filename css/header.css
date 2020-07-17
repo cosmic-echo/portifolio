@@ -44,7 +44,7 @@ a[name="inicio"] {
     box-shadow: none;
 }
 .menu-link--top-panel.contact {
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.8);
 }
 #social-media-container--top-panel {
     display: flex;
@@ -198,6 +198,7 @@ header {
     top: 0;
     box-sizing: content-box;
     z-index: 1001;
+    display: none;
 }
 #go-to-top {
     padding: 1rem;
