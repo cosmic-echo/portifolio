@@ -198,7 +198,6 @@ header {
     top: 0;
     box-sizing: content-box;
     z-index: 1001;
-    display: none;
 }
 #go-to-top {
     padding: 1rem;
