@@ -100,3 +100,28 @@ input, textarea {
 .flextstart {
     align-self: flex-start;
 }
+a[name="inicio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#go-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 999;
+}
+#go-top button {
+    border: 0;
+    color: rgba(0,0,0,.3);
+    font-size: 3rem;
+    transition: all .25s ease;
+    background: transparent;
+    cursor: pointer;
+}
+#go-top button:hover {
+    color: rgba(0,0,0,.6);
+}
+#go-top button:active {
+    transform: scale(0.90);
+}

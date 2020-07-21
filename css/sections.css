@@ -253,11 +253,6 @@ form input[type="radio"], form input[type="checkbox"] {
     height: 1.5rem;
     vertical-align: middle;
     margin-right: .5rem;
-    opacity: 0.7;
-    transition: all .2s ease-in-out;
-}
-form input[type="radio"]:hover, form input[type="checkbox"]:hover, form input[type="radio"]:checked, form input[type="checkbox"]:checked {
-    opacity: 1;
 }
 form input[type="checkbox"] + label {
     width: 1.5rem;
