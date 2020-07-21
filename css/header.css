@@ -191,18 +191,3 @@ header {
     background: #0b5288;
     transform: scale(0.97);
 }
-#go-to-top--container {
-    display: flex;
-    justify-content: flex-end;
-    position: sticky;
-    top: 0;
-    box-sizing: content-box;
-    z-index: 1001;
-}
-#go-to-top {
-    padding: 1rem;
-    border-radius: 40px;
-    background: rgba(0,0,0,.6);
-    display: inline-block;
-    color: #fff;
-}

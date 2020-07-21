@@ -222,7 +222,7 @@
     position: absolute;
     top: 1rem;
     left: .7rem;
-    transition: all .25s ease;
+    transition: all .2s ease;
 }
 .inputform:valid + label,
 .inputform:focus + label {
@@ -235,7 +235,7 @@
     color: #208de0;
 }
 .inputform {
-    padding: 1.3rem 0.85rem 0.7rem 0.75rem;
+    padding: 1.3rem 0.86rem 0.7rem 0.73rem;
     border-radius: .4rem;
     border: 1px solid rgba(0,0,0,.5);
     transition: all .2s ease-in-out;
@@ -270,23 +270,20 @@ textarea {
     height: 15rem !important;
 }
 .submitbutton {
-    border: 2px solid #0067b8;
-    color: #0067b8;
+    background: #0067b8;
+    color: #fff;
+    border: 0;
     border-radius: .4rem;
     padding: .9rem 1.2rem;
     letter-spacing: .05rem;
-    transition: all .1s ease;
+    transition: all .2s ease;
 }
 .submitbutton:hover {
     background: #147bca;
-    border: 2px solid #147bca;
-    color: #fff;
 }
 .submitbutton:active {
     background: #0b5288;
-    border: 2px solid #0b5288;
     color: #fff;
-    box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
     transform: scale(0.97);
 }
 #contactdeveloper form h3 {
