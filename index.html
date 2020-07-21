@@ -70,9 +70,9 @@
                 </nav>
                 <div id="social-media">
                     <div id="social-media-container">
-                        <div><a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a></div>
-                        <div><a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a></div>
-                        <div><a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a></div>
+                        <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a>
+                        <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a>
+                        <a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </aside>
@@ -183,36 +183,47 @@
             </div>
             <div id="form-tabs" class="flexrow">
                 <div class="form-tabs--group">
-                    <input type="radio" id="radio--request" name="formoption" class="formtabs--option" value="siterequest" checked/>
-                    <label for="radio--request" class="fontlight">Fazer um orçamento</label>
+                    <input type="radio" id="radio1--request" name="formoption" class="option--formtabs" value="siterequest" checked/>
+                    <label for="radio1--request" class="fontlight">Fazer um orçamento</label>
                 </div>
                 <div class="form-tabs--group">
-                    <input type="radio" id="radio--contact" name="formoption" class="formtabs--option" value="developermessage"/>
-                    <label for="radio--contact" class="fontlight">Mandar uma mensagem</label>
+                    <input type="radio" id="radio2--contact" name="formoption" class="option--formtabs" value="developermessage"/>
+                    <label for="radio2--contact" class="fontlight">Mandar uma mensagem</label>
                 </div>
             </div>
-            <form id="form--request" class="show-form" action="pudim.html">
-                <input type="number" id="quantity" name="quantity" class="contactform--input" min="1" required/>
-                <label for="quantity">Quantidade de páginas</label>
-                <div class=" flextstart">
+            <form id="form1--request" class="show-form" action="pudim.html">
+                <div class="formgroup">
+                    <input type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
+                    <label for="quantity">Quantidade de páginas</label>
+                </div>
+                <div class="flextstart">
                     <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
                     <label for="layout-js">Preciso de Javascript</label>
                 </div>
-                <div class=" flextstart">
+                <div class="flextstart">
                     <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
                     <label for="layout-js">Preciso de um layout</label>
                 </div>
-                <input type="number" name="deadline" id="deadline" class="contactform--input" min="1" required/>
-                <label for="deadline">Prazo</label>
-                <input type="button" class="button--submit" value="Fazer pedido"/>
+                <div class="formgroup">
+                    <input type="number" name="deadline" id="deadline" class="inputform" min="1" required/>
+                    <label for="deadline">Prazo</label>
+                </div>
+                <input type="button" class="submitbutton" value="Fazer pedido"/>
             </form>
-            <form id="form--contact" action="pudim.html">
-                <input type="text" id="name" name="name" class="contactform--input" required/>
-                <label for="name">Quantidade de páginas</label>
-                <input type="text" id="email" class="contactform--input" required/>
-                <label for="quantity">Quantidade de páginas</label>
-                <textarea id="messagebox" class="contactform--input" placeholder="Mensagem" required></textarea>
-                <input type="button" class="button--submit" value="Enviar"/>
+            <form id="form2--contact" action="pudim.html">
+                <div class="formgroup">
+                    <input type="text" id="name" name="name" class="inputform" required/>
+                    <label for="name">Nome</label>
+                </div>
+                <div class="formgroup">
+                    <input type="text" id="email" class="inputform" required/>
+                    <label for="quantity">E-mail</label>
+                </div>
+                <div class="formgroup">
+                    <textarea id="message" name="message" class="inputform" required></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+                <input type="button" class="submitbutton" value="Enviar"/>
             </form>
         </section>
         <footer id="siteinfo" class="disableselection">

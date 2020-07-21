@@ -50,7 +50,7 @@ a[name="inicio"] {
     display: flex;
     flex-direction: row;
 }
-.social-item--top-panel {
+#social-media-container--top-panel a {
     font-size: 1.5rem;
     color: #fff;
     height: 3rem;
@@ -63,10 +63,10 @@ a[name="inicio"] {
     transition: all .25s ease;
     text-shadow: 1px 1px 3px rgba(0,0,0,.4);
 }
-.social-item--top-panel:hover {
+#social-media-container--top-panel a:hover {
     background: rgba(0,0,0,.4);
 }
-.social-item--top-panel:active i {
+#social-media-container--top-panel a:active {
     transform: scale(0.90);
     transition: all .2s ease;
 }
