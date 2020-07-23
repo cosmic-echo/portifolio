@@ -168,30 +168,84 @@
 /*end of projects section*/
 
 /*start - contact section*/
-#contactdeveloper {
+#contactpopup {
+    position: fixed;
+    top: 2rem;
+    left: calc(50vw - 15rem);
+    width: 30rem;
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    height: auto;
+    background: rgb(250, 250, 250);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    border-radius: .4rem;
+    z-index: 9999;
     align-items: center;
-    display: flex;
     flex-direction: column;
-    height: 100vh;
+    display: none;
+}
+#lockpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#lockpage.showlockpage, #contactpopup.show-contactform {
+    display: flex;
+    transition: all .25s ease-in-out;
+}
+#closecontact {
+    border-radius: 0 0 .5rem .5rem;
+    border: 1px solid rgba(0,0,0,.5);
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    transition: all .25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#closecontact:hover {
+    background: rgb(196, 43, 43);
+    box-shadow: 0 0 10px rgb(196, 43, 43);
+    border: 1px solid rgb(196, 43, 43);
+}
+#closecontact:active {
+    background: rgb(128, 17, 17);
+    box-shadow: inset 0 0 5px rgba(0,0,0,.8);
+}
+#closecontact svg {
+    fill:rgba(0,0,0,.8);
+    width: 20px;
+    height: 20px;
+}
+#closecontact:hover svg, #closecontact:active svg {
+    fill: rgb(255,255,255) !important;
 }
 #form-tabs {
     justify-content: space-between;
     margin-bottom: 2rem;
 }
 #form-tabs, #form2--contact, #form1--request {
-    width: 35%; 
+    width: 100%;
 }
 #form2--contact, #form1--request {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(auto, 1fr);
     row-gap: 1rem;
 }
-#contactdeveloper form {
+#contactpopup form {
     display: none;
     opacity: 0;
     animation: fadeTranslateX .2s ease-in-out;
 }
-#contactdeveloper form.show-form {
+#contactpopup form.show-form {
     display: grid;
     opacity: 1;
     animation: fade .2s linear, translateX .2s linear;
@@ -281,7 +335,7 @@ textarea {
     color: #fff;
     transform: scale(0.97);
 }
-#contactdeveloper form h3 {
+#contactpopup form h3 {
     margin: 1rem 0 0rem 0;
 }
 /*end - contact section*/
