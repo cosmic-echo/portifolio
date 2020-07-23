@@ -5,6 +5,7 @@
 @import url("fontawesome-all-min.css");
 
 /*animations*/
+
 @keyframes fade {
     0% {
         opacity: 0;
