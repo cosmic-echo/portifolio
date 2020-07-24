@@ -175,7 +175,6 @@
     width: 30rem;
     padding: 1rem;
     background: rgb(250, 250, 250);
-    background-size: 100% 60px;
     box-shadow: 0 0 30px rgba(0,0,0,.5);
     border-radius: .4rem;
     z-index: 9999;
@@ -230,6 +229,7 @@
 #closecontact:active {
     background: rgb(196, 43, 43);
     box-shadow: inset 0 0 7px rgba(0,0,0,.8);
+    transform: scale(0.90);
 }
 #closecontact svg {
     fill:rgba(0,0,0,.6);
@@ -282,29 +282,16 @@
 .formgroup {
     position: relative;
 }
-.inputform + label {
-    position: absolute;
-    top: 1rem;
-    left: .7rem;
-    transition: all .2s ease;
-}
-.inputform:valid + label,
-.inputform:focus + label {
-    position: absolute;
-    top: .35rem;
-    left: .75rem;
-    font-size: .8rem;
-}
-.inputform:focus + label {
+.inputform:focus::placeholder {
     color: #208de0;
 }
 .inputform {
-    padding: 1.3rem 0.86rem 0.7rem 0.73rem;
     border-radius: .4rem;
     border: 1px solid rgba(0,0,0,.5);
     transition: all .2s ease-in-out;
     background: rgba(255,255,255,.7);
     width: 100%;
+    padding: .9rem;
     box-sizing: border-box;
 }
 .inputform:focus {
@@ -326,7 +313,7 @@ form input[type="checkbox"] + label {
 }
 textarea {
     resize: none;
-    height: 15rem !important;
+    height: 10rem !important;
 }
 .submitbutton {
     background: #0067b8;
