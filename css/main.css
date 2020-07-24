@@ -142,16 +142,16 @@ a[name="inicio"] {
     align-self: flex-end;
 }
 #site-navigation ul li:nth-child(1) {
-    animation: translateX2 .2s forwards;
+    animation: translateX2 .5s forwards;
 }
 #site-navigation ul li:nth-child(2) {
-    animation: translateX2 .3s forwards;
-}
-#site-navigation ul li:nth-child(3) {
     animation: translateX2 .4s forwards;
 }
+#site-navigation ul li:nth-child(3) {
+    animation: translateX2 .3s forwards;
+}
 #site-navigation ul li:nth-child(4) {
-    animation: translateX2 .5s forwards;
+    animation: translateX2 .2s forwards;
 }
 #site-navigation ul li a {
     background: rgba(50,50,50,.8);

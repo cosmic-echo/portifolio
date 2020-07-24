@@ -73,8 +73,10 @@
 
 /*start of projects section*/
 #projects-container {
-    display: flex;
-    justify-content: space-evenly;
+    margin: 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
     margin-bottom: 7px; /*navigation/scrolling fix*/
 }
 .project-card {
@@ -152,6 +154,18 @@
 }
 .project-card:nth-child(3) .project-card-bg {
     background: url("../img/placeholder3.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(4) .project-card-bg {
+    background: url("../img/placeholder4.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(5) .project-card-bg {
+    background: url("../img/placeholder5.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(6) .project-card-bg {
+    background: url("../img/placeholder6.jpg");
     background-size: 100%;
 }
 .project-info {
