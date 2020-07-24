@@ -1,17 +1,18 @@
 /*hamburguer menu action*/
 var hamburguer = document.querySelector("#hamburguer");
+var sidebar = document.querySelector("#sidebar");
 
 hamburguer.addEventListener("click", function() {
-  document.querySelector("#sidebar").classList.toggle("show-menu");
+    sidebar.classList.toggle("show-menu");
 });
 
 /*Navigation menu*/
 var sitenavigation = document.querySelector("#site-navigation");
+var navbutton = document.querySelector("#nav-button");
 
-
-function shownagivationmenu() {
+navbutton.addEventListener("click", function() {
   sitenavigation.classList.toggle("show-nav");
-}
+});
 
 
 /*Contact popup*/
@@ -33,11 +34,23 @@ var formcontact = document.querySelector("#form2--contact");
 
 
 function switchrequestform() {
-  formrequest.classList.toggle("show-form");
-  formcontact.classList.remove("show-form");
+  if (!formrequest.classList.contains('show-form')){
+    formrequest.classList.toggle("show-form");
+    formcontact.classList.remove("show-form");
+  }
 }
 
 function switchcontactform() {
+  if (!formcontact.classList.contains('show-form')){
   formrequest.classList.remove("show-form");
   formcontact.classList.toggle("show-form");
+  }
 }
+
+/*Show credits (footer)*/
+var creditspopup = document.querySelector("#creditspopup");
+var creditsbutton = document.querySelector("#showcredits");
+
+creditsbutton.addEventListener("click", function() {
+  creditspopup.classList.toggle("show-credits");
+});

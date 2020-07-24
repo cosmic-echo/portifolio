@@ -12,20 +12,20 @@
     </head>
     <body>
         <div id="container">
-        <div id="go-top">
-            <div id="go-top-button-container">
-                <button id="nav-button" onclick="shownagivationmenu();" alt="Mostrar opções de navegação"><i class="fas fa-arrow-circle-up"></i></button>
-            </div>
+        <section id="inicio"></section>
+        <div id="navigation-menu-container">
+            <button id="nav-button" alt="Mostrar opções de navegação"><i class="fas fa-arrow-circle-up"></i></button>
             <nav id="site-navigation">
                 <ul>
-                    <li><a href="#projetos" alt="Projetos"><i class="fas fa-star"></i> Projetos</a></li>
-                    <li><a href="#conhecimentos" alt="Conhecimentos"><i class="fas fa-puzzle-piece"></i> Conhecimentos</a></li>
-                    <li><a href="#inicio" onclick="javascript: showcontactform();" alt="Contatar o desenvolvedor"><i class="fas fa-envelope-open"></i> Contato</a></li>
-                    <li><a href="#inicio" alt="Ir para o início da página"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#inicio" onclick="javascript: showcontactform();" alt="Contatar o desenvolvedor"><i class="fas fa-envelope-open"></i>&nbsp;Contato</a></li>
+                    <li><a href="#projetos" alt="Projetos"><i class="fas fa-star"></i>&nbsp;Projetos</a></li>
+                    <li><a href="#conhecimentos" alt="Conhecimentos"><i class="fas fa-puzzle-piece"></i>&nbsp;Conhecimentos</a></li>
+                    <li><a href="#inicio" alt="Ir para o início da página"><i class="fas fa-home"></i>&nbsp;Início</a></li>
                 </ul>
             </nav>
         </div>
             <div id="bg-container">
+                <div id="lockpage"></div>
                 <div class="background"></div>
                 <div class="background-dark"></div>
                 <div class="background-dots"></div>
@@ -39,18 +39,16 @@
                     </ul>
                 </nav>
                 <nav id="social-media-container--top-panel">
-                    <ul><a class="social-item--top-panel social-item--top-panel1" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip--top-panel">WhatsApp</span><i class="fab fa-whatsapp"></i></a></ul>
-                    <ul><a class="social-item--top-panel" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip--top-panel">Instagram</span><i class="fab fa-instagram"></i></a></ul>
-                    <ul><a class="social-item--top-panel" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip--top-panel">Github</span><i class="fab fa-github"></i></a></ul>
+                    <ul><a class="social-item--top-panel" href="/"><span class="tooltip">Instagram</span><i class="fab fa-instagram"></i></a></ul>
+                    <ul><a class="social-item--top-panel" href="https://github.com/cosmic-echo" target="_blank"><span class="tooltip">Github</span><i class="fab fa-github"></i></a></ul>
                 </nav>
             </section>
-            <div id="lockpage"></div>
             <section id="contactpopup" class="section disableselection">
                 <div id="titlebar">
                     <span>Contato</span>
                     <button id="closecontact" onclick="closecontactform();">
                         <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
-                        <span id="closebutton_title">Fechar</span>
+                        <span class="tooltip" id="closebutton_title">Fechar</span>
                     </button>
                 </div>
                 <div id="form-tabs" class="flexrow">
@@ -99,7 +97,6 @@
                 </form>
             </section>
             <header>
-                <a name="inicio"></a>
                 <div id="banner"> 
                     <div id="profile_picture"></div>
                     <div id="developer_container">
@@ -140,9 +137,9 @@
                     </div>
                 </div>
             </aside>
-            <section id="projects" class="section">
+            <section id="projetos" class="section">
                 <div class="section-header">
-                    <a name="projetos"><h1 class="fontlight disableselection">Projetos</h1></a>
+                    <h1 class="fontlight disableselection">Projetos</h1>
                 </div>
                 <div id="projects-container" class="fontnormal disableselection">
                     <div class="project-card">
@@ -151,7 +148,7 @@
                         <div class="project-card-bg-dark"></div>
                         <a class="project-go" href="pudim.html"></a>
                         <div class="project-info">
-                            <h2 class="fontmedium">Este site</h2>
+                            <h2 class="fontmedium">e disseram que eu tava na pior</h2>
                             <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
                             <h4 class="fontmedium">CSS</h4>
                         </div>
@@ -162,7 +159,7 @@
                         <div class="project-card-bg-dark"></div>
                         <a class="project-go" href="pudim.html"></a>
                         <div class="project-info">
-                            <h2 class="fontmedium">Este site, também, uai</h2>
+                            <h2 class="fontmedium">and I forsee the dark ahead I if stay</h2>
                             <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
                             <h4 class="fontmedium">HTML</h4>     
                         </div>
@@ -173,9 +170,9 @@
                         <div class="project-card-bg-dark"></div>
                         <a class="project-go" href="pudim.html"></a>
                         <div class="project-info">
-                            <h2 class="fontmedium">Sol com nuvens</h2>
+                            <h2 class="fontmedium">alô alô alô, graças a deus</h2>
                             <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Desenho</h4>
+                            <h4 class="fontmedium">Bootstrap</h4>
                         </div>
                     </div>
                     <div class="project-card">
@@ -184,9 +181,9 @@
                         <div class="project-card-bg-dark"></div>
                         <a class="project-go" href="pudim.html"></a>
                         <div class="project-info">
-                            <h2 class="fontmedium">Sol com nuvens</h2>
+                            <h2 class="fontmedium">diabo, acalma teu coração, eu sou a tempestade</h2>
                             <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Desenho</h4>
+                            <h4 class="fontmedium">Git & Github</h4>
                         </div>
                     </div>
                     <div class="project-card">
@@ -195,9 +192,9 @@
                         <div class="project-card-bg-dark"></div>
                         <a class="project-go" href="pudim.html"></a>
                         <div class="project-info">
-                            <h2 class="fontmedium">Sol com nuvens</h2>
+                            <h2 class="fontmedium">a cadeira caiu</h2>
                             <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Desenho</h4>
+                            <h4 class="fontmedium">Javascript</h4>
                         </div>
                     </div>
                     <div class="project-card">
@@ -206,7 +203,7 @@
                         <div class="project-card-bg-dark"></div>
                         <a class="project-go" href="pudim.html"></a>
                         <div class="project-info">
-                            <h2 class="fontmedium">Sol com nuvens</h2>
+                            <h2 class="fontmedium">meudeus já é treizora</h2>
                             <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
                             <h4 class="fontmedium">Desenho</h4>
                         </div>
@@ -214,9 +211,9 @@
                 </div>
             </div>
         </div>
-        <section id="knowledge" class="section">
+        <section id="conhecimentos" class="section">
             <div class="section-header">
-                <a name="conhecimentos"><h1 class="fontlight disableselection">Conhecimentos</h1></a>
+                <h1 class="fontlight disableselection">Conhecimentos</h1>
             </div>
             <div id="knowledge-container" class="fontnormal">
                 <div class="knowledge-item">
@@ -277,7 +274,17 @@
         <footer id="siteinfo" class="disableselection">
             <p>Portifólio de Raul Gomes</p>
             <span>&nbsp;|&nbsp;</span>
-            <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença</a></p>
+            <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença CC0 1.0 Universal (CC0 1.0)</a></p>
+            <div style="position: relative;">
+                <nav id="creditspopup">
+                    <ul>
+                        <h3>Ícones</h3>
+                        <li>Font Awesome by Dave Gandy - <a href="http://fontawesome.io" target="_blank">http://fontawesome.io</a></li>
+                    </ul>
+                </nav>
+                <span>&nbsp;|&nbsp;</span>
+                <button id="showcredits" class="a">Agradecimentos e créditos</button>
+            </div>
         </footer>
     </div>
 </body>

@@ -61,6 +61,12 @@
 ::-moz-focus-inner {
     border:0;
 }
+a, .a {
+    transition: all .25s ease-in-out;
+}
+a:active, .a:active {
+    transform: scale(0.95);
+}
 * {
     margin: 0;
     padding: 0;
@@ -109,77 +115,18 @@ input, textarea {
 .flextstart {
     align-self: flex-start;
 }
-a[name="inicio"] {
+.tooltip {
+    font-size: .9rem;
+    padding: .4rem .8rem;
     position: absolute;
-    top: 0;
-    left: 0;
-}
-#go-top {
-    position: fixed;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    z-index: 999;
-}
-#site-navigation {
-    text-decoration: none;
-    position: fixed;
-    right: 1.5rem;
-    bottom: 5rem;
-    display: none;
-}
-#site-navigation.show-nav {
-    display: block;
-    animation: fade .2s ease;
-}
-#site-navigation ul {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-end;
-}
-#site-navigation ul li {
-    margin-bottom: 1rem;
-    align-self: flex-end;
-}
-#site-navigation ul li:nth-child(1) {
-    animation: translateX2 .5s forwards;
-}
-#site-navigation ul li:nth-child(2) {
-    animation: translateX2 .4s forwards;
-}
-#site-navigation ul li:nth-child(3) {
-    animation: translateX2 .3s forwards;
-}
-#site-navigation ul li:nth-child(4) {
-    animation: translateX2 .2s forwards;
-}
-#site-navigation ul li a {
-    background: rgba(20,20,20,.9);
+    bottom: -2.5rem;
+    background: rgba(0,0,0,.7);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.2);
     color: #fff;
-    padding: .5rem;
-    border-radius: 10px;
-    box-shadow:  0 0 5px rgba(0,0,0,.3);
-    display: block;
-    transition: all .2s ease-in-out;
-}
-#site-navigation ul li a:hover {
-    background: #147bca;
-}
-#site-navigation ul li a:active {
-    background: #0b5288;
-    transform: scale(0.95);
-}
-#go-top button {
-    border: 0;
-    color: rgba(0,0,0,.3);
-    font-size: 3rem;
-    transition: all .25s ease;
-    background: transparent;
-    cursor: pointer;
-}
-#go-top button:hover {
-    color: rgba(0,0,0,.6);
-}
-#go-top button:active {
-    transform: scale(0.90);
+    border-radius: 1rem;
+    display: none;
+    min-width: 3.5em;
+    text-align: center;
+    animation: fade .25s ease-in-out;
+    backdrop-filter: blur(.4rem);
 }

@@ -1,3 +1,74 @@
+#navigation-menu-container {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 999;
+}
+#site-navigation {
+    text-decoration: none;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 5rem;
+    display: none;
+}
+#site-navigation.show-nav {
+    display: block;
+    animation: fade .2s ease;
+}
+#site-navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#site-navigation ul li {
+    margin-bottom: 1rem;
+    align-self: flex-end;
+}
+#site-navigation ul li:nth-child(1) {
+    animation: translateX2 .5s forwards;
+}
+#site-navigation ul li:nth-child(2) {
+    animation: translateX2 .4s forwards;
+}
+#site-navigation ul li:nth-child(3) {
+    animation: translateX2 .3s forwards;
+    margin-bottom: 2.5rem;
+}
+#site-navigation ul li:nth-child(4) {
+    animation: translateX2 .2s forwards;
+}
+#site-navigation ul li a {
+    background: rgba(20,20,20,.9);
+    color: #fff;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    display: block;
+    transition: all .2s ease-in-out;
+}
+#site-navigation ul li a:hover {
+    background: #147bca;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+}
+#site-navigation ul li a:active {
+    background: #0b5288;
+    transform: scale(0.95);
+}
+#navigation-menu-container button {
+    border: 0;
+    color: rgba(0,0,0,.3);
+    font-size: 3rem;
+    transition: all .25s ease;
+    background: transparent;
+    cursor: pointer;
+}
+#navigation-menu-container button:hover {
+    color: rgba(20,20,20,.9);
+}
+#navigation-menu-container button:active {
+    transform: scale(0.90);
+}
 .section-header {
     display: flex;
     justify-content: center;
@@ -260,25 +331,13 @@
     height: 20px;
 }
 #closecontact:hover svg, #closecontact:active svg {
-    fill: rgb(255,255,255) !important;
+    fill: rgb(255,255,255);
 }
 #closebutton_title {
-    font-size: .9rem;
-    padding: .4rem .8rem;
-    position: absolute;
-    bottom: -2.5rem;
-    background: rgb(100,100,100);
-    border-radius: 1rem;
-    text-align: center;
-    color: #fff;
     display: none;
-    min-width: 2rem;
-    z-index: 10000;
 }
 #closecontact:hover #closebutton_title {
     display: block;
-    animation: fade .5s ease-in-out;
-
 }
 #form-tabs {
     justify-content: space-between;
@@ -408,15 +467,43 @@ textarea {
     font-size: 0.8rem;
     margin: 6rem 0 0 0;
 }
-#siteinfo a {
+#siteinfo a, #siteinfo button {
     color: rgb(82, 82, 82);
 }
-#siteinfo a:hover {
+#siteinfo a:hover, #siteinfo button:hover {
     color: rgb(96, 88, 209);
     text-decoration: underline;
-    transition: all .25s ease-in-out;
 }
-#siteinfo a:active {
+#siteinfo a:active, #siteinfo button:active {
     color: rgb(124, 124, 124);
+}
+#siteinfo button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+#creditspopup {
+    padding: 1rem;
+    min-width: 20rem;
+    min-height: 10rem;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    background: rgba(20,20,20,.9);
+    color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    display: none;
+    backdrop-filter: blur(.5rem);
+}
+#creditspopup.show-credits {
+    display: block;
+    animation: fade .5s ease, translateY .2s ease;
+}
+#creditspopup ul {
+    text-decoration: none;
+}
+#creditspopup ul li a, #creditspopup ul li a:hover, #creditspopup ul li a:active  {
+    color: #fff;
 }
 /*end - siteinfo section*/

@@ -65,21 +65,8 @@
     transform: scale(0.95);
     transition: all .2s ease;
 }
-.social-tooltip--top-panel {
-    font-size: .9rem;
-    padding: .4rem .8rem;
-    position: absolute;
-    bottom: -2.5rem;
-    background: rgba(0,0,0,.6);
-    color: #fff;
-    border-radius: 1rem;
-    display: none;
-    min-width: 3.5em;
-    text-align: center;
-}
-.social-item--top-panel:hover .social-tooltip--top-panel {
+#social-media-container--top-panel a:hover .tooltip {
     display: block;
-    animation: fade .5s ease;
 }
 #bg-container {
     position: relative;
