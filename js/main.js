@@ -12,8 +12,12 @@ var navbutton = document.querySelector("#nav-button");
 
 navbutton.addEventListener("click", function() {
   sitenavigation.classList.toggle("show-nav");
+  navbutton.classList.toggle("hover");
 });
 
+document.querySelector("#container").addEventListener("click", function(e) {
+  sitenavigation.classList.remove("show-nav");
+});
 
 /*Contact popup*/
 var contactpopup = document.querySelector("#contactpopup");
@@ -50,7 +54,11 @@ function switchcontactform() {
 /*Show credits (footer)*/
 var creditspopup = document.querySelector("#creditspopup");
 var creditsbutton = document.querySelector("#showcredits");
+var creditsclose = document.querySelector("#creditsclose");
 
 creditsbutton.addEventListener("click", function() {
   creditspopup.classList.toggle("show-credits");
+});
+creditsclose.addEventListener("click", function() {
+  creditspopup.classList.remove("show-credits");
 });

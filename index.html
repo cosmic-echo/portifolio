@@ -10,207 +10,206 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     </head>
-    <body>
-        <div id="container">
-        <section id="inicio"></section>
-        <div id="navigation-menu-container">
-            <button id="nav-button" alt="Mostrar opções de navegação"><i class="fas fa-arrow-circle-up"></i></button>
-            <nav id="site-navigation">
-                <ul>
-                    <li><a href="#inicio" onclick="javascript: showcontactform();" alt="Contatar o desenvolvedor"><i class="fas fa-envelope-open"></i>&nbsp;Contato</a></li>
-                    <li><a href="#projetos" alt="Projetos"><i class="fas fa-star"></i>&nbsp;Projetos</a></li>
-                    <li><a href="#conhecimentos" alt="Conhecimentos"><i class="fas fa-puzzle-piece"></i>&nbsp;Conhecimentos</a></li>
-                    <li><a href="#inicio" alt="Ir para o início da página"><i class="fas fa-home"></i>&nbsp;Início</a></li>
+<body>
+    <section id="inicio"></section>
+    <div id="navigation-menu-container">
+        <button id="nav-button" alt="Mostrar opções de navegação"><i class="fas fa-arrow-circle-up"></i></button>
+        <nav id="site-navigation">
+            <ul>
+                <li><a href="#inicio" onclick="javascript: showcontactform();" alt="Contatar o desenvolvedor"><i class="fas fa-envelope-open"></i>&nbsp;Contato</a></li>
+                <li><a href="#projetos" alt="Projetos"><i class="fas fa-star"></i>&nbsp;Projetos</a></li>
+                <li><a href="#conhecimentos" alt="Conhecimentos"><i class="fas fa-puzzle-piece"></i>&nbsp;Conhecimentos</a></li>
+                <li><a href="#inicio" alt="Ir para o início da página"><i class="fas fa-home"></i>&nbsp;Início</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="container">
+        <div id="bg-container">
+            <div id="lockpage"></div>
+            <div class="background"></div>
+            <div class="background-dark"></div>
+            <div class="background-dots"></div>
+        </div>
+        <section id="top-panel" class="disableselection">
+            <nav>
+                <ul id="menu--top-panel">
+                    <li class="menu-item--top-panel"><a href="#projetos" class="menu-link--top-panel">Projetos</a></li>
+                    <li class="menu-item--top-panel"><a href="#conhecimentos" class="menu-link--top-panel">Conhecimentos</a></li>
+                    <li class="menu-item--top-panel"><a id="contactbutton" class="menu-link--top-panel contact" onclick="javascript: showcontactform();">Contato</a></li>
                 </ul>
             </nav>
-        </div>
-            <div id="bg-container">
-                <div id="lockpage"></div>
-                <div class="background"></div>
-                <div class="background-dark"></div>
-                <div class="background-dots"></div>
+            <nav id="social-media-container--top-panel">
+                <ul><a class="social-item--top-panel" href="/"><span class="tooltip">Instagram</span><i class="fab fa-instagram"></i></a></ul>
+                <ul><a class="social-item--top-panel" href="https://github.com/cosmic-echo" target="_blank"><span class="tooltip">Github</span><i class="fab fa-github"></i></a></ul>
+            </nav>
+        </section>
+        <section id="contactpopup" class="section disableselection">
+            <div id="contacttitlebar">
+                <span>Contato</span>
+                <button class="close" onclick="closecontactform();">
+                    <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
+                    <span class="tooltip" id="closebutton_title">Fechar</span>
+                </button>
             </div>
-            <section id="top-panel" class="disableselection">
-                <nav>
-                    <ul id="menu--top-panel">
-                        <li class="menu-item--top-panel"><a href="#projetos" class="menu-link--top-panel">Projetos</a></li>
-                        <li class="menu-item--top-panel"><a href="#conhecimentos" class="menu-link--top-panel">Conhecimentos</a></li>
-                        <li class="menu-item--top-panel"><a id="contactbutton" class="menu-link--top-panel contact" onclick="javascript: showcontactform();">Contato</a></li>
-                    </ul>
-                </nav>
-                <nav id="social-media-container--top-panel">
-                    <ul><a class="social-item--top-panel" href="/"><span class="tooltip">Instagram</span><i class="fab fa-instagram"></i></a></ul>
-                    <ul><a class="social-item--top-panel" href="https://github.com/cosmic-echo" target="_blank"><span class="tooltip">Github</span><i class="fab fa-github"></i></a></ul>
-                </nav>
-            </section>
-            <section id="contactpopup" class="section disableselection">
-                <div id="titlebar">
-                    <span>Contato</span>
-                    <button id="closecontact" onclick="closecontactform();">
-                        <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
-                        <span class="tooltip" id="closebutton_title">Fechar</span>
-                    </button>
+            <div id="form-tabs" class="flexrow">
+                <div class="form-tabs--group">
+                    <input type="radio" id="radio1--request" name="formoption" class="option--formtabs" value="siterequest" onclick="switchrequestform();" checked/>
+                    <label for="radio1--request" class="fontlight">Fazer um orçamento</label>
                 </div>
-                <div id="form-tabs" class="flexrow">
-                    <div class="form-tabs--group">
-                        <input type="radio" id="radio1--request" name="formoption" class="option--formtabs" value="siterequest" onclick="switchrequestform();" checked/>
-                        <label for="radio1--request" class="fontlight">Fazer um orçamento</label>
-                    </div>
-                    <div class="form-tabs--group">
-                        <input type="radio" id="radio2--contact" name="formoption" class="option--formtabs" value="developermessage" onclick="switchcontactform();"/>
-                        <label for="radio2--contact" class="fontlight">Mandar uma mensagem</label>
-                    </div>
-                </div>
-                <form id="form1--request" class="show-form" action="pudim.html">
-                    <div class="formgroup">
-                        <input type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
-                        <label for="quantity">Quantidade de páginas</label>
-                    </div>
-                    <div class="flextstart">
-                        <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
-                        <label for="layout-js">Preciso de Javascript</label>
-                    </div>
-                    <div class="flextstart">
-                        <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
-                        <label for="layout-js">Preciso de um layout</label>
-                    </div>
-                    <div class="formgroup">
-                        <input type="date" name="deadline" id="deadline" class="inputform" min="1" required/>
-                        <label for="deadline">Prazo (em dias)</label>
-                    </div>
-                    <input type="button" class="submitbutton" value="Fazer pedido"/>
-                </form>
-                <form id="form2--contact" action="pudim.html">
-                    <div class="formgroup">
-                        <input type="text" id="name" name="name" class="inputform" required/>
-                        <label for="name">Nome</label>
-                    </div>
-                    <div class="formgroup">
-                        <input type="text" id="email" class="inputform" required/>
-                        <label for="email">E-mail</label>
-                    </div>
-                    <div class="formgroup">
-                        <textarea id="message" name="message" class="inputform" required></textarea>
-                        <label for="message">Mensagem</label>
-                    </div>
-                    <input type="button" class="submitbutton" value="Enviar"/>
-                </form>
-            </section>
-            <header>
-                <div id="banner"> 
-                    <div id="profile_picture"></div>
-                    <div id="developer_container">
-                        <h1 id="developer_name" class="fontthin disableselection">Raul Sousa</h1>
-                        <p id="developer_office" class="fontlight disableselection">Web developer e designer front-end</p>
-                        <p id="developer_description" class="fontlight disableselection">
-                            Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
-                        </p>
-                        <button id="button--learnmore" class="fontmedium" onclick="location.href='#projetos';">Saiba mais</button>
-                    </div>
-                </div>
-            </header>
-            <div id="hamburguer" style="display: none;">
-                <input type="checkbox" />
-                <div class="line" id="line1"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-                <div id="hamburguer-close">
-                    <div class="close1">
-                      <div class="close2"></div>
-                    </div>
+                <div class="form-tabs--group">
+                    <input type="radio" id="radio2--contact" name="formoption" class="option--formtabs" value="developermessage" onclick="switchcontactform();"/>
+                    <label for="radio2--contact" class="fontlight">Mandar uma mensagem</label>
                 </div>
             </div>
-            <aside id="sidebar" class="disableselection" style="display: none;">
-                <nav>
-                    <ul id="menu">
-                        <li class="menu-item"><a href="#inicio" class="menu-link">Início</a></li>
-                        <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
-                        <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
-                        <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
-                    </ul>
-                </nav>
-                <div id="social-media">
-                    <div id="social-media-container">
-                        <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a>
-                        <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a>
-                        <a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a>
-                    </div>
+            <form id="form1--request" class="show-form" action="pudim.html">
+                <div class="formgroup">
+                    <input type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
+                    <label for="quantity">Quantidade de páginas</label>
                 </div>
-            </aside>
-            <section id="projetos" class="section">
-                <div class="section-header">
-                    <h1 class="fontlight disableselection">Projetos</h1>
+                <div class="flextstart">
+                    <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
+                    <label for="layout-js">Preciso de Javascript</label>
                 </div>
-                <div id="projects-container" class="fontnormal disableselection">
-                    <div class="project-card">
-                        <div class="project-card-bg"></div>
-                        <div class="project-card-bg-gradient"></div>
-                        <div class="project-card-bg-dark"></div>
-                        <a class="project-go" href="pudim.html"></a>
-                        <div class="project-info">
-                            <h2 class="fontmedium">e disseram que eu tava na pior</h2>
-                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">CSS</h4>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-bg"></div>
-                        <div class="project-card-bg-gradient"></div>
-                        <div class="project-card-bg-dark"></div>
-                        <a class="project-go" href="pudim.html"></a>
-                        <div class="project-info">
-                            <h2 class="fontmedium">and I forsee the dark ahead I if stay</h2>
-                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">HTML</h4>     
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-bg"></div>
-                        <div class="project-card-bg-gradient"></div>
-                        <div class="project-card-bg-dark"></div>
-                        <a class="project-go" href="pudim.html"></a>
-                        <div class="project-info">
-                            <h2 class="fontmedium">alô alô alô, graças a deus</h2>
-                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Bootstrap</h4>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-bg"></div>
-                        <div class="project-card-bg-gradient"></div>
-                        <div class="project-card-bg-dark"></div>
-                        <a class="project-go" href="pudim.html"></a>
-                        <div class="project-info">
-                            <h2 class="fontmedium">diabo, acalma teu coração, eu sou a tempestade</h2>
-                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Git & Github</h4>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-bg"></div>
-                        <div class="project-card-bg-gradient"></div>
-                        <div class="project-card-bg-dark"></div>
-                        <a class="project-go" href="pudim.html"></a>
-                        <div class="project-info">
-                            <h2 class="fontmedium">a cadeira caiu</h2>
-                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Javascript</h4>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <div class="project-card-bg"></div>
-                        <div class="project-card-bg-gradient"></div>
-                        <div class="project-card-bg-dark"></div>
-                        <a class="project-go" href="pudim.html"></a>
-                        <div class="project-info">
-                            <h2 class="fontmedium">meudeus já é treizora</h2>
-                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                            <h4 class="fontmedium">Desenho</h4>
-                        </div>
-                    </div>
+                <div class="flextstart">
+                    <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
+                    <label for="layout-js">Preciso de um layout</label>
+                </div>
+                <div class="formgroup">
+                    <input type="date" name="deadline" id="deadline" class="inputform" min="1" required/>
+                    <label for="deadline">Prazo</label>
+                </div>
+                <input type="button" class="submitbutton" value="Fazer pedido"/>
+            </form>
+            <form id="form2--contact" action="pudim.html">
+                <div class="formgroup">
+                    <input type="text" id="name" name="name" class="inputform" required/>
+                    <label for="name">Nome</label>
+                </div>
+                <div class="formgroup">
+                    <input type="text" id="email" class="inputform" required/>
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="formgroup">
+                    <textarea id="message" name="message" class="inputform" required></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+                <input type="button" class="submitbutton" value="Enviar"/>
+            </form>
+            </section>
+        <header>
+            <div id="banner"> 
+                <div id="profile_picture"></div>
+                <div id="developer_container">
+                    <h1 id="developer_name" class="fontthin disableselection">Raul Sousa</h1>
+                    <p id="developer_office" class="fontlight disableselection">Web developer e designer front-end</p>
+                    <p id="developer_description" class="fontlight disableselection">
+                        Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
+                    </p>
+                    <button id="button--learnmore" class="fontmedium" onclick="location.href='#projetos';">Saiba mais</button>
+                </div>
+            </div>
+        </header>
+        <div id="hamburguer" style="display: none;">
+            <input type="checkbox" />
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <div id="hamburguer-close">
+                <div class="close1">
+                    <div class="close2"></div>
                 </div>
             </div>
         </div>
+        <aside id="sidebar" class="disableselection" style="display: none;">
+            <nav>
+                <ul id="menu">
+                    <li class="menu-item"><a href="#inicio" class="menu-link">Início</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                </ul>
+            </nav>
+            <div id="social-media">
+                <div id="social-media-container">
+                    <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a>
+                    <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a>
+                    <a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </aside>
+        <section id="projetos" class="section">
+            <div class="section-header">
+                <h1 class="fontlight disableselection">Projetos</h1>
+            </div>
+            <div id="projects-container" class="fontnormal disableselection">
+                <div class="project-card">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-bg-gradient"></div>
+                    <div class="project-card-bg-dark"></div>
+                    <a class="project-go" href="pudim.html"></a>
+                    <div class="project-info">
+                        <h2 class="fontmedium">e disseram que eu tava na pior</h2>
+                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                        <h4 class="fontmedium">CSS</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-bg-gradient"></div>
+                    <div class="project-card-bg-dark"></div>
+                    <a class="project-go" href="pudim.html"></a>
+                    <div class="project-info">
+                        <h2 class="fontmedium">and I forsee the dark ahead I if stay</h2>
+                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                        <h4 class="fontmedium">HTML</h4>     
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-bg-gradient"></div>
+                    <div class="project-card-bg-dark"></div>
+                    <a class="project-go" href="pudim.html"></a>
+                    <div class="project-info">
+                        <h2 class="fontmedium">alô alô alô, graças a deus</h2>
+                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                        <h4 class="fontmedium">Bootstrap</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-bg-gradient"></div>
+                    <div class="project-card-bg-dark"></div>
+                    <a class="project-go" href="pudim.html"></a>
+                    <div class="project-info">
+                        <h2 class="fontmedium">diabo, acalma teu coração, eu sou a tempestade</h2>
+                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                        <h4 class="fontmedium">Git & Github</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-bg-gradient"></div>
+                    <div class="project-card-bg-dark"></div>
+                    <a class="project-go" href="pudim.html"></a>
+                    <div class="project-info">
+                        <h2 class="fontmedium">a cadeira caiu</h2>
+                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                        <h4 class="fontmedium">Javascript</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card-bg-gradient"></div>
+                    <div class="project-card-bg-dark"></div>
+                    <a class="project-go" href="pudim.html"></a>
+                    <div class="project-info">
+                        <h2 class="fontmedium">meudeus já é treizora</h2>
+                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                        <h4 class="fontmedium">Desenho</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="conhecimentos" class="section">
             <div class="section-header">
                 <h1 class="fontlight disableselection">Conhecimentos</h1>
@@ -270,6 +269,7 @@
                         <p>Logo seu olho caiu sobre uma pequena caixa de vidro que jazia sob a mesa: ela abriu-a e encontrou um pequeno bolo, no qual a palavra “COMA-ME” era lindamente inscrito.</p>
                     </div>
                 </div>
+            </div>
         </section>
         <footer id="siteinfo" class="disableselection">
             <p>Portifólio de Raul Gomes</p>
@@ -277,8 +277,15 @@
             <p><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR">Licença CC0 1.0 Universal (CC0 1.0)</a></p>
             <div style="position: relative;">
                 <nav id="creditspopup">
+                    <div id="credits-popup-panel">
+                        <span class="fontmedium">Agradecimentos e créditos</span>
+                        <button class="close" id="creditsclose">
+                            <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
+                            <span class="tooltip" id="closebutton_title">Fechar</span>
+                        </button>
+                    </div>
                     <ul>
-                        <h3>Ícones</h3>
+                        <span>Ícones:</span>
                         <li>Font Awesome by Dave Gandy - <a href="http://fontawesome.io" target="_blank">http://fontawesome.io</a></li>
                     </ul>
                 </nav>

@@ -101,6 +101,10 @@ input, textarea {
     font-family: Roboto, sans-serif;
     font-weight: 900;
 }
+.fontmedium {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
 .fontnormal {
     font-family: Roboto, sans-serif;
     font-weight: normal;
@@ -129,4 +133,31 @@ input, textarea {
     text-align: center;
     animation: fade .25s ease-in-out;
     backdrop-filter: blur(.4rem);
+}
+.close {
+    border-radius: 0 0 .5rem .5rem;
+    background: rgba(0,0,0,0);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.4);
+    border: 0;
+    border-radius: 100%;
+    transition: all .25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.close:hover {
+    background: rgb(196,43,43);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.0);
+}
+.close:active {
+    background: rgb(196,43,43);
+    box-shadow: inset 0 0 7px rgba(0,0,0,.8);
+    transform: scale(0.90);
+}
+.close svg {
+    fill: rgba(0,0,0,.6);
+}
+.close:hover svg, .close:active svg {
+    fill: rgb(255,255,255);
 }
