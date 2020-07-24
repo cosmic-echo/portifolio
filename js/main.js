@@ -5,10 +5,17 @@ hamburguer.addEventListener("click", function() {
   document.querySelector("#sidebar").classList.toggle("show-menu");
 });
 
+/*Navigation menu*/
+var sitenavigation = document.querySelector("#site-navigation");
+
+
+function shownagivationmenu() {
+  sitenavigation.classList.toggle("show-nav");
+}
+
+
 /*Contact popup*/
 var contactpopup = document.querySelector("#contactpopup");
-var contactbutton = document.querySelector("#closecontact");
-var closebutton = document.querySelector("#closecontact");
 var lockpage = document.querySelector("#lockpage");
 
 function showcontactform() {

@@ -13,7 +13,17 @@
     <body>
         <div id="container">
         <div id="go-top">
-            <button onclick="location.href='#inicio';" alt="Ir para o início da página"><i class="fas fa-arrow-circle-up"></i></button>
+            <div id="go-top-button-container">
+                <button id="nav-button" onclick="shownagivationmenu();" alt="Mostrar opções de navegação"><i class="fas fa-arrow-circle-up"></i></button>
+            </div>
+            <nav id="site-navigation">
+                <ul>
+                    <li><a href="#projetos" alt="Projetos">Projetos</a></li>
+                    <li><a href="#conhecimentos" alt="Conhecimentos">Conhecimentos</a></li>
+                    <li><a href="#inicio" onclick="javascript: showcontactform();" alt="Contatar o desenvolvedor">Contato</a></li>
+                    <li><a href="#inicio" alt="Ir para o início da página">Início</a></li>
+                </ul>
+            </nav>
         </div>
             <div id="bg-container">
                 <div class="background"></div>
