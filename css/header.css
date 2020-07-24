@@ -71,6 +71,7 @@
     position: absolute;
     bottom: -2.5rem;
     background: rgba(0,0,0,.6);
+    color: #fff;
     border-radius: 1rem;
     display: none;
     min-width: 3.5em;

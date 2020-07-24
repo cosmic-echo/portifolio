@@ -40,6 +40,7 @@
                     <span>Contato</span>
                     <button id="closecontact" onclick="closecontactform();">
                         <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
+                        <span id="closebutton_title">Fechar</span>
                     </button>
                 </div>
                 <div id="form-tabs" class="flexrow">
@@ -54,7 +55,8 @@
                 </div>
                 <form id="form1--request" class="show-form" action="pudim.html">
                     <div class="formgroup">
-                        <input placeholder="Quantidade de páginas" type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
+                        <input type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
+                        <label for="quantity">Quantidade de páginas</label>
                     </div>
                     <div class="flextstart">
                         <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
@@ -65,19 +67,23 @@
                         <label for="layout-js">Preciso de um layout</label>
                     </div>
                     <div class="formgroup">
-                        <input placeholder="Prazo" type="number" name="deadline" id="deadline" class="inputform" min="1" required/>
+                        <input type="date" name="deadline" id="deadline" class="inputform" min="1" required/>
+                        <label for="deadline">Prazo (em dias)</label>
                     </div>
                     <input type="button" class="submitbutton" value="Fazer pedido"/>
                 </form>
                 <form id="form2--contact" action="pudim.html">
                     <div class="formgroup">
-                        <input placeholder="Nome" type="text" id="name" name="name" class="inputform" required/>
+                        <input type="text" id="name" name="name" class="inputform" required/>
+                        <label for="name">Nome</label>
                     </div>
                     <div class="formgroup">
-                        <input placeholder="E-mail" type="text" id="email" class="inputform" required/>
+                        <input type="text" id="email" class="inputform" required/>
+                        <label for="email">E-mail</label>
                     </div>
                     <div class="formgroup">
-                        <textarea placeholder="Digite sua mensagem" id="message" name="message" class="inputform" required></textarea>
+                        <textarea id="message" name="message" class="inputform" required></textarea>
+                        <label for="message">Mensagem</label>
                     </div>
                     <input type="button" class="submitbutton" value="Enviar"/>
                 </form>

@@ -215,12 +215,10 @@
     height: 30px;
     border-radius: 100%;
     transition: all .25s;
-    align-self: flex-end;
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 40rem;
-    overflow: auto;
+    position: relative;
 }
 #closecontact:hover {
     background: rgb(196, 43, 43);
@@ -238,6 +236,24 @@
 }
 #closecontact:hover svg, #closecontact:active svg {
     fill: rgb(255,255,255) !important;
+}
+#closebutton_title {
+    font-size: .9rem;
+    padding: .4rem .8rem;
+    position: absolute;
+    bottom: -2.5rem;
+    background: rgb(100,100,100);
+    border-radius: 1rem;
+    text-align: center;
+    color: #fff;
+    display: none;
+    min-width: 2rem;
+    z-index: 10000;
+}
+#closecontact:hover #closebutton_title {
+    display: block;
+    animation: fade .5s ease-in-out;
+
 }
 #form-tabs {
     justify-content: space-between;
@@ -282,22 +298,42 @@
 .formgroup {
     position: relative;
 }
-.inputform:focus::placeholder {
-    color: #208de0;
-}
 .inputform {
     border-radius: .4rem;
     border: 1px solid rgba(0,0,0,.5);
     transition: all .2s ease-in-out;
     background: rgba(255,255,255,.7);
     width: 100%;
-    padding: .9rem;
+    padding: 1.4rem .9rem .4rem .74rem;
     box-sizing: border-box;
+    color: transparent; /*fix for unremovable placeholders*/
 }
-.inputform:focus {
+.inputform:focus, .inputform:valid {
     border: 1px solid #208de0;
     box-shadow: 0 0 0 1px #208de0;
     background: #fff;
+    color: #000;
+}
+.inputform + label {
+    position: absolute;
+    top: 1rem;
+    left: .7rem;
+    transition: all .2s ease;
+    cursor: text;
+}
+.inputform:valid + label,
+.inputform:focus + label {
+    position: absolute;
+    top: .1rem;
+    left: .75rem;
+    font-size: .8rem;
+    padding: .17rem 0;
+    background: #fff;
+    box-sizing: border-box;
+    width: 94%;
+}
+.inputform:focus + label {
+    color: #208de0;
 }
 form input[type="radio"], form input[type="checkbox"] {
     width: 1.5rem;
