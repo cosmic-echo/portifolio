@@ -154,19 +154,20 @@ a[name="inicio"] {
     animation: translateX2 .2s forwards;
 }
 #site-navigation ul li a {
-    background: rgba(50,50,50,.8);
+    background: rgba(20,20,20,.9);
     color: #fff;
     padding: .5rem;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow:  0 0 5px rgba(0,0,0,.3);
     display: block;
-    transition: all .25s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 #site-navigation ul li a:hover {
-    background: rgba(0,0,0,.8);
+    background: #147bca;
 }
 #site-navigation ul li a:active {
-    transform: scale(0.90);
+    background: #0b5288;
+    transform: scale(0.95);
 }
 #go-top button {
     border: 0;
