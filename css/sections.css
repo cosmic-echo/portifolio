@@ -455,10 +455,17 @@ textarea {
     font-size: 0.8rem;
     margin: 6rem 0 1.5rem 0;
 }
+#siteinfo a {
+    padding: .2rem 1rem;
+}
 #showcredits {
-    background: none;
     border: 0;
     cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+    border-radius: 10rem;
+}
+#showcredits:active {
+    transform: scale(0.95);
 }
 #creditspopup {
     padding: 1rem;
