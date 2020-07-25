@@ -442,22 +442,12 @@ textarea {
 /*start - siteinfo section*/
 #siteinfo {
     padding: 5rem 2rem 1rem 2rem;
-    color: rgb(117, 117, 117);
+    color: rgba(0,0,0,.7);
     line-height: 1.5rem;
     display: flex;
     justify-content: center;
     font-size: 0.8rem;
     margin: 6rem 0 0 0;
-}
-#siteinfo a, #showcredits {
-    color: rgb(82, 82, 82);
-}
-#siteinfo a:hover, #showcredits:hover {
-    color: rgb(96, 88, 209);
-    text-decoration: underline;
-}
-#siteinfo a:active, #showcredits:active {
-    color: rgb(124, 124, 124);
 }
 #showcredits {
     background: none;
@@ -469,6 +459,7 @@ textarea {
     min-width: 20rem;
     min-height: 10rem;
     background: rgb(250, 250, 250);
+    color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 30px rgba(0,0,0,.5);
     border-radius: 10px;
     position: absolute;
@@ -487,6 +478,9 @@ textarea {
     align-items: center;
     margin-bottom: 1rem;
 }
+#credits-popup-panel span {
+    font-size: 1rem;
+}
 #credits-popup-panel .close {
     width: 25px;
     height: 25px;
@@ -496,9 +490,18 @@ textarea {
     height: 15px;
 }
 #creditspopup ul {
-    text-decoration: none;
+    list-style: circle;
+    list-style-type: circle;
 }
-#creditspopup ul li a, #creditspopup ul li a:hover, #creditspopup ul li a:active  {
-    color: #fff;
+#creditspopup a, #creditspopup .a {
+    transition: all .25s ease-in-out;
+    color: #0067b8;
 }
+#creditspopup a:hover, #creditspopup .a:hover {
+    color: #2a92e2;
+}
+#creditspopup a:active, #creditspopup .a:active {
+    color: #0b5288;
+}
+
 /*end - siteinfo section*/

@@ -61,11 +61,19 @@
 ::-moz-focus-inner {
     border:0;
 }
-a, .a {
+.a {
+    transition: all .25s ease-in-out;
+    color: #0067b8;
+}
+.a1 {
+    color: rgba(0,0,0, .7);
     transition: all .25s ease-in-out;
 }
-a:active, .a:active {
-    transform: scale(0.95);
+.a:hover, .a1:hover {
+    color: #2a92e2;
+}
+.a:active, .a1:active {
+    color: #0b5288;
 }
 * {
     margin: 0;
