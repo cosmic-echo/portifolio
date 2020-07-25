@@ -17,6 +17,7 @@ navbutton.addEventListener("click", function() {
 
 document.querySelector("#container").addEventListener("click", function(e) {
   sitenavigation.classList.remove("show-nav");
+  navbutton.classList.remove("hover");
 });
 
 /*Contact popup*/
