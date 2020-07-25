@@ -2,7 +2,7 @@
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    z-index: 999;
+    z-index: 10000;
 }
 #site-navigation {
     text-decoration: none;
@@ -310,6 +310,7 @@
     width: 100%;
     height: 100%;
     display: none;
+    backdrop-filter: blur(.2rem);
 }
 #lockpage.showlockpage, #contactpopup.show-contactform {
     display: flex;
@@ -476,11 +477,12 @@ textarea {
     box-shadow: 0 0 5px rgba(0,0,0,.5);
     color: #fff;
     border-radius: 10px;
-    position: absolute;
-    bottom: 3rem;
-    left: 0;
+    position: fixed;
+    bottom: 6rem;
+    left: calc(50wh-10rem);
     display: none;
     backdrop-filter: blur(.5rem);
+    z-index: 100;
 }
 #creditspopup.show-credits {
     display: block;
