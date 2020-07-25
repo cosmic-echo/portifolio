@@ -142,10 +142,16 @@
 /*end of knowledge section*/
 
 /*start of projects section*/
+#center-projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #projects-container {
     margin: 0 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
     row-gap: 2rem;
     margin-bottom: 7px; /*navigation/scrolling fix*/
 }
@@ -410,6 +416,12 @@ form input[type="checkbox"] + label {
 textarea {
     resize: none;
     height: 10rem !important;
+}
+#deadline-container * {
+    padding: .3rem 0;
+}
+#price {
+    font-size: 1.5rem;
 }
 .submitbutton {
     background: #0067b8;

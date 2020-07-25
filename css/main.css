@@ -124,8 +124,9 @@ input, textarea {
     display: flex;
     flex-direction: row;
 }
-.flextstart {
-    align-self: flex-start;
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
 }
 .tooltip {
     font-size: .9rem;

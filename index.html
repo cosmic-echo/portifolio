@@ -65,17 +65,21 @@
                     <input type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
                     <label for="quantity">Quantidade de páginas</label>
                 </div>
-                <div class="flextstart">
-                    <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
-                    <label for="layout-js">Preciso de Javascript</label>
-                </div>
-                <div class="flextstart">
-                    <input type="checkbox" name="layout" id="layout-js" class="contactform--checkbox"/>
-                    <label for="layout-js">Preciso de um layout</label>
+                <div class="formgroup">
+                    <input type="checkbox" name="layout" id="js-yes"/>
+                    <label for="js-yes">Você precisa de Javascript?</label>
                 </div>
                 <div class="formgroup">
-                    <input type="date" name="deadline" id="deadline" class="inputform" min="1" required/>
+                    <input type="checkbox" name="layout" id="layout-yes"/>
+                    <label for="layout-yes">Precisa, também, de um layout?</label>
+                </div>
+                <div id="deadline-container" class="flexcolumn">
                     <label for="deadline">Prazo</label>
+                    <input type="range" name="deadline" id="deadline" min="1" max="10"/>
+                    <label id="deadlinetime">Agora é só selecionar um prazo!</label>
+                </div>
+                <div class="formgroup">
+                    <label id="price" class="fontlight">R$0,00</label>
                 </div>
                 <input type="button" class="submitbutton" value="Fazer pedido"/>
             </form>
@@ -140,71 +144,73 @@
             <div class="section-header">
                 <h1 class="fontlight disableselection">Projetos</h1>
             </div>
-            <div id="projects-container" class="fontnormal disableselection">
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">e disseram que eu tava na pior</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">CSS</h4>
+            <div id="center-projects-container">
+                <div id="projects-container" class="fontnormal disableselection">
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">e disseram que eu tava na pior</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">CSS</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">and I forsee the dark ahead if I stay</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">HTML</h4>     
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">and I forsee the dark ahead if I stay</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">HTML</h4>     
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">alô alô alô, graças a deus</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">Bootstrap</h4>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">alô alô alô, graças a deus</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Bootstrap</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">diabo, acalma teu coração, eu sou a tempestade</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">Git & Github</h4>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">diabo, acalma teu coração, eu sou a tempestade</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Git & Github</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">a cadeira caiu</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">Javascript</h4>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">a cadeira caiu</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Javascript</h4>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-bg"></div>
-                    <div class="project-card-bg-gradient"></div>
-                    <div class="project-card-bg-dark"></div>
-                    <a class="project-go" href="pudim.html"></a>
-                    <div class="project-info">
-                        <h2 class="fontmedium">meudeus já é treizora</h2>
-                        <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
-                        <h4 class="fontmedium">Desenho</h4>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">meudeus já é treizora</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Desenho</h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -294,4 +300,5 @@
     </div>
 </body>
 <script src="js/main.js"></script>
+<script src="js/contactform.js"></script>
 </html>
