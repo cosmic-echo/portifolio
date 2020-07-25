@@ -313,7 +313,7 @@
 }
 #lockpage.showlockpage, #contactpopup.show-contactform {
     display: flex;
-    animation: move 2s linear;
+    animation: fade .25s linear;
 }
 #closebutton_title {
     display: none;
