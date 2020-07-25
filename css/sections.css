@@ -453,7 +453,8 @@ textarea {
     display: flex;
     justify-content: center;
     font-size: 0.8rem;
-    margin: 6rem 0 1.5rem 0;
+    margin: 6rem 0 1.2rem 0;
+    box-sizing: border-box;
 }
 #siteinfo a {
     padding: .2rem 1rem;
