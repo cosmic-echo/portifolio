@@ -499,6 +499,9 @@ textarea {
     list-style: circle;
     list-style-type: circle;
 }
+#creditspopup ul li {
+    margin-bottom: 1rem;
+}
 #creditspopup a, #creditspopup .a {
     transition: all .25s ease-in-out;
     color: #0067b8;
