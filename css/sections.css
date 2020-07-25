@@ -365,10 +365,12 @@
 .formgroup {
     position: relative;
 }
+form input:hover {
+    transition: background-color 2s ease-out;
+}
 .inputform {
     border-radius: .4rem;
     border: 1px solid rgba(0,0,0,.5);
-    transition: all .2s ease-in-out;
     background: rgba(255,255,255,.7);
     width: 100%;
     padding: 1.4rem .9rem .4rem .74rem;
