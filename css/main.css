@@ -1,6 +1,7 @@
 @import url("header.css");
 @import url("sidebar.css");
 @import url("sections.css");
+@import url("footer.css");
 @import url("fonts.css");
 @import url("fontawesome-all-min.css");
 
@@ -68,6 +69,7 @@
 .a1 {
     color: rgba(0,0,0, .7);
     transition: all .25s ease-in-out;
+    cursor: pointer;
 }
 .a:hover, .a1:hover {
     color: #2a92e2;
@@ -87,7 +89,6 @@ html {
 }
 body {
     font-family: Roboto, sans-serif;
-    background: rgb(240, 240, 240);
     font-size: 16px;
     color: rgba(0,0,0,.8);
 }
