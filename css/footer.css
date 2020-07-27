@@ -37,7 +37,12 @@
 }
 #creditspopup.show-credits {
     display: block;
-    animation: fade .35s ease, translateY .2s ease;
+    animation: fade .35s ease-in-out, translateY .2s ease-in-out
+}
+.creditslink {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 #credits-popup-panel {
     display: flex;

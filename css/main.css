@@ -145,7 +145,6 @@ input, textarea {
     backdrop-filter: blur(.4rem);
 }
 .close {
-    border-radius: 0 0 .5rem .5rem;
     border: 0;
     border-radius: 100%;
     transition: all .25s;

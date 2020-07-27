@@ -13,7 +13,7 @@
 }
 #site-navigation.show-nav {
     display: block;
-    animation: fade .2s ease;
+    animation: fade .2s ease-in-out;
 }
 #site-navigation ul {
     display: flex;
@@ -60,7 +60,7 @@
     color: rgba(0,0,0,.3);
     border-radius: 100%;
     font-size: 3rem;
-    transition: all .25s ease;
+    transition: all .25s ease-in-out;
     background: transparent;
     cursor: pointer;
 }
@@ -390,7 +390,7 @@ form input:hover {
     position: absolute;
     top: 1rem;
     left: .7rem;
-    transition: all .2s ease;
+    transition: all .2s ease-in-out;
     cursor: text;
 }
 .inputform:valid + label,
@@ -436,7 +436,7 @@ textarea {
     border-radius: .4rem;
     padding: .9rem 1.2rem;
     letter-spacing: .05rem;
-    transition: all .2s ease;
+    transition: all .2s ease-in-out;
 }
 .submitbutton:hover {
     background: #147bca;
