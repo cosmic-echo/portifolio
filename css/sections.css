@@ -1,0 +1,452 @@
+#navigation-menu-container {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 10000;
+}
+#site-navigation {
+    text-decoration: none;
+    position: fixed;
+    right: 1.5rem;
+    bottom: 5rem;
+    display: none;
+}
+#site-navigation.show-nav {
+    display: block;
+    animation: fade .2s ease-in-out;
+}
+#site-navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#site-navigation ul li {
+    margin-bottom: 1rem;
+    align-self: flex-end;
+}
+#site-navigation ul li:nth-child(1) {
+    animation: translateX2 .5s forwards;
+}
+#site-navigation ul li:nth-child(2) {
+    animation: translateX2 .4s forwards;
+}
+#site-navigation ul li:nth-child(3) {
+    animation: translateX2 .3s forwards;
+    margin-bottom: 2.5rem;
+}
+#site-navigation ul li:nth-child(4) {
+    animation: translateX2 .2s forwards;
+}
+#site-navigation ul li a {
+    background: rgba(20,20,20,.9);
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    color: #fff;
+    padding: .5rem;
+    border-radius: 10px;
+    display: block;
+    transition: all .2s ease-in-out;
+}
+#site-navigation ul li a:hover {
+    background: #147bca;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.3);
+}
+#site-navigation ul li a:active {
+    background: #0b5288;
+    transform: scale(0.95);
+}
+#navigation-menu-container button {
+    border: 0;
+    color: rgba(0,0,0,.3);
+    border-radius: 100%;
+    font-size: 3rem;
+    transition: all .25s ease-in-out;
+    background: transparent;
+    cursor: pointer;
+}
+#navigation-menu-container button:hover, #navigation-menu-container button.hover {
+    color: rgba(20,20,20,.9);
+}
+#navigation-menu-container button:active {
+    transform: scale(0.90);
+}
+#navigation-menu-container button i {
+    backdrop-filter: blur(.5rem);
+    border-radius: 100%;
+}
+section:last-of-type {
+    margin-bottom: 6rem;
+}
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-header h1 {
+    font-size: 4rem;
+    margin: 4rem 0 3rem 0;
+}
+/*start - knowledge section*/
+#knowledge-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    column-gap: 6rem;
+    row-gap: 3rem;
+    margin: 0 10rem;
+}
+.knowledge-item-header {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 0 .5rem 0;
+}
+.knowledge-item-header h3 {
+    font-size: 2rem;
+    grid-column: 1;
+}
+.knowledge-item-header i {
+    font-size: 2rem;
+    grid-column: 2;
+}
+.knowledge-item {
+    border-radius: 10px;
+    padding: 1rem;
+    border: 2px dashed rgba(0,0,0,.2);
+}
+.knowledge-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+.knowledge-item:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+.knowledge-item:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+.knowledge-item:nth-child(4) {
+    grid-column: 2;
+    grid-row: 1;
+}
+.knowledge-item:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2;
+}
+.knowledge-item:nth-child(6) {
+    grid-column: 2;
+    grid-row: 3;
+}
+.knowledge-item-text {
+    text-align: justify;
+    line-height: 1.7rem;
+}
+/*end of knowledge section*/
+
+/*start of projects section*/
+#center-projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#projects-container {
+    margin: 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    margin-bottom: 7px; /*navigation/scrolling fix*/
+}
+.project-card {
+    width: 22.5rem;
+    height: 30rem;
+    display: flex;
+    border-radius: .5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.5), 1px 1px 7px rgba(0,0,0,.7);
+    transition: all .2s ease-in-out;
+}
+.project-card:hover {
+    transform: scale(1.03);  
+}
+.project-card:active {
+    transform: scale(1);
+}
+.project-card:hover .project-info {
+    opacity: 1;
+    transition: all .3s ease-in-out;
+}
+.project-card-bg, .project-card-bg-dark, .project-card-bg-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.project-card-bg {
+    z-index: 1;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4);
+    border-radius: .5rem;
+}
+.project-card:hover .project-card-bg-gradient {
+    opacity: 0.4;
+    transition: all .3s ease-in-out;
+}
+.project-card:hover .project-card-bg-dark {
+    opacity: 0.5;
+    transition: all .3s ease-in-out;
+}
+.project-card-bg-gradient {
+    background: linear-gradient(45deg, rgba(196,18,255,1) 0%, rgba(196,18,255,1) 1%, rgba(37,106,152,1) 81%, rgba(0,128,128,1) 100%);
+    z-index: 2;
+    opacity: 0;
+}
+.project-card-bg-dark {
+    z-index: 3;
+    background: #000;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4);
+    opacity: 0;
+}
+.project-card a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+}
+.project-card a:active {
+    background: rgba(0,0,0,.4);
+    transition: all .3s ease-in-out;
+}
+.project-card:nth-child(1) .project-card-bg {
+    background: url("../img/placeholder1.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(2) .project-card-bg {
+    background: url("../img/placeholder2.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(3) .project-card-bg {
+    background: url("../img/placeholder3.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(4) .project-card-bg {
+    background: url("../img/placeholder4.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(5) .project-card-bg {
+    background: url("../img/placeholder5.jpg");
+    background-size: 100%;
+}
+.project-card:nth-child(6) .project-card-bg {
+    background: url("../img/placeholder6.jpg");
+    background-size: 100%;
+}
+.project-info {
+    align-self: flex-end;
+    position: relative;
+    z-index: 4;
+    padding: 1rem;
+    opacity: 0;
+    line-height: 1.8rem;
+}
+.project-card p, .project-card h2, .project-info h4 {
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,.7);
+}
+.project-info h4 {
+    border-radius: 10rem;
+    padding: .3rem .8rem;
+    display: inline-block;
+    background: rgba(0,0,0,.6);
+}
+.project-card p {
+    padding: .8rem 0;
+    text-align: justify;
+}
+/*end of projects section*/
+
+/*start - contact section*/
+#contactpopup {
+    position: absolute;
+    top: 2rem;
+    left: calc(50vw - 15rem);
+    width: 30rem;
+    padding: 1rem;
+    background: rgb(250, 250, 250);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    border-radius: .4rem;
+    z-index: 9999;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+#contacttitlebar .close {
+    width: 30px;
+    height: 30px;
+}
+#contacttitlebar .close svg {
+    width: 20px;
+    height: 20px;
+}
+#contacttitlebar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    box-sizing: content-box;
+}
+#contacttitlebar span {
+    padding-top: 6px;
+}
+#lockpage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    backdrop-filter: blur(.2rem);
+}
+#lockpage.showlockpage, #contactpopup.show-contactform {
+    display: flex;
+    animation: fade .25s linear;
+}
+#closebutton_title {
+    display: none;
+}
+#closecontact:hover #closebutton_title {
+    display: block;
+}
+#form-tabs {
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+#form-tabs, #form2--contact, #form1--request {
+    width: 100%;
+}
+#form2--contact, #form1--request {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    row-gap: 1rem;
+}
+#contactpopup form {
+    display: none;
+    opacity: 0;
+}
+#contactpopup form.show-form {
+    display: grid;
+    opacity: 1;
+    animation: fade .2s linear, translateX .2s linear;
+}
+.form-tabs--group {
+    position: relative;
+}
+.option--formtabs {
+    position: absolute;
+    cursor: pointer;
+    visibility: hidden;
+}
+.option--formtabs + label {
+    padding: .5rem 0;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.3rem;
+}
+.option--formtabs:checked + label {
+    border-bottom: 3px solid #208de0;
+    color: #208de0;
+    transition: all .2s ease-in-out;
+}
+.formgroup {
+    position: relative;
+}
+form input:hover {
+    transition: background-color 2s ease-out;
+}
+.inputform {
+    border-radius: .4rem;
+    border: 1px solid rgba(0,0,0,.5);
+    background: rgba(255,255,255,.7);
+    width: 100%;
+    padding: 1.4rem .9rem .4rem .74rem;
+    box-sizing: border-box;
+    color: transparent; /*fix for unremovable placeholders*/
+}
+.inputform:focus, .inputform:valid {
+    border: 1px solid #208de0;
+    box-shadow: 0 0 0 1px #208de0;
+    background: #fff;
+    color: #000;
+}
+.inputform + label {
+    position: absolute;
+    top: 1rem;
+    left: .7rem;
+    transition: all .2s ease-in-out;
+    cursor: text;
+}
+.inputform:valid + label,
+.inputform:focus + label {
+    position: absolute;
+    top: .1rem;
+    left: .75rem;
+    font-size: .8rem;
+    padding: .17rem 0;
+    background: #fff;
+    box-sizing: border-box;
+    width: 94%;
+}
+.inputform:focus + label {
+    color: #208de0;
+}
+form input[type="radio"], form input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+form input[type="checkbox"] + label {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+    margin-right: 2rem;
+}
+textarea {
+    resize: none;
+    height: 10rem !important;
+}
+#deadline-container * {
+    padding: .3rem 0;
+}
+#price {
+    font-size: 1.5rem;
+}
+.submitbutton {
+    background: #0067b8;
+    color: #fff;
+    border: 0;
+    border-radius: .4rem;
+    padding: .9rem 1.2rem;
+    letter-spacing: .05rem;
+    transition: all .2s ease-in-out;
+}
+.submitbutton:hover {
+    background: #147bca;
+}
+.submitbutton:active {
+    background: #0b5288;
+    color: #fff;
+    transform: scale(0.97);
+}
+#contactpopup form h3 {
+    margin: 1rem 0 0rem 0;
+}
+/*end - contact section*/

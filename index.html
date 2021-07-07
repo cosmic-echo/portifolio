@@ -10,66 +10,219 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     </head>
-    <body class="fontnormal">
-        <div id="container">
-            <div id="bg-container">
-                <div id="background"></div>
-                <div id="background-dark"></div>
-                <div id="background-dots"></div>
-            </div>  
-            <div id="hamburguer">
-                <input type="checkbox" />
-                <div class="line" id="line1"></div>
-                <div class="line" id="line2"></div>
-                <div class="line" id="line3"></div>
-                <div id="hamburguer-close">
-                    <div class="close1">
-                      <div class="close2"></div>
-                    </div>
+<body>
+    <div id="navigation-menu-container">
+        <button id="nav-button" alt="Mostrar opções de navegação"><i class="fas fa-arrow-circle-up"></i></button>
+        <nav id="site-navigation">
+            <ul>
+                <li><a href="#inicio" onclick="javascript: showcontactform();" alt="Contatar o desenvolvedor"><i class="fas fa-envelope-open"></i>&nbsp;Contato</a></li>
+                <li><a href="#projetos" alt="Projetos"><i class="fas fa-star"></i>&nbsp;Projetos</a></li>
+                <li><a href="#conhecimentos" alt="Conhecimentos"><i class="fas fa-puzzle-piece"></i>&nbsp;Conhecimentos</a></li>
+                <li><a href="#inicio" alt="Ir para o início da página"><i class="fas fa-home"></i>&nbsp;Início</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="container">
+        <section id="inicio"></section>
+        <div id="bg-container">
+            <div id="lockpage"></div>
+            <div class="background"></div>
+            <div class="background-dark"></div>
+            <div class="background-dots"></div>
+        </div>
+        <section id="top-panel" class="disableselection">
+            <nav>
+                <ul id="menu--top-panel">
+                    <li class="menu-item--top-panel"><a href="#projetos" class="menu-link--top-panel">Projetos</a></li>
+                    <li class="menu-item--top-panel"><a href="#conhecimentos" class="menu-link--top-panel">Conhecimentos</a></li>
+                    <li class="menu-item--top-panel"><a id="contactbutton" class="menu-link--top-panel contact" onclick="javascript: showcontactform();">Contato</a></li>
+                </ul>
+            </nav>
+            <nav id="social-media-container--top-panel">
+                <ul><a class="social-item--top-panel" href="/"><span class="tooltip">Instagram</span><i class="fab fa-instagram"></i></a></ul>
+                <ul><a class="social-item--top-panel" href="https://github.com/cosmic-echo" target="_blank"><span class="tooltip">Github</span><i class="fab fa-github"></i></a></ul>
+            </nav>
+        </section>
+        <section id="contactpopup" class="section disableselection">
+            <div id="contacttitlebar">
+                <span>Contato</span>
+                <button class="close" onclick="closecontactform();" alt="Fechar">
+                    <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
+                </button>
+            </div>
+            <div id="form-tabs" class="flexrow">
+                <div class="form-tabs--group">
+                    <input type="radio" id="radio1--request" name="formoption" class="option--formtabs" value="siterequest" onclick="switchrequestform();" checked/>
+                    <label for="radio1--request" class="fontlight">Fazer um orçamento</label>
+                </div>
+                <div class="form-tabs--group">
+                    <input type="radio" id="radio2--contact" name="formoption" class="option--formtabs" value="developermessage" onclick="switchcontactform();"/>
+                    <label for="radio2--contact" class="fontlight">Mandar uma mensagem</label>
                 </div>
             </div>
-            <header>
-                <div id="banner"> 
+            <form id="form1--request" class="show-form" action="pudim.html">
+                <div class="formgroup">
+                    <input type="number" id="quantity" name="quantity" class="inputform" min="1" required/>
+                    <label for="quantity">Quantas páginas você precisa?</label>
+                </div>
+                <div class="formgroup">
+                    <input type="checkbox" name="layout" id="js-yes"/>
+                    <label for="js-yes">Preciso de Javascript</label>
+                </div>
+                <div class="formgroup">
+                    <input type="checkbox" name="layout" id="layout-yes"/>
+                    <label for="layout-yes">Preciso de layout</label>
+                </div>
+                <div id="deadline-container" class="flexcolumn">
+                    <label for="deadline">O prazo, esta é a última etapa!</label>
+                    <input type="range" name="deadline" id="deadline" min="1" max="10"/>
+                    <label id="deadlinetime">&nbsp;</label>
+                </div>
+                <div class="formgroup">
+                    <label id="price" class="fontlight">R$0,00</label>
+                </div>
+                <input type="button" class="submitbutton" value="Fazer pedido"/>
+            </form>
+            <form id="form2--contact" action="pudim.html">
+                <div class="formgroup">
+                    <input type="text" id="name" name="name" class="inputform" required/>
+                    <label for="name">Nome</label>
+                </div>
+                <div class="formgroup">
+                    <input type="text" id="email" class="inputform" required/>
+                    <label for="email">E-mail</label>
+                </div>
+                <div class="formgroup">
+                    <textarea id="message" name="message" class="inputform" required></textarea>
+                    <label for="message">Mensagem</label>
+                </div>
+                <input type="button" class="submitbutton" value="Enviar"/>
+            </form>
+            </section>
+        <header>
+            <div id="banner"> 
                 <div id="profile_picture"></div>
                 <div id="developer_container">
-                    <h1 id="developer_name" class="fontthin">Raul Sousa</h1>
-                    <p id="developer_office" class="fontlight">Web developer e designer front-end</p>
-                    <p id="developer_description" class="fontlight">
+                    <h1 id="developer_name" class="fontthin disableselection">Raul Sousa</h1>
+                    <p id="developer_office" class="fontlight disableselection">Web developer e designer front-end</p>
+                    <p id="developer_description" class="fontlight disableselection">
                         Alice estava começando a ficar muito cansada de sentar-se ao lado de sua irmã no banco e de não ter nada para fazer: uma ou duas vezes havia espiado o livro que a irmã estava lendo, mas não havia imagens nem diálogos nele, "e para que serve um livro", pensou Alice, "sem imagens nem diálogos?"
                     </p>
-                    <button id="learn_more" class="fontblack" onclick="location.href='#saibamais';">Saiba mais</button>
+                    <button id="button--learnmore" class="fontmedium" onclick="location.href='#projetos';">Saiba mais</button>
                 </div>
             </div>
-            </div>
         </header>
-        
-        <aside id="sidebar">
+        <div id="hamburguer" style="display: none;">
+            <input type="checkbox" />
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <div id="hamburguer-close">
+                <div class="close1">
+                    <div class="close2"></div>
+                </div>
+            </div>
+        </div>
+        <aside id="sidebar" class="disableselection" style="display: none;">
             <nav>
                 <ul id="menu">
-                    <li class="menu-item"><a href="" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Conhecimentos</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Contatos</a></li>
-                    <li class="menu-item"><a href="" class="menu-link">Orçamento</a></li>
+                    <li class="menu-item"><a href="#inicio" class="menu-link">Início</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
                 </ul>
             </nav>
             <div id="social-media">
                 <div id="social-media-container">
-                    <a href="tel:192"><span>WhatsApp</span><i class="fab fa-whatsapp"></i></a>
-                    <a href="pudim.html"><span>Instagram</span><i class="fab fa-instagram"></i></a>
-                    <a href="mailto:exemplo@exemplo.com"><span>E-mail</span><i class="far fa-envelope"></i></a>
-                    <a href="https://github.com/cosmic-echo/portifolio"><span>Github</span><i class="fab fa-github"></i></a>
+                    <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">WhatsApp</span><i class="fab fa-whatsapp"></i></a>
+                    <a class="social-item" href="https://www.youtube.com/watch?v=oHg5SJYRHA0"><span class="social-tooltip">Instagram</span><i class="fab fa-instagram"></i></a>
+                    <a class="social-item" href="https://github.com/cosmic-echo/portifolio" target="_blank"><span class="social-tooltip">Github</span><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </aside>
-        <section id="knowledge" class="section">
+        <section id="projetos" class="section">
             <div class="section-header">
-                <a name="saibamais"><h1 class="fontlight">Conhecimentos</h1></a>
+                <h1 class="fontlight disableselection">Projetos</h1>
+            </div>
+            <div id="center-projects-container">
+                <div id="projects-container" class="fontnormal disableselection">
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">e disseram que eu tava na pior</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">CSS</h4>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">and I forsee the dark ahead if I stay</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">HTML</h4>     
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">alô alô alô, graças a deus</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Bootstrap</h4>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">diabo, acalma teu coração, eu sou a tempestade</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Git & Github</h4>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">a cadeira caiu</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Javascript</h4>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-card-bg"></div>
+                        <div class="project-card-bg-gradient"></div>
+                        <div class="project-card-bg-dark"></div>
+                        <a class="project-go" href="pudim.html"></a>
+                        <div class="project-info">
+                            <h2 class="fontmedium">meudeus já é treizora</h2>
+                            <p>Era briluz, as lemolisas touvas roldavam e relviam nos gramilvos. Estavam misimcais os pintalouvos e os momirratos davam grilvos</p>
+                            <h4 class="fontmedium">Desenho</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="conhecimentos" class="section">
+            <div class="section-header">
+                <h1 class="fontlight disableselection">Conhecimentos</h1>
             </div>
             <div id="knowledge-container" class="fontnormal">
                 <div class="knowledge-item">
                     <div class="knowledge-item-header">
-                        <h3 class="fontnormal">HTML</h3>
+                        <h3 class="fontlight disableselection">HTML</h3>
                         <i class="fab fa-html5"></i>
                     </div>
                     <div class="knowledge-item-text">
@@ -78,16 +231,16 @@
                 </div>
                 <div class="knowledge-item">
                     <div class="knowledge-item-header">                        
-                        <h3 class="fontnormal">CSS</h3>
+                        <h3 class="fontlight disableselection">CSS</h3>
                         <i class="fab fa-css3-alt"></i>
                     </div>
                     <div class="knowledge-item-text">
-                        <p>E a bebida fez efeito de verdade, e muito mais rápido do que Alice esperava: antes que ela tivesse bebido metade da garrafa, percebeu sua cabeça pressionando contra o teto, e então teve que parar para salvar seu pescoço de ser quebrado.</p>
+                        <p>E a bebida fez efeito de verdade, e muito mais rápido do que Alice esperava: antes que ela tivesse bebido metade da garrafa, percebeu sua cabeça pressionando contra o teto [...]</p>
                     </div>
                 </div>
                 <div class="knowledge-item">
                     <div class="knowledge-item-header">                       
-                        <h3 class="fontnormal">Design</h3>
+                        <h3 class="fontlight disableselection">Design</h3>
                         <i class="fas fa-pencil-alt"></i>
                     </div>
                     <div class="knowledge-item-text">
@@ -96,16 +249,16 @@
                 </div>
                 <div class="knowledge-item">
                     <div class="knowledge-item-header">                        
-                        <h3 class="fontnormal">Javascript</h3>
+                        <h3 class="fontlight disableselection">Javascript</h3>
                         <i class="fab fa-js-square"></i>
                     </div>
                     <div class="knowledge-item-text">
-                        <p>Alice sentia-se tão desesperada que estava pronta para pedir ajuda a qualquer um: então, quando o Coelho chegou perto dela, a menina começou com uma voz baixa, tímida: “Por favor, Senhor...” O Coelho parou violentamente, derrubando as luvas brancas e o leque, e disparou em direção à escuridão tão rápido quanto pôde.</p>
+                        <p>Alice sentia-se tão desesperada que estava pronta para pedir ajuda a qualquer um: então, quando o Coelho chegou perto dela, a menina começou com uma voz baixa, tímida [...]</p>
                     </div>
                 </div>
                 <div class="knowledge-item">
                     <div class="knowledge-item-header">                       
-                        <h3 class="fontnormal">Bootstrap</h3>
+                        <h3 class="fontlight disableselection">Bootstrap</h3>
                         <i class="fab fa-bootstrap"></i>
                     </div>
                     <div class="knowledge-item-text">
@@ -114,40 +267,38 @@
                 </div>
                 <div class="knowledge-item">
                     <div class="knowledge-item-header">                       
-                        <h3 class="fontnormal">Git & Github</h3>
+                        <h3 class="fontlight disableselection">Git & Github</h3>
                         <i class="fab fa-github"></i>
                     </div>
                     <div class="knowledge-item-text">
                         <p>Logo seu olho caiu sobre uma pequena caixa de vidro que jazia sob a mesa: ela abriu-a e encontrou um pequeno bolo, no qual a palavra “COMA-ME” era lindamente inscrito.</p>
                     </div>
                 </div>
+            </div>
         </section>
-        <section id="projects" class="section">
-            <div class="section-header">
-                <h1 class="fontlight">Projetos</h1>
+        <footer id="siteinfo" class="disableselection">
+            <a class="a1" href="https://creativecommons.org/publicdomain/zero/1.0/deed.pt_BR" target="_blank">Licença</a>
+            <div style="position: relative;">
+                <nav id="creditspopup">
+                    <div id="credits-popup-panel">
+                        <span>Agradecimentos</span>
+                        <button class="closedark" id="creditsclose" alt="Fechar">
+                            <svg viewBox="0 0 24 24"><g><path d="M13.414 12l5.793-5.793c.39-.39.39-1.023 0-1.414s-1.023-.39-1.414 0L12 10.586 6.207 4.793c-.39-.39-1.023-.39-1.414 0s-.39 1.023 0 1.414L10.586 12l-5.793 5.793c-.39.39-.39 1.023 0 1.414.195.195.45.293.707.293s.512-.098.707-.293L12 13.414l5.793 5.793c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414L13.414 12z"></path></g></svg>
+                        </button>
+                    </div>
+                    <ul>
+                        <span>Ícones:</span>
+                        <li>Font Awesome by Dave Gandy - <a class="creditslink" href="http://fontawesome.io" target="_blank">http://fontawesome.io</a></li>
+
+                        <span>Imagens:</span>
+                        <li>Pixar Animation Studios e DreamWorks Animation LLC</li>
+                    </ul>
+                </nav>
             </div>
-            <div id="projects-container" class="fontnormal">
-                <div class="project-item">
-                    <div class="project-item-header">                       
-                        <a href="pudim.html"><h3 class="fontmedium">TÔ DOIDA</h3></a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-item-header">                       
-                       <a href="pudim.html"><h3 class="fontmedium">EU TAMBÉM</h3></a>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-item-header">                       
-                        <a href="pudim.html"><h3 class="fontmedium">.</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <a id="showcredits" class="a1">Agradecimentos</a>
+        </footer>
     </div>
-    <section id="siteinfo">
-        <p>Este site está sob a licença <a href="LICENSE">CC0 1.0 Universal</a></p>
-    </section>
 </body>
-<script src="js/main.js" async></script>
+<script src="js/main.js"></script>
+<script src="js/contactform.js"></script>
 </html>

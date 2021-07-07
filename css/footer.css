@@ -1,0 +1,81 @@
+/*start - siteinfo section*/
+#siteinfo {
+    padding: 2rem 2rem;
+    background: rgba(50,50,50,.1);
+    line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    box-sizing: border-box;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,.1);
+}
+#siteinfo a {
+    border: 0;
+    cursor: pointer;
+    box-shadow:  1px 2px 8px rgba(0,0,0,.3);
+    border-radius: 10rem;
+    padding: .2rem 1rem;
+    margin: 0 .7rem;
+}
+#siteinfo a:active {
+    transform: scale(0.95);
+}
+#creditspopup {
+    padding: 1rem;
+    min-width: 20rem;
+    min-height: 10rem;
+    background: rgba(20,20,20,.9);
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    color: #fff;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 5rem;
+    left: calc(50wh-10rem);
+    display: none;
+    backdrop-filter: blur(.5rem);
+    z-index: 100;
+}
+#creditspopup.show-credits {
+    display: block;
+    animation: fade .35s ease-in-out, translateY .2s ease-in-out
+}
+.creditslink {
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+#credits-popup-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+#credits-popup-panel span {
+    font-size: 1rem;
+}
+#credits-popup-panel .closedark {
+    width: 25px;
+    height: 25px;
+}
+#credits-popup-panel .closedark svg {
+    width: 15px;
+    height: 15px;
+}
+#creditspopup ul {
+    list-style: circle;
+    list-style-type: circle;
+}
+#creditspopup ul li {
+    margin-bottom: 1rem;
+}
+#creditspopup a, #creditspopup .a {
+    transition: all .25s ease-in-out;
+    color: #62a9df;
+}
+#creditspopup a:hover, #creditspopup .a:hover {
+    color: #a6d4f8;
+}
+#creditspopup a:active, #creditspopup .a:active {
+    color: #579cd1;
+}
+/*end - siteinfo section*/

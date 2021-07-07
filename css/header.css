@@ -1,0 +1,175 @@
+#top-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: .5rem 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#menu--top-panel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+}
+.menu-item--top-panel {
+    transition: all .1s ease;
+    margin-right: .7rem;
+}
+.menu-item--top-panel:active {
+    transform: scale(0.95);
+}
+.menu-link--top-panel {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    transition: all .2s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+.menu-link--top-panel:hover, .menu-link--top-panel:hover.contact {
+    background: rgba(0,0,0,.4);
+    box-shadow: none;
+}
+.menu-link--top-panel.contact {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.8);
+}
+#social-media-container--top-panel {
+    display: flex;
+    flex-direction: row;
+}
+#social-media-container--top-panel a {
+    font-size: 1.5rem;
+    color: #fff !important;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    transition: all .25s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+#social-media-container--top-panel a:hover {
+    background: rgba(0,0,0,.4);
+    color: #fff !important;
+}
+#social-media-container--top-panel a:active {
+    transform: scale(0.95);
+    transition: all .2s ease;
+    color: #fff !important;
+}
+#social-media-container--top-panel a:hover .tooltip {
+    display: block;
+}
+#bg-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(196,18,255,1) 0%, rgba(196,18,255,1) 1%, rgba(37,106,152,1) 81%, rgba(0,128,128,1) 100%);
+    z-index: 1;
+}
+.background-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+    z-index: 2;
+}
+.background-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center url("../img/dot.png") repeat;
+    z-index: 3;
+    opacity: 0.6;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+#banner {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    animation: fade 1s forwards, ranslateX 1s forwards, translateY .7s forwards, rotateX .7s forwards;
+    opacity: 0;
+    margin-top: 3rem;
+}
+#profile_picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.5), inset 0 0 0 1px rgba(255,255,255,.5);
+    background: center url("../img/profile_picture.jpg");
+    background-size: 150px;
+}
+#developer_container {
+    margin-left: 3rem;
+    width: 80%;
+}
+#developer_name {
+    font-size: 4rem;
+}
+#developer_office, #developer_description, #developer_name {
+    text-shadow: .2rem .3rem 10px rgba(0,0,0,.7); 
+    color: #fff;
+}
+#developer_office {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+#developer_description {  
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: justify;  
+}
+#button--learnmore {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.4), 0 0 0 1px rgba(0,0,0,.2), 1px 1px 5px rgba(0,0,0,.5);
+    background: #0067b8;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: .4rem;
+    transition: all .1s ease;
+    padding: 1rem 1.3rem;
+    letter-spacing: .05rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.2);
+    font-size: 1.2rem;
+    box-sizing: border-box;
+}
+#button--learnmore:hover {
+    background: #147bca;
+}
+#button--learnmore:active {
+    background: #0b5288;
+    transform: scale(0.97);
+}
